@@ -1,3 +1,5 @@
+alert("working");
+
 // Bootcamp Algorithm challenge/solutions - itskills 2022
 const { log } = console;
 /*1. The formula to convert from Celsius to Fahrenheit is the
@@ -41,4 +43,5 @@ function evenInt(nums) {
     
 }
 evenInt(nums)
+
 
