@@ -1,6 +1,3 @@
-// Bootcamp Algorithm challenge/solutions - itskills 2022
-const { log } = console; //console.log
-
 /*1. The formula to convert from Celsius to Fahrenheit is the
 temperature in Celsius times 9/5, plus 32.
 You are given a variable celsius representing a temperature in Celsius.
@@ -9,11 +6,12 @@ equivalent to the given Celsius temperature.
 Use the formula mentioned above to help convert the Celsius temperature to Fahrenheit.
 NOTE; Return the value of the result from the function*/
 
-function convertCelsius(para) {
-    return para*(9/5) + 32;
-  }
-  console.log(convertCelsius(2))//converts Celsius to Fahrenheit.
-  
+let convertToFahrenheit = function (celsius) {
+  return (degFahrenheit = celsius * (9 / 5) + 32)
+}
+
+console.log(convertToFahrenheit(30))
+
 /*
     2. Given an integer array nums, move all the even integers 
     at the beginning of the array  followed by all the odd integers. 
@@ -24,22 +22,18 @@ function convertCelsius(para) {
     Explanation: outputs: [4,2,3,1], [2,4,1,3] and [4,2,1,3] 
     would also be accepted
  */
-const nums = [3,1,2,4];
-let even = [];
-let odd = [];
-function evenInt(nums) {
-    for(let x of nums) {
-        if(x%2==0) {
-            even.push(x);
-        } else {
-            odd.push(x);
-        }
-           
-    }
-    let element = document.createElement("p")
-    element.innerHTML = even.concat(odd);
-    document.body.appendChild(element);
-    
-}
-evenInt(nums)
 
+function evenOdd(nums) {
+  let even = []
+  let odd = []
+  for (let num of nums) {
+    if (num % 2 == 0) {
+      even.push(num)
+    } else {
+      odd.push(num)
+    }
+  }
+  return even.concat(odd)
+}
+
+console.log(evenOdd([3, 1, 2, 4, 5, 6, 7, 8, 9]))
