@@ -40,20 +40,32 @@ function evenIntegersOddIntegers(nums) {
 }
 console.log(evenIntegersOddIntegers([5,1,2,4]));
 
-// or
 
-
-function evenIntegersOddIntegers(nums) {
-    let evenIntegers = [];
-    let oddIntegers = [];
-
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i]%2 == 0) {
-            evenIntegers.push(nums[i]);
-        }else {
-            oddIntegers.push(nums[i]);
-        }
-    }
-    return oddIntegers.concat(evenIntegers);
+/*
+    3. Write a function that takes in integers in minute and convert it to seconds
+    Examples:
+    convert(5) => 300
+    convert(3) => 180
+*/
+function convert(integer){
+    return integer*60;
 }
-console.log(evenIntegersOddIntegers([3,1,2,4]));
+console.log(convert(5));
+console.log(convert(3));
+
+
+/*
+    4. Write a function that returns true if a number passed into it is an 
+    even number and false if otherwise. 
+*/
+
+function integer(number){
+    if (number%2 == 0) {
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(integer(4));
+console.log(integer(5));
+
