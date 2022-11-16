@@ -1,3 +1,4 @@
+
 // Bootcamp Algorithm challenge/solutions - itskills 2022
 const { log } = console;
 /*1. The formula to convert from Celsius to Fahrenheit is the
@@ -18,3 +19,27 @@ NOTE; Return the value of the result from the function*/
     Explanation: outputs: [4,2,3,1], [2,4,1,3] and [4,2,1,3] 
     would also be accepted
  */
+
+
+  /*  function tempfah(cel){
+        return cel*(9/5)+32
+    }
+    console.log(tempfah(40)); */
+
+
+let x;
+let num1
+let num2
+let arr=[2,3,4,5,6,7,];
+arr.forEach(myfunction());
+function myfunction() {
+    if (x%2==0){
+    num1=x.append
+    }
+    else{
+        num2=x.append
+    }
+    myfunction()
+    
+    
+}
