@@ -19,3 +19,15 @@ NOTE; Return the value of the result from the function*/
     Explanation: outputs: [4,2,3,1], [2,4,1,3] and [4,2,1,3] 
     would also be accepted
  */
+
+/*
+        3. Write a function that takes in integers in minute and convert it to seconds
+        Examples:
+        convert(5) => 300
+        convert(3) => 180
+    */
+
+/*
+        4. Write a function that returns true if a number passed into it is an 
+        even number and false if otherwise. 
+    */
