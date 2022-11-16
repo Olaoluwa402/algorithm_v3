@@ -16,10 +16,20 @@ NOTE; Return the value of the result from the function*/
 
 
 // ()()
-(function convert(celsius){
-    let Fahrenheit = celsius * (9/5) + 32;
+// function tempconvert(celsius){
+//     const k = 9/5
+//     const k2 = 32
+//     let Fahrenheit = (celsius * k) + k2;
+//     return Fahrenheit;
+// }
+// console.log(tempconvert(100))
+                // OR
+function tempconvert(celsius){
+    let Fahrenheit = (celsius * 9/5) + 32;
     return Fahrenheit;
-})(30)
+}
+console.log(tempconvert(100))    
+
 
 /*
     2. Given an integer array nums, move all the even integers 
@@ -47,6 +57,33 @@ function evenandodd(nums) {
 
 console.log(evenandodd([3,1,2,4]))
 
+/*
+        3. Write a function that takes in integers in minute and convert it to seconds
+        Examples:
+        convert(5) => 300
+        convert(3) => 180
+    */
+        function convert(minute){
+            let seconds = minute * 60
+            return seconds;
+        }
+        console.log(convert(5))
+        console.log(convert(3))
+
+/*
+        4. Write a function that returns true if a number passed into it is an 
+        even number and false if otherwise. 
+    */
+
+        function evenAndOdd(num){
+            if(num % 2 == 0){
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        console.log(evenAndOdd(4))
 
 
 
