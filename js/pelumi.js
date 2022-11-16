@@ -68,3 +68,4 @@ function integer(number){
 }
 console.log(integer(4));
 console.log(integer(5));
+
