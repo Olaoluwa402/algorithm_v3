@@ -1,5 +1,3 @@
-
-
 // Bootcamp Algorithm challenge/solutions - itskills 2022
 const { log } = console;
 /*1. The formula to convert from Celsius to Fahrenheit is the
@@ -10,10 +8,13 @@ equivalent to the given Celsius temperature.
 Use the formula mentioned above to help convert the Celsius temperature to Fahrenheit.
 NOTE; Return the value of the result from the function*/
 
-function convertCelsius(para) {
-  return para * (9 / 5) + 32;
+
+let convertToFahrenheit = function(celsius){
+    return (degFahrenheit =celsius*(9/5) + 32)
 }
-console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
+
+console.log (convertToFahrenheit(30))
+
 
 /*
     2. Given an integer array nums, move all the even integers 
@@ -25,42 +26,36 @@ console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
     Explanation: outputs: [4,2,3,1], [2,4,1,3] and [4,2,1,3] 
     would also be accepted
  */
-const nums = [3, 1, 2, 4];
-let even = [];
-let odd = [];
-function evenInt(nums) {
-  for (let x of nums) {
-    if (x % 2 == 0) {
-      even.push(x);
-    } else {
-      odd.push(x);
-    }
-  }
-  let element = document.createElement("p");
-  element.innerHTML = even.concat(odd);
-  document.body.appendChild(element);
-}
-evenInt(nums)
-  /*
+
+
+
+   /*
         3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
         convert(5) => 300
         convert(3) => 180
-
     */
-  (function (Int) {
-    console.log(60 * Int);
-  }
-);
-5;
+   let converttoseconds = function(minute){
+    let second= minute*60
+    return second
+   }
 
+   console.log(converttoseconds(5))
+   console.log(converttoseconds(3))
+
+   
 /*
         4. Write a function that returns true if a number passed into it is an 
         even number and false if otherwise. 
     */
-const val = function (para) {
-    let num = (para %2 == 0) ? "true" : "false";
-    return num;
-};
-
-console.log(val(3));
+   function evenAndodd(num){
+    if(num % 2==0){
+        return true
+       }
+       else{
+        return false
+       }
+    
+   }
+   
+   console.log(evenAndodd(4))
