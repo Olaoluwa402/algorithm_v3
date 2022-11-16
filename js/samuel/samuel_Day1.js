@@ -7,10 +7,17 @@ Use the formula mentioned above to help convert the Celsius temperature to Fahre
 NOTE; Return the value of the result from the function*/
 
 let convertToFahrenheit = function (celsius) {
-  return (degFahrenheit = celsius * (9 / 5) + 32)
-}
+  return (degFahrenheit = celsius * (9 / 5) + 32);
+};
 
-console.log(convertToFahrenheit(30))
+console.log(convertToFahrenheit(30));
+
+// function convert(x, y) {
+//   const degFahrenheit = celsius * (9 / 5) + 32;
+//   return degFahrenheit;
+// }
+
+// convert(30);
 
 /*
     2. Given an integer array nums, move all the even integers 
@@ -24,16 +31,22 @@ console.log(convertToFahrenheit(30))
  */
 
 function evenOdd(nums) {
-  let even = []
-  let odd = []
+  let even = [];
+  let odd = [];
   for (let num of nums) {
     if (num % 2 == 0) {
-      even.push(num)
+      even.push(num);
     } else {
-      odd.push(num)
+      odd.push(num);
     }
   }
-  return even.concat(odd)
+  return odd.concat(even);
 }
 
-console.log(evenOdd([3, 1, 2, 4, 5, 6, 7, 8, 9]))
+// for(let i=0; i < nums.length; i++){
+
+// }
+
+// gjh
+
+console.log(evenOdd([3, 1, 2, 4, 5, 6, 7, 8, 9]));
