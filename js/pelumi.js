@@ -38,5 +38,22 @@ function evenIntegersOddIntegers(nums) {
     }
     return evenIntegers.concat(oddIntegers);
 }
-console.log(evenIntegersOddIntegers([3,1,2,4]));
+console.log(evenIntegersOddIntegers([5,1,2,4]));
 
+// or
+
+
+function evenIntegersOddIntegers(nums) {
+    let evenIntegers = [];
+    let oddIntegers = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i]%2 == 0) {
+            evenIntegers.push(nums[i]);
+        }else {
+            oddIntegers.push(nums[i]);
+        }
+    }
+    return oddIntegers.concat(evenIntegers);
+}
+console.log(evenIntegersOddIntegers([3,1,2,4]));
