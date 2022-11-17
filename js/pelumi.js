@@ -69,3 +69,21 @@ function integer(number){
 console.log(integer(4));
 console.log(integer(5));
 
+/* 
+    5. Create a function that takes a number as an argument, increments the number by 
+    1 and return the result. Example addition(0) => 1, addition(4) => 5
+*/
+function addition(num) {
+    num++
+    return num;
+}
+console.log(addition(0));
+console.log(addition(4));
+/* 
+    6. Create a function that takes voltage and current and returns the 
+    calculated power. Example circuitPower(230, 10) => 2300
+*/
+function circuitPower(voltage, current){
+    return voltage*current
+}
+console.log(circuitPower(230, 10));

@@ -1,3 +1,4 @@
+
 // Bootcamp Algorithm challenge/solutions - itskills 2022
 
     /*    3. Write a function that takes in integers in minute and convert it to seconds
@@ -31,3 +32,31 @@
 
         // }
         
+
+        
+/* 
+        5. Create a function that takes a number as an argument, increments the number by 
+        1 and return the result. Example addition(0) => 1, addition(4) => 5
+    */
+   let count;
+   function num(x){
+    
+    count= x+1 ;
+    return count;
+
+   }
+   console.log(num(5));
+
+/* 
+       6. Create a function that takes voltage and current and returns the 
+        calculated power. Example circuitPower(230, 10) => 2300
+    */
+
+        function pow(x,y){
+            z=x*y
+            return(z);
+            }
+            
+
+        
+        console.log(pow(20,30));
