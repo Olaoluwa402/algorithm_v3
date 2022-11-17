@@ -1,5 +1,3 @@
-
-
 // Bootcamp Algorithm challenge/solutions - itskills 2022
 const { log } = console;
 /*1. The formula to convert from Celsius to Fahrenheit is the
@@ -40,27 +38,35 @@ function evenInt(nums) {
   element.innerHTML = even.concat(odd);
   document.body.appendChild(element);
 }
-evenInt(nums)
-  /*
+// evenInt(nums);
+/*
         3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
         convert(5) => 300
         convert(3) => 180
 
     */
-  (function (Int) {
-    console.log(60 * Int);
-  }
-);
-5;
 
+// log(
+//   (function (Int) {
+//     return 60 * Int;
+//     // console.log(60 * Int);
+//   })(5)
+// );
+
+const result = (function (Int) {
+  return 60 * Int;
+  // console.log(60 * Int);
+})(5);
+
+result;
 /*
         4. Write a function that returns true if a number passed into it is an 
         even number and false if otherwise. 
     */
 const val = function (para) {
-    let num = (para %2 == 0) ? "true" : "false";
-    return num;
+  let num = para % 2 == 0 ? "true" : "false";
+  return num;
 };
 
 console.log(val(3));

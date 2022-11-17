@@ -6,11 +6,11 @@
     */
 
 function minuteToSec(minutes) {
-  let seconds = minutes * 60
-  return seconds
+  let seconds = minutes * 60;
+  return seconds;
 }
 
-console.log(minuteToSec(5))
+console.log(minuteToSec(5));
 
 /*
         4. Write a function that returns true if a number passed into it is an 
@@ -18,6 +18,7 @@ console.log(minuteToSec(5))
     */
 
 function evenCheck(num) {
-  return num % 2 == 0 ? true : false
+  //using ternary operators
+  return num % 2 == 0 ? true : false;
 }
-console.log(evenCheck(3))
+console.log(evenCheck(3));

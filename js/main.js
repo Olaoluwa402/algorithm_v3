@@ -69,6 +69,10 @@ function myfunction() {
         convert(5) => 300
         convert(3) => 180
     */
+//psuedo code
+//1.Take in input and cast to number
+//2. use formular for minute to seconds convertion
+//3. store result in a variable and return the result to the function call\
 
 /*
         4. Write a function that returns true if a number passed into it is an 
