@@ -43,6 +43,26 @@ function evenInt(nums) {
 }
 // evenInt(nums)
 
+/*  function tempfah(cel){
+        return cel*(9/5)+32
+    }
+    console.log(tempfah(40)); */
+
+algo_date_15;
+
+let x;
+let num1;
+let num2;
+let arr = [2, 3, 4, 5, 6, 7];
+arr.forEach(myfunction());
+function myfunction() {
+  if (x % 2 == 0) {
+    num1 = x.append;
+  } else {
+    num2 = x.append;
+  }
+  myfunction();
+}
 /*
         3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
@@ -53,4 +73,14 @@ function evenInt(nums) {
 /*
         4. Write a function that returns true if a number passed into it is an 
         even number and false if otherwise. 
+    */
+
+/* 
+        5. Create a function that takes a number as an argument, increments the number by 
+        1 and return the result. Example addition(0) => 1, addition(4) => 5
+    */
+
+/* 
+       6. Create a function that takes voltage and current and returns the 
+        calculated power. Example circuitPower(230, 10) => 2300
     */
