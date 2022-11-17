@@ -59,3 +59,27 @@ console.log (convertToFahrenheit(30))
    }
    
    console.log(evenAndodd(4))
+
+
+   
+/* 
+        5. Create a function that takes a number as an argument, increments the number by 
+        1 and return the result. Example addition(0) => 1, addition(4) => 5
+    */
+function argument(num){
+    let result=num +1
+    return result
+}
+console.log(argument(5))
+
+        
+/* 
+       6. Create a function that takes voltage and current and returns the 
+        calculated power. Example circuitPower(230, 10) => 2300
+    */
+let voltagecurrent= function(v,c){
+    let power= v*c
+    return power 
+}
+
+console.log(voltagecurrent(230,10))
