@@ -39,7 +39,7 @@ function evenInt(nums) {
   }
   let element = document.createElement("p");
   element.innerHTML = even.concat(odd);
-  document.body.appendChild(element);
+  document.body.appendChild(element);cd clearInterval
 }
 // evenInt(nums)
 
