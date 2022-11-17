@@ -43,6 +43,26 @@ function evenInt(nums) {
 }
 // evenInt(nums)
 
+/*  function tempfah(cel){
+        return cel*(9/5)+32
+    }
+    console.log(tempfah(40)); */
+
+algo_date_15;
+
+let x;
+let num1;
+let num2;
+let arr = [2, 3, 4, 5, 6, 7];
+arr.forEach(myfunction());
+function myfunction() {
+  if (x % 2 == 0) {
+    num1 = x.append;
+  } else {
+    num2 = x.append;
+  }
+  myfunction();
+}
 /*
         3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
