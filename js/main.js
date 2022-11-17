@@ -13,7 +13,6 @@ function convertCelsius(para) {
   return para * (9 / 5) + 32;
 }
 console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
-
 /*
 
     2. Given an integer array nums, move all the even integers 
