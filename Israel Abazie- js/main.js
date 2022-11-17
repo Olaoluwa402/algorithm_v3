@@ -70,7 +70,7 @@ console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
     */
 
         function increaseNum(num) {
-            console.log((num+1)); //Adds an integer 1 to the parameter
+            console.log((Number(num)+1)); //Adds an integer 1 to the parameter
         }
         increaseNum(4)
 
