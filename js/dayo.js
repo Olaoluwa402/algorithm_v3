@@ -94,12 +94,25 @@ console.log(evenandodd([3,1,2,4]))
             console.log(str)
             newStr = str.split(' ')
             let newWord = []
+                    function reverseWords(str) {
+            // Go for it
+            console.log(str)
+            newStr = str.split(' ')
+            let newWord = []
             
             newStr.map(char=>{
               newWord.push(char.split('').reverse().join(''))
             })
             return newWord.join(' ')
+                        newStr.map(char=>{
+              newWord.push(char.split('').reverse().join(''))
+            })
+            return newWord.join(' ')
             
+          }
+
+
+
           }
 
         //   5. Create a function that takes a number as an argument, increments the number by 
