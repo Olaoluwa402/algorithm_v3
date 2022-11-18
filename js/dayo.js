@@ -62,6 +62,10 @@ console.log(evenandodd([3,1,2,4]))
         Examples:
         convert(5) => 300
         convert(3) => 180
+        
+    1. take in input and cast to number
+    2. use formula for minute to seconds convertion
+    3. store result in a variable and return the result to the function call
     */
         function convert(minute){
             let seconds = minute * 60
@@ -98,7 +102,21 @@ console.log(evenandodd([3,1,2,4]))
             
           }
 
+        //   5. Create a function that takes a number as an argument, increments the number by 
+        // 1 and return the result. Example addition(0) => 1, addition(4) => 5
+
+        function increment(num){
+            let result = num + 1
+            return result
+        }
+        console.log(increment(10))
 
 
+    //  6. Create a function that takes voltage and current and returns the 
+    //     calculated power. Example circuitPower(230, 10) => 2300
 
-
+        function voltCurr(c,v){
+            let power = c * v
+            return power
+        }
+        console.log(voltCurr(10,10))
