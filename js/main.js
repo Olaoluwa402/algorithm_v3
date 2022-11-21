@@ -94,12 +94,22 @@ function myfunction() {
         team and return that value. Examples points(1,1) => 5, points(5,7) => 31
     */
 
-/*
-    8.  Repeat a given string str (first argument) for num times (second argument). 
-      Return an empty string if num is not a positive number. 
-      For the purpose of this challenge, do not use the built-in .repeat() method.
+    // 8.  Repeat a given string str (first argument) for num times (second argument). 
+    //   Return an empty string if num is not a positive number. 
+    //   For the purpose of this challenge, do not use the built-in .repeat() method.
 
-      Example:
-      repeatStringNumTimes("*", 3) should return the string ***.
-       repeatStringNumTimes("abc", 3) should return the string abcabcabc.
+    //   Example:
+    //   repeatStringNumTimes("*", 3) should return the string ***.
+    //    repeatStringNumTimes("abc", 3) should return the string abcabcabc.
+
+       
   */
+
+function repeatStringNumTimes (str,num){
+  if (num < 0){
+    return ""
+  }else{
+    return num * str;
+  }
+} 
+console.log(repeatStringNumTimes("abc",2));
