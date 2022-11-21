@@ -85,6 +85,19 @@ console.log(evenandodd([3,1,2,4]))
         }
         console.log(evenAndOdd(4))
 
+        function reverseWords(str) {
+            // Go for it
+            console.log(str)
+            newStr = str.split(' ')
+            let newWord = []
+            
+            newStr.map(char=>{
+              newWord.push(char.split('').reverse().join(''))
+            })
+            return newWord.join(' ')
+            
+          }
+
 
 
 

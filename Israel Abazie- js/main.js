@@ -25,22 +25,22 @@ console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
     Explanation: outputs: [4,2,3,1], [2,4,1,3] and [4,2,1,3] 
     would also be accepted
  */
-const nums = [3, 1, 2, 4];
-let even = [];
-let odd = [];
-function evenInt(nums) {
-  for (let x of nums) {
-    if (x % 2 == 0) {
-      even.push(x);
-    } else {
-      odd.push(x);
-    }
-  }
-  let element = document.createElement("p");
-  element.innerHTML = even.concat(odd);
-  document.body.appendChild(element);
-}
-evenInt(nums)
+// const nums = [3, 1, 2, 4];
+// let even = [];
+// let odd = [];
+// function evenInt(nums) {
+//   for (let x of nums) {
+//     if (x % 2 == 0) {
+//       even.push(x);
+//     } else {
+//       odd.push(x);
+//     }
+//   }
+//   let element = document.createElement("p");
+//   element.innerHTML = even.concat(odd);
+//   document.body.appendChild(element);
+// }
+// evenInt(nums)
   /*
         3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
@@ -48,19 +48,39 @@ evenInt(nums)
         convert(3) => 180
 
     */
-  (function (Int) {
-    console.log(60 * Int);
-  }
-);
-5;
+        let minToSecs = function(Int) {
+          console.log(60 * Int);
+        }
+        minToSecs(5);
 
 /*
         4. Write a function that returns true if a number passed into it is an 
         even number and false if otherwise. 
     */
-const val = function (para) {
+    const val = function (para) {
     let num = (para %2 == 0) ? "true" : "false";
     return num;
-};
+    };
 
-console.log(val(3));
+    console.log(val(3));
+
+/* 
+        5. Create a function that takes a number as an argument, increments the number by 
+        1 and return the result. Example addition(0) => 1, addition(4) => 5
+    */
+
+        function increaseNum(num) {
+            console.log((num+1)); //Adds an integer 1 to the parameter
+        }
+        increaseNum(4)
+
+
+/* 
+       6. Create a function that takes voltage and current and returns the 
+        calculated power. Example circuitPower(230, 10) => 2300
+    */
+
+        function powerInWatts(voltage, current){
+          return `The calculated power is ${voltage*current} watts`
+        }
+        console.log(powerInWatts(230,10));
