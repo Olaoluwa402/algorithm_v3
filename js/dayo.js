@@ -133,3 +133,39 @@ console.log(evenandodd([3,1,2,4]))
             return power
         }
         console.log(voltCurr(10,10))
+
+        /*
+       7. You are counting points for a basketball game, given the amount of 
+        2-pointers scored and 3-pointers scored, find the final points for the 
+        team and return that value. Examples points(1,1) => 5, points(5,7) => 31
+    */
+
+        function basketballPoints(a,b){
+        return (a*2) + (b*3)
+        }
+        console.log(basketballPoints(1,1))
+        console.log(basketballPoints(5,7))
+/*
+    8.  Repeat a given string str (first argument) for num times (second argument). 
+      Return an empty string if num is not a positive number. 
+      For the purpose of this challenge, do not use the built-in .repeat() method.
+
+      Example:
+      repeatStringNumTimes("*", 3) should return the string ***.
+       repeatStringNumTimes("abc", 3) should return the string abcabcabc.
+  */
+
+       function repeatStringNumTimes(str,num){
+       let result = " "
+        if (num > 0){
+            for(let i=0; i<num; i++){
+                 result += str
+            }
+            return result;
+        }
+        else{
+            return " "
+        }
+       }
+       console.log(repeatStringNumTimes("*", 3))
+       console.log(repeatStringNumTimes("ABC", 3))
