@@ -68,15 +68,16 @@
         2-pointers scored and 3-pointers scored, find the final points for the 
         team and return that value. Examples points(1,1) => 5, points(5,7) => 31
     */
+        // <---I DID THIS MYSELF ----->
 
-        // function point(x,y){
-        //     let twoPointers=2*x;
-        //     let threePointers=3*y;
-        //     let teamTotal=twoPointers + threePointers
+        function point(x,y){
+            let twoPointers=2*x;
+            let threePointers=3*y;
+            let teamTotal=twoPointers + threePointers
             
-        //     return(teamTotal)
-        // }
-        // console.log(point(6,8));
+            return(teamTotal)
+        }
+        console.log(point(6,8));
 
 
         // function Points(x,y){
@@ -106,5 +107,21 @@
     //    }
     //    console.log(stringRepeat("dara",4));
 
-let y="dara" * 4;
-console.log (y);
+    // let y="dara" * 4;
+    // console.log (y);
+
+
+    // <<------THIS IS S CLASS CORRRECTION------>
+
+let stringRepeat=(str,num)=>{
+    let new_str=("");
+    if (num >0){
+        for (let i=0; i<num; i++){
+            new_str=new_str +str;
+        }
+        return new_str;
+    }else {
+        return("")
+    }
+}
+console.log(stringRepeat("abc", 6));
