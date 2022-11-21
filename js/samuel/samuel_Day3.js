@@ -3,8 +3,11 @@
         1 and return the result. Example addition(0) => 1, addition(4) => 5
     */
 
-let addition = (num) => (num += 1)
-console.log(addition(3))
+let addition = (num) => {
+  const toNum = Number(num); // parseInt() or +num
+  toNum += 1;
+};
+console.log(addition(3));
 
 /* 
        6. Create a function that takes voltage and current and returns the 
@@ -12,7 +15,7 @@ console.log(addition(3))
 */
 
 function circuitPower(voltage, current) {
-  return (power = voltage * current)
+  return (power = voltage * current);
 }
 
-console.log(circuitPower(230, 10))
+console.log(circuitPower(230, 10));
