@@ -80,10 +80,13 @@ console.log(val(3));
         1 and return the result. Example addition(0) => 1, addition(4) => 5
     */
 
-function increaseNum(num) {
-  console.log(num + 1); //Adds an integer 1 to the parameter
-}
-increaseNum(4);
+        function increaseNum(num) {
+            console.log((Number(num)+1)); //Adds an integer 1 to the parameter
+        }
+        increaseNum(4)
+
+
+
 
 /* 
        6. Create a function that takes voltage and current and returns the 
