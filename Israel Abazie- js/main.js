@@ -97,3 +97,44 @@ function powerInWatts(voltage, current) {
   return `The calculated power is ${voltage * current} watts`;
 }
 console.log(powerInWatts(230, 10));
+
+/*
+       7. You are counting points for a basketball game, given the amount of 
+        2-pointers scored and 3-pointers scored, find the final points for the 
+        team and return that value. Examples points(1,1) => 5, points(5,7) => 31
+    */
+        
+        function basketballPoints(twos, threes){
+          try {
+            let value = (twos >=0 && threes >= 0) ? twos*2+threes*3 : error; 
+            return value;
+          } catch (error) {
+            throw new Error("The input must be a number!");
+          }
+        }
+        console.log(basketballPoints(1,1))
+
+/*
+    8.  Repeat a given string str (first argument) for num times (second argument). 
+      Return an empty string if num is not a positive number. 
+      For the purpose of this challenge, do not use the built-in .repeat() method.
+
+      Example:
+      repeatStringNumTimes("*", 3) should return the string ***.
+       repeatStringNumTimes("abc", 3) should return the string abcabcabc.
+  */
+
+       let emptyContainer = '';
+       function repeatStringNumTimes(arg, num){
+        //Positive numbers are numbers greater than zero
+        if(Math.trunc(num)>0){
+          for(let x = 0; x<num; x++){
+            emptyContainer += arg;
+          }
+        }
+        return emptyContainer;
+       }
+       console.log(repeatStringNumTimes("abc", 1.4))
+
+      
+
