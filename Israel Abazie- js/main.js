@@ -23,22 +23,22 @@ console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
     Explanation: outputs: [4,2,3,1], [2,4,1,3] and [4,2,1,3] 
     would also be accepted
  */
-const nums = [3, 1, 2, 4];
-let even = [];
-let odd = [];
-function evenInt(nums) {
-  for (let x of nums) {
-    if (x % 2 == 0) {
-      even.push(x);
-    } else {
-      odd.push(x);
-    }
-  }
-  let element = document.createElement("p");
-  element.innerHTML = even.concat(odd);
-  document.body.appendChild(element);
-}
-// evenInt(nums);
+// const nums = [3, 1, 2, 4];
+// let even = [];
+// let odd = [];
+// function evenInt(nums) {
+//   for (let x of nums) {
+//     if (x % 2 == 0) {
+//       even.push(x);
+//     } else {
+//       odd.push(x);
+//     }
+//   }
+//   let element = document.createElement("p");
+//   element.innerHTML = even.concat(odd);
+//   document.body.appendChild(element);
+// }
+// evenInt(nums)
 /*
         3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
@@ -46,6 +46,10 @@ function evenInt(nums) {
         convert(3) => 180
 
     */
+let minToSecs = function (Int) {
+  console.log(60 * Int);
+};
+minToSecs(5);
 
 // log(
 //   (function (Int) {
@@ -70,3 +74,23 @@ const val = function (para) {
 };
 
 console.log(val(3));
+
+/* 
+        5. Create a function that takes a number as an argument, increments the number by 
+        1 and return the result. Example addition(0) => 1, addition(4) => 5
+    */
+
+function increaseNum(num) {
+  console.log(num + 1); //Adds an integer 1 to the parameter
+}
+increaseNum(4);
+
+/* 
+       6. Create a function that takes voltage and current and returns the 
+        calculated power. Example circuitPower(230, 10) => 2300
+    */
+
+function powerInWatts(voltage, current) {
+  return `The calculated power is ${voltage * current} watts`;
+}
+console.log(powerInWatts(230, 10));
