@@ -1,5 +1,3 @@
-
-
 // Bootcamp Algorithm challenge/solutions - itskills 2022
 const { log } = console;
 /*1. The formula to convert from Celsius to Fahrenheit is the
@@ -41,28 +39,41 @@ console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
 //   document.body.appendChild(element);
 // }
 // evenInt(nums)
-  /*
+/*
         3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
         convert(5) => 300
         convert(3) => 180
 
     */
-        let minToSecs = function(Int) {
-          console.log(60 * Int);
-        }
-        minToSecs(5);
+let minToSecs = function (Int) {
+  console.log(60 * Int);
+};
+minToSecs(5);
 
+// log(
+//   (function (Int) {
+//     return 60 * Int;
+//     // console.log(60 * Int);
+//   })(5)
+// );
+
+const result = (function (Int) {
+  return 60 * Int;
+  // console.log(60 * Int);
+})(5);
+
+result;
 /*
         4. Write a function that returns true if a number passed into it is an 
         even number and false if otherwise. 
     */
-    const val = function (para) {
-    let num = (para %2 == 0) ? "true" : "false";
-    return num;
-    };
+const val = function (para) {
+  let num = para % 2 == 0 ? "true" : "false";
+  return num;
+};
 
-    console.log(val(3));
+console.log(val(3));
 
 /* 
         5. Create a function that takes a number as an argument, increments the number by 
@@ -75,12 +86,14 @@ console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
         increaseNum(4)
 
 
+
+
 /* 
        6. Create a function that takes voltage and current and returns the 
         calculated power. Example circuitPower(230, 10) => 2300
     */
 
-        function powerInWatts(voltage, current){
-          return `The calculated power is ${voltage*current} watts`
-        }
-        console.log(powerInWatts(230,10));
+function powerInWatts(voltage, current) {
+  return `The calculated power is ${voltage * current} watts`;
+}
+console.log(powerInWatts(230, 10));
