@@ -156,7 +156,7 @@ console.log(evenandodd([3,1,2,4]))
   */
 
        function repeatStringNumTimes(str,num){
-       let result = " "
+       let result = ""
         if (num > 0){
             for(let i=0; i<num; i++){
                  result += str
@@ -164,7 +164,7 @@ console.log(evenandodd([3,1,2,4]))
             return result;
         }
         else{
-            return " "
+            return ""
         }
        }
        console.log(repeatStringNumTimes("*", 3))
