@@ -31,3 +31,60 @@
         }
         console.log(passed(5));
         console.log(passed(6));
+
+
+
+    //     5. Create a function that takes a number as an argument, increments the number by 
+    //     1 and return the result. Example addition(0) => 1, addition(4) => 5
+    function addition(num){
+        return num + 1;
+    }
+console.log(addition(0));
+console.log(addition(4));
+
+
+
+    //    6. Create a function that takes voltage and current and returns the 
+    //     calculated power. Example circuitPower(230, 10) => 2300
+
+    function power(voltage, current){
+        return voltage * current;
+    }
+   console.log(power(230, 10));
+
+
+   function perimeter(l,num){
+    if (l=="s"){
+        return 4 * num;
+    }else if (l=="c"){
+        return 2 * 3.14 *num;
+    }  
+    return "the letter can either be c or s" 
+    }
+   console.log(perimeter("s",4));
+   console.log(perimeter("d",4));
+
+
+//    7. You are counting points for a basketball game, given the amount of 
+        // 2-pointers scored and 3-pointers scored, find the final points for the 
+        // team and return that value. Examples points(1,1) => 5, points(5,7) => 31
+   
+        function finalpoint(two_pointers,three_pointers){
+    return (2*two_pointers + 3*three_pointers);
+      }
+    console.log(finalpoint(1,1));
+    console.log(finalpoint(5,7));
+    // Repeat a given string str (first argument) for num times (second argument). 
+    // Return an empty string if num is not a positive number. 
+    // For the purpose of this challenge, do not use the built-in .repeat() method.
+
+    // Example:
+    // repeatStringNumTimes("*", 3) should return the string ***.
+    //  repeatStringNumTimes("abc", 3) should return the string abcabcabc.
+
+     function repeatStringNumTimes (str,num){
+         let repeatStr = ""
+         if (num > 0){
+           for (let i=0; i<num; i++){
+console.log(repeatStringNumTimes("abc",2);
+

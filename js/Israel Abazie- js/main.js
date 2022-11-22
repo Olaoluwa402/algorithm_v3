@@ -8,13 +8,10 @@ equivalent to the given Celsius temperature.
 Use the formula mentioned above to help convert the Celsius temperature to Fahrenheit.
 NOTE; Return the value of the result from the function*/
 
-
-let convertToFahrenheit = function(celsius){
-    return (degFahrenheit =celsius*(9/5) + 32)
+function convertCelsius(para) {
+  return para * (9 / 5) + 32;
 }
-
-console.log (convertToFahrenheit(30))
-
+console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
 
 /*
     2. Given an integer array nums, move all the even integers 
@@ -26,76 +23,98 @@ console.log (convertToFahrenheit(30))
     Explanation: outputs: [4,2,3,1], [2,4,1,3] and [4,2,1,3] 
     would also be accepted
  */
-
-
-
-   /*
+// const nums = [3, 1, 2, 4];
+// let even = [];
+// let odd = [];
+// function evenInt(nums) {
+//   for (let x of nums) {
+//     if (x % 2 == 0) {
+//       even.push(x);
+//     } else {
+//       odd.push(x);
+//     }
+//   }
+//   let element = document.createElement("p");
+//   element.innerHTML = even.concat(odd);
+//   document.body.appendChild(element);
+// }
+// evenInt(nums)
+/*
         3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
         convert(5) => 300
         convert(3) => 180
+
     */
-   let converttoseconds = function(minute){
-    let second= minute*60
-    return second
-   }
+let minToSecs = function (Int) {
+  console.log(60 * Int);
+};
+minToSecs(5);
 
-   console.log(converttoseconds(5))
-   console.log(converttoseconds(3))
+// log(
+//   (function (Int) {
+//     return 60 * Int;
+//     // console.log(60 * Int);
+//   })(5)
+// );
 
-   
+const result = (function (Int) {
+  return 60 * Int;
+  // console.log(60 * Int);
+})(5);
+
+result;
 /*
         4. Write a function that returns true if a number passed into it is an 
         even number and false if otherwise. 
     */
-   function evenAndodd(num){
-    if(num % 2==0){
-        return true
-       }
-       else{
-        return false
-       }
-    
-   }
-   
-   console.log(evenAndodd(4))
+const val = function (para) {
+  let num = para % 2 == 0 ? "true" : "false";
+  return num;
+};
 
+console.log(val(3));
 
-   
 /* 
         5. Create a function that takes a number as an argument, increments the number by 
         1 and return the result. Example addition(0) => 1, addition(4) => 5
     */
-function argument(num){
-    let result=num +1
-    return result
-}
-console.log(argument(5))
 
-        
+        function increaseNum(num) {
+            console.log((Number(num)+1)); //Adds an integer 1 to the parameter
+        }
+        increaseNum(4)
+
+
+
+
 /* 
        6. Create a function that takes voltage and current and returns the 
         calculated power. Example circuitPower(230, 10) => 2300
     */
-let voltagecurrent= function(v,c){
-    let power= v*c
-    return power 
+
+function powerInWatts(voltage, current) {
+  return `The calculated power is ${voltage * current} watts`;
 }
-
-console.log(voltagecurrent(230,10))
-
+console.log(powerInWatts(230, 10));
 
 /*
        7. You are counting points for a basketball game, given the amount of 
         2-pointers scored and 3-pointers scored, find the final points for the 
         team and return that value. Examples points(1,1) => 5, points(5,7) => 31
     */
-  let pointer= function(a,b){
-    return(a*2)+(b*3)
-   }
-console.log(pointer(5,7))
+        
+        function basketballPoints(twos, threes){
+          try {
+            let value = (twos >=0 && threes >= 0) ? twos*2+threes*3 : error; 
+            return value;
+          } catch (error) {
+            throw new Error("The input must be a number!");
+          }
+        }
+        console.log(basketballPoints(1,1))
 
-        /*
+/*
     8.  Repeat a given string str (first argument) for num times (second argument). 
       Return an empty string if num is not a positive number. 
       For the purpose of this challenge, do not use the built-in .repeat() method.
@@ -104,17 +123,18 @@ console.log(pointer(5,7))
       repeatStringNumTimes("*", 3) should return the string ***.
        repeatStringNumTimes("abc", 3) should return the string abcabcabc.
   */
-     function argument(str,num){
-    result=""
-    if (num > 0){
-        for(let i=0; i<num; i++){
-            result +=str
+
+       let emptyContainer = '';
+       function repeatStringNumTimes(arg, num){
+        //Positive numbers are numbers greater than zero
+        if(Math.trunc(num)>0){
+          for(let x = 0; x<num; x++){
+            emptyContainer += arg;
+          }
         }
-        return result
-    }
-else{
-    return ""
-}
- }
-console.log(argument("*",3))
-console.log(argument("abc",3))
+        return emptyContainer;
+       }
+       console.log(repeatStringNumTimes("abc", 1.4))
+
+      
+

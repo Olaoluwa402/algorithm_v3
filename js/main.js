@@ -13,7 +13,6 @@ function convertCelsius(para) {
   return para * (9 / 5) + 32;
 }
 console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
-
 /*
 
     2. Given an integer array nums, move all the even integers 
@@ -69,6 +68,10 @@ function myfunction() {
         convert(5) => 300
         convert(3) => 180
     */
+//psuedo code
+//1.Take in input and cast to number
+//2. use formular for minute to seconds convertion
+//3. store result in a variable and return the result to the function call\
 
 /*
         4. Write a function that returns true if a number passed into it is an 
@@ -84,3 +87,47 @@ function myfunction() {
        6. Create a function that takes voltage and current and returns the 
         calculated power. Example circuitPower(230, 10) => 2300
     */
+
+/*
+       7. You are counting points for a basketball game, given the amount of 
+        2-pointers scored and 3-pointers scored, find the final points for the 
+        team and return that value. Examples points(1,1) => 5, points(5,7) => 31
+    */
+
+// 8.  Repeat a given string str (first argument) for num times (second argument).
+//   Return an empty string if num is not a positive number.
+//   For the purpose of this challenge, do not use the built-in .repeat() method.
+
+//   Example:
+//   repeatStringNumTimes("*", 3) should return the string ***.
+//    repeatStringNumTimes("abc", 3) should return the string abcabcabc.
+
+function repeatStringNumTimes(str, num) {
+  if (num < 0) {
+    return "";
+  } else {
+    return num * str;
+  }
+}
+console.log(repeatStringNumTimes("abc", 2));
+
+/*
+    9.
+        We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
+        The lowest number will not always come first. For example, sumAll([4,1]) should return 10 because sum of all the numbers 
+        between 1 and 4 (both inclusive) is 10.
+
+        sumAll([1, 4]) should return 10.
+
+        sumAll([4, 1]) should return 10.
+
+        sumAll([5, 10]) should return 45.
+
+        sumAll([10, 5]) should return 45.
+    */
+
+
+      function sumAll([x,y]){
+        if (x>y or y<)
+      }
+
