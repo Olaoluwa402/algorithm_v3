@@ -175,11 +175,10 @@ console.log(repeatStringNumTimes("ABC", 3));
 
         sumAll([10, 5]) should return 45.
     */
-        function sumAll{
-          sum = 0;
-          for (i=0; i<sum; i++){
-            
-          }
-        }
+      function sumAll(arr){
+        let minNum = Math.min(...arr)
+        let maxNum =Math.max(...arr)
+        
+      }
 
     
