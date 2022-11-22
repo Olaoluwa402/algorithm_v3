@@ -6,8 +6,11 @@
         convert(5) => 300
         convert(3) => 180
     */
+    // 1Take input and cast to nummber.
+    // 2.use formula for minutes conversion
+    // 3.store result
 
-        
+        //x=prompt(x)
         // function sec(x){
           
         //   console.log(x * 60);
@@ -31,6 +34,13 @@
     
 
         // }
+
+        another solution to NO 4
+        function evemCheck(num){
+            return num%2==0? true:false;
+        
+        }
+        cpmsole.log(evenCheck(3));
         
 
         
