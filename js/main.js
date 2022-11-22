@@ -94,22 +94,34 @@ function myfunction() {
         team and return that value. Examples points(1,1) => 5, points(5,7) => 31
     */
 
-    // 8.  Repeat a given string str (first argument) for num times (second argument). 
-    //   Return an empty string if num is not a positive number. 
-    //   For the purpose of this challenge, do not use the built-in .repeat() method.
+// 8.  Repeat a given string str (first argument) for num times (second argument).
+//   Return an empty string if num is not a positive number.
+//   For the purpose of this challenge, do not use the built-in .repeat() method.
 
-    //   Example:
-    //   repeatStringNumTimes("*", 3) should return the string ***.
-    //    repeatStringNumTimes("abc", 3) should return the string abcabcabc.
+//   Example:
+//   repeatStringNumTimes("*", 3) should return the string ***.
+//    repeatStringNumTimes("abc", 3) should return the string abcabcabc.
 
-       
-  */
-
-function repeatStringNumTimes (str,num){
-  if (num < 0){
-    return ""
-  }else{
+function repeatStringNumTimes(str, num) {
+  if (num < 0) {
+    return "";
+  } else {
     return num * str;
   }
-} 
-console.log(repeatStringNumTimes("abc",2));
+}
+console.log(repeatStringNumTimes("abc", 2));
+
+/*
+    9.
+        We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
+        The lowest number will not always come first. For example, sumAll([4,1]) should return 10 because sum of all the numbers 
+        between 1 and 4 (both inclusive) is 10.
+
+        sumAll([1, 4]) should return 10.
+
+        sumAll([4, 1]) should return 10.
+
+        sumAll([5, 10]) should return 45.
+
+        sumAll([10, 5]) should return 45.
+    */
