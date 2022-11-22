@@ -59,6 +59,10 @@ console.log(evenandodd([3, 1, 2, 4]));
         Examples:
         convert(5) => 300
         convert(3) => 180
+        
+    1. take in input and cast to number
+    2. use formula for minute to seconds convertion
+    3. store result in a variable and return the result to the function call
     */
 function convert(minute) {
   let seconds = minute * 60;
@@ -86,9 +90,72 @@ function reverseWords(str) {
   console.log(str);
   newStr = str.split(" ");
   let newWord = [];
+  function reverseWords(str) {
+    // Go for it
+    console.log(str);
+    newStr = str.split(" ");
+    let newWord = [];
 
-  newStr.map((char) => {
-    newWord.push(char.split("").reverse().join(""));
-  });
-  return newWord.join(" ");
+    newStr.map((char) => {
+      newWord.push(char.split("").reverse().join(""));
+    });
+    return newWord.join(" ");
+    newStr.map((char) => {
+      newWord.push(char.split("").reverse().join(""));
+    });
+    return newWord.join(" ");
+  }
 }
+
+//   5. Create a function that takes a number as an argument, increments the number by
+// 1 and return the result. Example addition(0) => 1, addition(4) => 5
+
+function increment(num) {
+  let result = num + 1;
+  return result;
+}
+console.log(increment(10));
+
+//  6. Create a function that takes voltage and current and returns the
+//     calculated power. Example circuitPower(230, 10) => 2300
+
+function voltCurr(c, v) {
+  let power = c * v;
+  return power;
+}
+console.log(voltCurr(10, 10));
+
+/*
+       7. You are counting points for a basketball game, given the amount of 
+        2-pointers scored and 3-pointers scored, find the final points for the 
+        team and return that value. Examples points(1,1) => 5, points(5,7) => 31
+    */
+
+function basketballPoints(a, b) {
+  return a * 2 + b * 3;
+}
+console.log(basketballPoints(1, 1));
+console.log(basketballPoints(5, 7));
+/*
+    8.  Repeat a given string str (first argument) for num times (second argument). 
+      Return an empty string if num is not a positive number. 
+      For the purpose of this challenge, do not use the built-in .repeat() method.
+
+      Example:
+      repeatStringNumTimes("*", 3) should return the string ***.
+       repeatStringNumTimes("abc", 3) should return the string abcabcabc.
+  */
+
+function repeatStringNumTimes(str, num) {
+  let result = "";
+  if (num > 0) {
+    for (let i = 0; i < num; i++) {
+      result += str;
+    }
+    return result;
+  } else {
+    return "";
+  }
+}
+console.log(repeatStringNumTimes("*", 3));
+console.log(repeatStringNumTimes("ABC", 3));
