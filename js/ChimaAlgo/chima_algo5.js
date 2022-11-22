@@ -14,21 +14,23 @@
     */
 
         let sumAll = (array_of_numbers)=>{
+            let new_array = [];
             if(array_of_numbers[0] - array_of_numbers[1] <= 0){
-                let new_array = [];
+              
 
-            for(let i=0; i <= array_of_numbers[1]; i++){
+            for(let i=1; i <= array_of_numbers[1]; i++){
                 new_array.push(i)
             }
             
-            // return new_array;
-            for(let i=0; i<new_array.length; i++){
-               
-                new_array = new_array[i]+(i+1)
-                console.log(new_array)
-            }
-            return new_array
-            }
+             
+      
         
+        }
+        // return new_array;
+        console.log(typeof(new_array.keys()))
+        for (let i=0; i< new_array.length;i++){
+            console.log(new_array[i])
+        }
+       
         }
         console.log(sumAll([1, 4]))
