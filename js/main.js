@@ -1,5 +1,5 @@
 // Bootcamp Algorithm challenge/solutions - itskills 2022
-const { log } = console //console.log
+const { log } = console; //console.log
 
 /*1. The formula to convert from Celsius to Fahrenheit is the
 temperature in Celsius times 9/5, plus 32.
@@ -10,9 +10,9 @@ Use the formula mentioned above to help convert the Celsius temperature to Fahre
 NOTE; Return the value of the result from the function*/
 
 function convertCelsius(para) {
-  return para * (9 / 5) + 32
+  return para * (9 / 5) + 32;
 }
-console.log(convertCelsius(2)) //converts Celsius to Fahrenheit.
+console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
 /*
 
     2. Given an integer array nums, move all the even integers 
@@ -25,20 +25,20 @@ console.log(convertCelsius(2)) //converts Celsius to Fahrenheit.
     would also be accepted
  */
 
-const nums = [3, 1, 2, 4]
-let even = []
-let odd = []
+const nums = [3, 1, 2, 4];
+let even = [];
+let odd = [];
 function evenInt(nums) {
   for (let x of nums) {
     if (x % 2 == 0) {
-      even.push(x)
+      even.push(x);
     } else {
-      odd.push(x)
+      odd.push(x);
     }
   }
-  let element = document.createElement('p')
-  element.innerHTML = even.concat(odd)
-  document.body.appendChild(element)
+  let element = document.createElement("p");
+  element.innerHTML = even.concat(odd);
+  document.body.appendChild(element);
 }
 // evenInt(nums)
 
@@ -47,20 +47,20 @@ function evenInt(nums) {
     }
     console.log(tempfah(40)); */
 
-algo_date_15
+algo_date_15;
 
-let x
-let num1
-let num2
-let arr = [2, 3, 4, 5, 6, 7]
-arr.forEach(myfunction())
+let x;
+let num1;
+let num2;
+let arr = [2, 3, 4, 5, 6, 7];
+arr.forEach(myfunction());
 function myfunction() {
   if (x % 2 == 0) {
-    num1 = x.append
+    num1 = x.append;
   } else {
-    num2 = x.append
+    num2 = x.append;
   }
-  myfunction()
+  myfunction();
 }
 /*
         3. Write a function that takes in integers in minute and convert it to seconds
@@ -94,22 +94,34 @@ function myfunction() {
         team and return that value. Examples points(1,1) => 5, points(5,7) => 31
     */
 
-    // 8.  Repeat a given string str (first argument) for num times (second argument). 
-    //   Return an empty string if num is not a positive number. 
-    //   For the purpose of this challenge, do not use the built-in .repeat() method.
+// 8.  Repeat a given string str (first argument) for num times (second argument).
+//   Return an empty string if num is not a positive number.
+//   For the purpose of this challenge, do not use the built-in .repeat() method.
 
-    //   Example:
-    //   repeatStringNumTimes("*", 3) should return the string ***.
-    //    repeatStringNumTimes("abc", 3) should return the string abcabcabc.
+//   Example:
+//   repeatStringNumTimes("*", 3) should return the string ***.
+//    repeatStringNumTimes("abc", 3) should return the string abcabcabc.
 
-       
-  */
-
-function repeatStringNumTimes (str,num){
-  if (num < 0){
-    return ""
-  }else{
+function repeatStringNumTimes(str, num) {
+  if (num < 0) {
+    return "";
+  } else {
     return num * str;
   }
-} 
-console.log(repeatStringNumTimes("abc",2));
+}
+console.log(repeatStringNumTimes("abc", 2));
+
+/*
+    9.
+        We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
+        The lowest number will not always come first. For example, sumAll([4,1]) should return 10 because sum of all the numbers 
+        between 1 and 4 (both inclusive) is 10.
+
+        sumAll([1, 4]) should return 10.
+
+        sumAll([4, 1]) should return 10.
+
+        sumAll([5, 10]) should return 45.
+
+        sumAll([10, 5]) should return 45.
+    */
