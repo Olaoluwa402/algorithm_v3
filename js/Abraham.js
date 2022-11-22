@@ -27,6 +27,26 @@ console.log (convertToFahrenheit(30))
     would also be accepted
  */
 
+    function evenOdd(nums) {
+        let even = [];
+        let odd = [];
+        for (let num of nums) {
+          if (num % 2 == 0) {
+            even.push(num);
+          } else {
+            odd.push(num);
+          }
+        }
+        return odd.concat(even);
+      }
+      
+      // for(let i=0; i < nums.length; i++){
+      
+      // }
+      
+      console.log(evenOdd([3, 1, 2, 4, 5, 6, 7, 8, 9]));
+      
+
 
 
    /*
@@ -118,3 +138,27 @@ else{
  }
 console.log(argument("*",3))
 console.log(argument("abc",3))
+
+// */
+//     9.
+//         We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
+//         The lowest number will not always come first. For example, sumAll([4,1]) should return 10 because sum of all the numbers 
+//         between 1 and 4 (both inclusive) is 10.
+
+//         sumAll([1, 4]) should return 10.
+
+//         sumAll([4, 1]) should return 10.
+
+//         sumAll([5, 10]) should return 45.
+
+//         sumAll([10, 5]) should return 45.
+//     */
+
+function sumALL(arr){
+    // check for mmaximum and minimum value in the Array
+    let minNum=Math.min(...arr);
+    let maxNum=Math.max(...arr);
+    // Declare a variable to first hold the sum of the Array, initialize to zero
+    let givenArraySumWithMinMaxInclusive=0;
+    for(let i= MinNum; i <=maxNum; i++{ivenArraySumWithMinMaxInclusiv +=i;})
+}
