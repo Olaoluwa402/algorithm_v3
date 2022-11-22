@@ -14,32 +14,32 @@
     */
 function sumAll(arr) {
   // 1. Declare a variable to first hold the SUM of the array, initialize to zero
-  let givenArraySum = 0
+  let givenArraySum = 0;
 
   for (let num of arr) {
-    givenArraySum += num
+    givenArraySum += num; // givenArraySum  = givenArraySum  + num
   }
 
   // 2. Check for the MAXIMUM and MINIMUM values in the array
-  let minNum = Math.min(...arr)
-  let maxNum = Math.max(...arr)
+  let minNum = Math.min(...arr);
+  let maxNum = Math.max(...arr);
 
   // 3. Declare an EMPTY array to hold the values between the MIN VALUE and MAX and the populate the array
-  let numbersBetween = []
+  let numbersBetween = [];
 
   for (let i = minNum + 1; i < maxNum; i++) {
-    numbersBetween.push(i)
+    numbersBetween.push(i);
   }
 
   //   4. Add the values in the array of numbers between the MIN and MAX and store in a variable
-  let numbersBetweenSum = 0
+  let numbersBetweenSum = 0;
 
   for (number of numbersBetween) {
-    numbersBetweenSum += number
+    numbersBetweenSum += number;
   }
 
   //   5. Return the sum of the given array and the sum of the numbers between
 
-  return givenArraySum + numbersBetweenSum
+  return givenArraySum + numbersBetweenSum;
 }
-console.log(sumAll([10, 5]))
+console.log(sumAll([10, 5]));
