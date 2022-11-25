@@ -125,18 +125,3 @@ NOTE; Return the value of the result from the function*/
 
         sumAll([10, 5]) should return 45.
     */
-
-
-      function sumAll(x,y){
-        if (x<y){
-          return(x);
-        }
-        
-      
-      else if(y<x){
-        return y
-      
-      } 
-    }
-      console.log(sumAll(7,13));
-
