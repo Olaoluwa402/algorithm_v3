@@ -154,11 +154,58 @@ console.log(argument("abc",3))
 //         sumAll([10, 5]) should return 45.
 //     */
 
-function sumALL(arr){
-    // check for mmaximum and minimum value in the Array
-    let minNum=Math.min(...arr);
-    let maxNum=Math.max(...arr);
-    // Declare a variable to first hold the sum of the Array, initialize to zero
-    let givenArraySumWithMinMaxInclusive=0;
-    for(let i= MinNum; i <=maxNum; i++{ivenArraySumWithMinMaxInclusiv +=i;})
-}
+
+function sumAll(arr) {
+    // const sortedArray = arr.sort((a, b) => a - b);
+    // const min = sortedArray[0];
+    // const max = sortedArray[sortedArray.length - 1];
+  
+    // 1. Check for the MAXIMUM and MINIMUM values in the array
+    let minNum = Math.min(...arr); //spread operator
+    let maxNum = Math.max(...arr);
+    // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
+    let givenArraySumWIthMinMaxInclusive = 0;
+  
+    for (let i = minNum; i <= maxNum; i++) {
+      givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
+    }
+  
+    return givenArraySumWIthMinMaxInclusive;
+  }
+  console.log(sumAll([10, 15]));
+  
+
+//   solution 2
+
+function sumAll(arr) {
+    // 1. Declare a variable to first hold the SUM of the array, initialize to zero
+    let givenArraySum = 0;
+  
+    for (let num of arr) {
+      givenArraySum += num; // givenArraySum  = givenArraySum  + num
+    }
+  
+    // 2. Check for the MAXIMUM and MINIMUM values in the array
+    let minNum = Math.min(...arr);
+    let maxNum = Math.max(...arr);
+  
+    // 3. Declare an EMPTY array to hold the values between the MIN VALUE and MAX and the populate the array
+    let numbersBetween = [];
+  
+    for (let i = minNum + 1; i < maxNum; i++) {
+      numbersBetween.push(i);
+    }
+  
+    //   4. Add the values in the array of numbers between the MIN and MAX and store in a variable
+    let numbersBetweenSum = 0;
+  
+    for (number of numbersBetween) {
+      numbersBetweenSum += number;
+    }
+  
+    //   5. Return the sum of the given array and the sum of the numbers between
+  
+    return givenArraySum + numbersBetweenSum;
+  }
+  console.log(sumAll([10, 5]));
+  
