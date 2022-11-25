@@ -160,7 +160,6 @@ function repeatStringNumTimes(str, num) {
 console.log(repeatStringNumTimes("*", 3));
 console.log(repeatStringNumTimes("ABC", 3));
 
-
 /*
     9.
         We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
@@ -176,9 +175,8 @@ console.log(repeatStringNumTimes("ABC", 3));
         sumAll([10, 5]) should return 45.
     */
       function sumAll(arr){
-        let minNum = Math.min(...arr)
-        let maxNum =Math.max(...arr)
-        
-      }
+        sum = 0
+       }
+      console.log(sumAll([5,7]))
 
     

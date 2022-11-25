@@ -46,22 +46,6 @@ function evenInt(nums) {
         return cel*(9/5)+32
     }
     console.log(tempfah(40)); */
-
-algo_date_15;
-
-let x;
-let num1;
-let num2;
-let arr = [2, 3, 4, 5, 6, 7];
-arr.forEach(myfunction());
-function myfunction() {
-  if (x % 2 == 0) {
-    num1 = x.append;
-  } else {
-    num2 = x.append;
-  }
-  myfunction();
-}
 /*
         3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
@@ -126,4 +110,21 @@ console.log(repeatStringNumTimes("abc", 2));
         sumAll([10, 5]) should return 45.
     */
 
- 
+function sumAll(arr) {
+  // const sortedArray = arr.sort((a, b) => a - b);
+  // const min = sortedArray[0];
+  // const max = sortedArray[sortedArray.length - 1];
+
+  // 1. Check for the MAXIMUM and MINIMUM values in the array
+  let minNum = Math.min(...arr); //spread operator
+  let maxNum = Math.max(...arr);
+  // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
+  let givenArraySumWIthMinMaxInclusive = 0;
+
+  for (let i = minNum; i <= maxNum; i++) {
+    givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
+  }
+
+  return givenArraySumWIthMinMaxInclusive;
+}
+console.log(sumAll([10, 15]));
