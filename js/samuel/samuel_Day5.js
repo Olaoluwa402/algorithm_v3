@@ -15,11 +15,9 @@
 function sumAll(arr) {
   // 1. Declare a variable to first hold the SUM of the array, initialize to zero
   let givenArraySum = 0
-
   for (let num of arr) {
     givenArraySum += num
   }
-
   // 2. Check for the MAXIMUM and MINIMUM values in the array
   let minNum = Math.min(...arr)
   let maxNum = Math.max(...arr)
@@ -37,7 +35,6 @@ function sumAll(arr) {
   for (number of numbersBetween) {
     numbersBetweenSum += number
   }
-
   //   5. Return the sum of the given array and the sum of the numbers between
 
   return givenArraySum + numbersBetweenSum
