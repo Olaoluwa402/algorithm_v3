@@ -128,6 +128,29 @@ function sumAll(arr) {
   return givenArraySumWIthMinMaxInclusive;
 }
 // console.log(sumAll([10, 15]));
+function sumPrime(num) {
+  // 1. loop through the num given, excluding zero and 1
+  //2. initiate a sum count
+  let sum = 0;
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      sum = sum + i;
+    }
+  }
+
+  return sum;
+
+  function isPrime(test) {
+    //check that num is prime
+    for (let i = 2; i < test; i++) {
+      if (test % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+console.log(sumPrime(12), "prime");
 
 /* 10
         SUM ALL PRIME:
