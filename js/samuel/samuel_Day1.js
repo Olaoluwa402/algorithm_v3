@@ -7,10 +7,10 @@ Use the formula mentioned above to help convert the Celsius temperature to Fahre
 NOTE; Return the value of the result from the function*/
 
 let convertToFahrenheit = function (celsius) {
-  return (degFahrenheit = celsius * (9 / 5) + 32);
-};
+  return (degFahrenheit = celsius * (9 / 5) + 32)
+}
 
-console.log(convertToFahrenheit(30));
+console.log(convertToFahrenheit(30))
 
 // function convert(x, y) {
 //   const degFahrenheit = celsius * (9 / 5) + 32;
@@ -31,22 +31,38 @@ console.log(convertToFahrenheit(30));
  */
 
 function evenOdd(nums) {
-  let even = [];
-  let odd = [];
+  let even = []
+  let odd = []
   for (let num of nums) {
     if (num % 2 == 0) {
-      even.push(num);
+      even.push(num)
     } else {
-      odd.push(num);
+      odd.push(num)
     }
   }
-  return odd.concat(even);
+  return odd.concat(even)
 }
 
-// for(let i=0; i < nums.length; i++){
+// console.log(evenOdd([3, 1, 2, 4, 5, 6, 7, 8, 9]));
 
+// function booWho(bool) {
+//   if(typeof(bool)=="boolean"){
+//     return true
+//   }else{
+//     return false
+//   }
 // }
 
-// gjh
+// booWho(null);
 
-console.log(evenOdd([3, 1, 2, 4, 5, 6, 7, 8, 9]));
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+
+function createPhoneNumber(numbers) {
+  let format = '(xxx) xxx-xxxx'
+
+  for (let i = 0; i < numbers.length; i++) {
+    format = format.replace('x', numbers[i])
+  }
+  return format
+}
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]))
