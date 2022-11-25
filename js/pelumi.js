@@ -207,3 +207,36 @@ console.log(repeatStringNumTimes("pelz",  4));
     // 10. Return the number (count) of vowels in the given string.
     // We will consider a, e, i, o, u as vowels for this question.
     // The input string will only consist of lower case letters and/or spaces.
+
+    /* 10
+        SUM ALL PRIME:
+        A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2
+        is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is
+        divisible by 1, 2 and 4.
+
+        Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
+
+        sumPrimes(10) should return 17.
+        sumPrimes(977) should return 73156.
+
+        note:We only need to check up to the square root because the square root 
+        of a number is the largest possible unique divisor.
+    */
+   function sumPrimes(num){
+       let sum = 0;
+       function isPrime(num){
+        for (let i=2; i<num; i++){
+            if (num % i == 0 ){
+                return false
+            }
+         }
+         return true
+       }
+         for (let i=2; i<=num; i++){
+          if (isPrime(i)){
+             sum += i
+          }
+       }
+         return sum;
+   }
+   console.log(sumPrimes(10));
