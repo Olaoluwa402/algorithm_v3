@@ -47,22 +47,22 @@ console.log(addition(4));
     //    6. Create a function that takes voltage and current and returns the 
     //     calculated power. Example circuitPower(230, 10) => 2300
 
-    function power(voltage, current){
-        return voltage * current;
-    }
-   console.log(power(230, 10));
+//     function power(voltage, current){
+//         return voltage * current;
+//     }
+//    console.log(power(230, 10));
 
 
-   function perimeter(l,num){
-    if (l=="s"){
-        return 4 * num;
-    }else if (l=="c"){
-        return 2 * 3.14 *num;
-    }  
-    return "the letter can either be c or s" 
-    }
-   console.log(perimeter("s",4));
-   console.log(perimeter("d",4));
+//    function perimeter(l,num){
+//     if (l=="s"){
+//         return 4 * num;
+//     }else if (l=="c"){
+//         return 2 * 3.14 *num;
+//     }  
+//     return "the letter can either be c or s" 
+//     }
+//    console.log(perimeter("s",4));
+//    console.log(perimeter("d",4));
 
 
 //    7. You are counting points for a basketball game, given the amount of 
@@ -82,9 +82,75 @@ console.log(addition(4));
     // repeatStringNumTimes("*", 3) should return the string ***.
     //  repeatStringNumTimes("abc", 3) should return the string abcabcabc.
 
-     function repeatStringNumTimes (str,num){
-         let repeatStr = ""
-         if (num > 0){
-           for (let i=0; i<num; i++){
-console.log(repeatStringNumTimes("abc",2);
+//      function repeatStringNumTimes (str,num){
+//          let repeatStr = ""
+//          if (num > 0){
+//            for (let i=0; i<num; i++);}
+           
+// console.log(repeatStringNumTimes("abc",2)
+//       }
 
+// function repeatStringNumTimes(str,num){
+
+//         let repeatStr =""
+//         if(num > 0) {
+//             for ( let i=0; i<num; i++);
+//             return str * 
+// }
+// }
+// console.log(repeatStringNumTimes("abc",2))
+
+// We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
+//             The lowest number will not always come first. For example, sumAll([4,1]) should return 10 because sum of all the numbers 
+//             between 1 and 4 (both inclusive) is 10.
+    
+//             sumAll([1, 4]) should return 10.
+    
+//             sumAll([4, 1]) should return 10.
+    
+//             sumAll([5, 10]) should return 45.
+    
+//             sumAll([10, 5]) should return 45.num;
+//
+
+// SUM ALL PRIME:
+// A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2
+// is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is
+// divisible by 1, 2 and 4.
+
+// Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
+
+// sumPrimes(10) should return 17.
+// sumPrimes(977) should return 73156.
+
+// note:We only need to check up to the square root because the square root 
+// of a number is the largest possible unique divisor
+
+
+
+ // Javascript program to find
+    // sum of primes in
+    // range from 1 to n.
+     
+    // Returns sum of primes
+    // in range from
+  
+    
+    function sumPrimes(num){
+        let sum = 0;
+        function isPrime(num){
+            for(let i=2; i<num; i++){
+                if(num % i == 0){
+                    return false
+                }
+            }
+            return true
+        }
+        for(let i=2; i<=num; i++){
+            if (isPrime(i)){
+                sum += i
+            }
+        }
+        return sum;
+    }
+    console.log(sumPrimes(16))
