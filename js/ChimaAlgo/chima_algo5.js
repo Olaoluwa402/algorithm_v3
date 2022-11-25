@@ -13,24 +13,27 @@
         sumAll([10, 5]) should return 45.
     */
 
-        let sumAll = (array_of_numbers)=>{
-            let new_array = [];
-            if(array_of_numbers[0] - array_of_numbers[1] <= 0){
-              
+        let sumAll=(array)=>{
+            let minValue = Math.min(...array)
+            let maxValue = Math.max(...array)
+            initialValue = 0;
 
-            for(let i=1; i <= array_of_numbers[1]; i++){
-                new_array.push(i)
+            for(let i = minValue; i <= maxValue; i++){
+                initialValue += i
             }
-            
-             
-      
-        
+            return initialValue;
         }
-        // return new_array;
-        console.log(typeof(new_array.keys()))
-        for (let i=0; i< new_array.length;i++){
-            console.log(new_array[i])
-        }
-       
-        }
-        console.log(sumAll([1, 4]))
+ console.log(sumAll([1, 4]))
+
+ let sumAll1 = (array)=>{
+    let newArray = array.sort((a,b)=>a-b)
+    let minValue = newArray[0]
+    let MaxValue = newArray[1]
+
+    initialValue1 = 0
+    for(let i= minValue; i <= MaxValue; i++){
+        initialValue1 += i;
+    }
+return initialValue1
+ }
+ console.log(sumAll1([1, 4]))
