@@ -145,7 +145,65 @@ function repeatStringNumTimes(str, num){
             repeatStr +=  str
         }
     }
-    return repeatStr
+    
 }
 console.log(repeatStringNumTimes("*",  3));
 console.log(repeatStringNumTimes("abc", 3));
+
+// or
+
+function repeatString(string, times){ 
+    let repeatS = ''
+    if(times < 0){
+        return ""
+    } else {
+        return repeatS += string
+    }
+}
+console.log(repeatStringNumTimes("pelz",  4));
+
+/*
+    9.
+        We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
+        The lowest number will not always come first. For example, sumAll([4,1]) should return 10 because sum of all the numbers 
+        between 1 and 4 (both inclusive) is 10.
+
+        sumAll([1, 4]) should return 10.
+
+        sumAll([4, 1]) should return 10.
+
+        sumAll([5, 10]) should return 45.
+
+        sumAll([10, 5]) should return 45.
+    */ function sumAll(arr){
+        let val = 0;
+        let min = Math.min(...arr)
+        let max = Math.max(...arr)
+        for(let i = min; i<=max; i++){
+           val += i;
+        }
+        return val;
+    }
+    let value = sumAll([10,5])
+    console.log("%c" + value, "font-size: 20px; color: blue;")
+
+    function sum(arr){
+        let num = 0;
+        let a = [...arr]
+        if(a[0]>a[a.length-1]){
+            for(let i = a[0]; i>=a[a.length-1]; i--){
+               num += i;
+            }
+        } else if(a[0]<a[a.length-1]){
+            for(let i = a[0]; i<=a[a.length-1]; i++){
+                num += i;
+        }
+    }
+        return num;
+    }
+    console.log(sum([5,10]))
+    console.log(sum([10, 5]))
+
+    // 10. Return the number (count) of vowels in the given string.
+    // We will consider a, e, i, o, u as vowels for this question.
+    // The input string will only consist of lower case letters and/or spaces.
