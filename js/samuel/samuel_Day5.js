@@ -16,7 +16,7 @@ function sumAll(arr) {
   // 1. Declare a variable to first hold the SUM of the array, initialize to zero
   let givenArraySum = 0
   for (let num of arr) {
-    givenArraySum += num
+    givenArraySum += num // givenArraySum  = givenArraySum  + num
   }
   // 2. Check for the MAXIMUM and MINIMUM values in the array
   let minNum = Math.min(...arr)
