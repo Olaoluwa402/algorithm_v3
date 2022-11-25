@@ -35,12 +35,12 @@
 
         // }
 
-        another solution to NO 4
-        function evemCheck(num){
-            return num%2==0? true:false;
+        // another solution to NO 4
+        // function evemCheck(num){
+        //     return num%2==0? true:false;
         
-        }
-        cpmsole.log(evenCheck(3));
+        // }
+        // cpmsole.log(evenCheck(3));
         
 
         
@@ -48,25 +48,25 @@
         5. Create a function that takes a number as an argument, increments the number by 
         1 and return the result. Example addition(0) => 1, addition(4) => 5
     */
-   let count;
-   function num(x){
+//    let count;
+//    function num(x){
     
-    count= x+1 ;
-    return count;
+//     count= x+1 ;
+//     return count;
 
-   }
-   console.log(num(5));
+//    }
+//    console.log(num(5));
 
 /* 
        6. Create a function that takes voltage and current and returns the 
         calculated power. Example circuitPower(230, 10) => 2300
     */
 
-        function pow(x,y){
-            z=x*y
-            return(z);
-            }
+        // function pow(x,y){
+        //     z=x*y
+        //     return(z);
+        //     }
             
 
         
-        console.log(pow(20,30));
+        // console.log(pow(20,30));
