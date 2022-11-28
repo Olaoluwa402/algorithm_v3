@@ -150,7 +150,7 @@ function sumPrime(num) {
     return true;
   }
 }
-console.log(sumPrime(12), "prime");
+console.log(sumPrime(977), "prime");
 
 /* 10
         SUM ALL PRIME:
