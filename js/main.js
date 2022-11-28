@@ -166,11 +166,7 @@ function sumPrime(num) {
     return true;
   }
 }
-<<<<<<< HEAD
-console.log(sumPrime(50), "prime");
-=======
 console.log(sumPrime(977), "prime");
->>>>>>> f1c8c13e8406211d4a495c69b63eaad5e03351d1
 
 /* 10
         SUM ALL PRIME:
