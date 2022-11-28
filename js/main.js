@@ -125,3 +125,79 @@ NOTE; Return the value of the result from the function*/
 
         sumAll([10, 5]) should return 45.
     */
+
+function sumAll(arr) {
+  // const sortedArray = arr.sort((a, b) => a - b);
+  // const min = sortedArray[0];
+  // const max = sortedArray[sortedArray.length - 1];
+
+  // 1. Check for the MAXIMUM and MINIMUM values in the array
+  let minNum = Math.min(...arr); //spread operator
+  let maxNum = Math.max(...arr);
+  // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
+  let givenArraySumWIthMinMaxInclusive = 0;
+
+  for (let i = minNum; i <= maxNum; i++) {
+    givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
+  }
+
+  return givenArraySumWIthMinMaxInclusive;
+}
+// console.log(sumAll([10, 15]));
+function sumPrime(num) {
+  // 1. loop through the num given, excluding zero and 1
+  //2. initiate a sum count
+  let sum = 0;
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      sum = sum + i;
+    }
+  }
+
+  return sum;
+
+  function isPrime(test) {
+    //check that num is prime
+    for (let i = 2; i < test; i++) {
+      if (test % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+console.log(sumPrime(12), "prime");
+
+/* 10
+        SUM ALL PRIME:
+        A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2
+        is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is
+        divisible by 1, 2 and 4.
+
+        Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
+
+        sumPrimes(10) should return 17.
+        sumPrimes(977) should return 73156.
+
+        note:We only need to check up to the square root because the square root 
+        of a number is the largest possible unique divisor.
+    */
+
+/* 11.
+      A tetrahedron is a pyramid with a triangular base and three sides. 
+      A tetrahedral number is a number of items within a tetrahedron.
+      Create a function that takes an integer n and returns the nth tetrahedral number.
+      
+      Hint :
+      tetra(2) ➞ 4
+      tetra(5) ➞ 35
+      tetra(6) ➞ 56
+
+    12. Write a function redundant that takes in a string str and returns a function that returns str.
+      const f1 = redundant("apple")
+      f1() ➞ "apple"
+      const f2 = redundant("pear")
+      f2() ➞ "pear"
+      const f3 = redundant("")
+      f3() ➞ ""
+ */
