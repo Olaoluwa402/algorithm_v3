@@ -177,35 +177,92 @@ console.log(sumAll([10, 15]));
         of a number is the largest possible unique divisor.
     */
 
-// take input from the user
-const number = parseInt(prompt("Enter a positive number: "));
-let isPrime = true;
+const sumPrimes = function (num) {
+  let result = 2; //Since we are adding all prime numbers
 
-// check if number is equal to 1
-if (number === 1) {
-    console.log("1 is neither prime nor composite number.");
-}
-
-// check if number is greater than 1
-else if (number > 1) {
-
-    // looping through 2 to number-1
-    for (let i = 2; i < number; i++) {
-        if (number % i == 0) {
-            isPrime = false;
-            break;
-        }
+  // Conditional statement to check if the input is 1 or less than 1
+  if (num <= 1) {
+    return "The number must be greater than 1"; // Prime numbers are numbers that are divisible by 1 and itself.
+  } else {
+    for (let i = 2; i <= num; i++) {
+       if(i % 2 === 0 || (i % Math.sqrt(i)) === 0){
+        console.log(i);
+        continue;
+       }
+       result += i;  
     }
+    console.log(result, "wat");
+  }
+}
+sumPrimes(50);
 
-    if (isPrime) {
-        console.log(`${number} is a prime number`);
-    } else {
-        console.log(`${number} is a not prime number`);
+
+function avgNums(para){
+  let result = 0;
+   let average = [...para];
+   for(let x of para){
+     result += x;
+   }
+    console.log(Math.floor(result/average.length));
+}
+avgNums([2,3,6]);
+
+// Q2. You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+// #Examples:
+
+// Kata.getMiddle("test") should return "es"
+
+// Kata.getMiddle("testing") should return "t"
+
+// Kata.getMiddle("middle") should return "dd"
+
+// Kata.getMiddle("A") should return "A"
+// 
+
+
+function checkInfo(msg){
+  let value = "";
+   for(let i = 0; i < msg.length; i++){
+    if(msg.length % 2 ==0){
+      console.log(msg[i])
+     value += msg[(msg.length/2)-1] + msg[msg.length/2]
+    } else if(msg.length % 2 !==0){
+      value += msg[Math.trunc(msg.length/2)]
     }
-}
+    return value;
+   }
+   
+   }
+   console.log(checkInfo("A"));
 
-// check if number is less than 1
-else {
-    console.log("The number is not a prime number.");
+//Q3. The two oldest ages function/method needs to be completed. 
+//It should take an array of numbers as its argument and return the two highest numbers within the array. 
+//The returned value should be an array in the format [second oldest age,  oldest age].
+
+// The order of the numbers passed in could be any order. 
+//The array will always include at least 2 items. 
+//If there are two or more oldest age, then return both of them in array format.
+
+// For example (Input --> Output):
+
+// [1, 2, 10, 8] --> [8, 10]
+// [1, 5, 87, 45, 8, 8] --> [45, 87]
+// [1, 3, 10, 0]) --> [3, 10]
+
+function oldestAge(arr){
+  let val = arr.sort(function(a,b){return b-a})
+  return [val[1], val[0]];
 }
-sumPrimes(10);
+console.log(oldestAge([1,5,87,45,8,8]))
+
+function vintageCreator(arr){
+  let arrValue = [...arr]
+  console.log(arrValue.join(''))
+  if(arrValue != ""){ //returns true if the value of the parameter is not empty.
+    return "true";
+  } 
+  return "false"; //returns false if the value of the parameter is not empty
+}
+console.log(vintageCreator([]))
+
