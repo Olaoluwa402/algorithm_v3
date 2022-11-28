@@ -296,9 +296,9 @@ function sumAll(arr) {
       f3() ➞ ""
       */
         function redundant(str){
-          return f1()
-          function f1(){
-            return str
-          }
+          return function f1(){
+            return str;
+          };
         }
-        console.log(apple)
+        const f1 = redundant("apple");
+        console.log("apple");
