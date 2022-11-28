@@ -204,10 +204,6 @@ console.log(repeatStringNumTimes("pelz",  4));
     console.log(sum([5,10]))
     console.log(sum([10, 5]))
 
-    // 10. Return the number (count) of vowels in the given string.
-    // We will consider a, e, i, o, u as vowels for this question.
-    // The input string will only consist of lower case letters and/or spaces.
-
     /* 10
         SUM ALL PRIME:
         A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2
@@ -240,3 +236,39 @@ console.log(repeatStringNumTimes("pelz",  4));
          return sum;
    }
    console.log(sumPrimes(10));
+
+   /* 11.
+      A tetrahedron is a pyramid with a triangular base and three sides. 
+      A tetrahedral number is a number of items within a tetrahedron.
+      Create a function that takes an integer n and returns the nth tetrahedral number.
+      
+      Hint :
+      tetra(2) ➞ 4
+      tetra(5) ➞ 35
+      tetra(6) ➞ 56
+   */  
+    function tetra(n){
+      let formular = (n*(n+1)*(n+2))/6; 
+      return formular;
+    }
+    console.log(tetra(2));
+    console.log(tetra(5));
+    console.log(tetra(6));
+
+   /*
+    12. Write a function redundant that takes in a string str and returns a function that returns str.
+      const f1 = redundant("apple")
+      f1() ➞ "apple"
+      const f2 = redundant("pear")
+      f2() ➞ "pear"
+      const f3 = redundant("")
+      f3() ➞ ""
+*/
+    function redundant(str){
+        return function f1(){
+            return str;
+        }
+    }
+    const result = redundant("apple");
+    console.log("apple");
+    
