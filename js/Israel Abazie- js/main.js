@@ -196,73 +196,122 @@ const sumPrimes = function (num) {
 }
 sumPrimes(50);
 
+/* 11.
+      A tetrahedron is a pyramid with a triangular base and three sides. 
+      A tetrahedral number is a number of items within a tetrahedron.
+      Create a function that takes an integer n and returns the nth tetrahedral number.
+      
+      Hint :
+      tetra(2) ➞ 4
+      tetra(5) ➞ 35
+      tetra(6) ➞ 56
 
-function avgNums(para){
-  let result = 0;
-   let average = [...para];
-   for(let x of para){
-     result += x;
-   }
-    console.log(Math.floor(result/average.length));
+*/
+
+function tetra(n){
+  let result = (n * (n+1)*(n+2))/6; //formular for finding nth term of tetrahedron.
+  return result;
 }
-avgNums([2,3,6]);
-
-// Q2. You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
-
-// #Examples:
-
-// Kata.getMiddle("test") should return "es"
-
-// Kata.getMiddle("testing") should return "t"
-
-// Kata.getMiddle("middle") should return "dd"
-
-// Kata.getMiddle("A") should return "A"
-// 
+console.log(tetra(2));
+console.log(tetra(5));
+console.log(tetra(6));
+ 
 
 
-function checkInfo(msg){
-  let value = "";
-   for(let i = 0; i < msg.length; i++){
-    if(msg.length % 2 ==0){
-      console.log(msg[i])
-     value += msg[(msg.length/2)-1] + msg[msg.length/2]
-    } else if(msg.length % 2 !==0){
-      value += msg[Math.trunc(msg.length/2)]
-    }
-    return value;
-   }
+/*
+    12. Write a function redundant that takes in a string str and returns a function that returns str.
+      const f1 = redundant("apple")
+      f1() ➞ "apple"
+      const f2 = redundant("pear")
+      f2() ➞ "pear"
+      const f3 = redundant("")
+      f3() ➞ ""
+ */
+
+      const redundant = function(str){
+        function f1(str){
+          return JSON.stringify(str); // a method that makes a copy of a string passed as parameter.
+        }
+        return f1(str);
+      }
+      console.log(redundant("apple"));
+      console.log(redundant("pear"));
+      console.log(redundant(""));
+
+      
+     
+
+// ALGORITHM PERSONAL PRACTICE:
+
+// Calculating the average of student scores.
+//function avgNums(para){
+//   let result = 0;
+//    let average = [...para];
+//    for(let x of para){
+//      result += x;
+//    }
+//     console.log(Math.floor(result/average.length));
+// }
+// avgNums([2,3,6]);
+
+// // Q2. You are going to be given a word. Your job is to return the middle character of the word. 
+// //If the word's length is odd, return the middle character. 
+// //If the word's length is even, return the middle 2 characters.
+
+// // #Examples:
+
+// // Kata.getMiddle("test") should return "es"
+
+// // Kata.getMiddle("testing") should return "t"
+
+// // Kata.getMiddle("middle") should return "dd"
+
+// // Kata.getMiddle("A") should return "A"
+// // 
+
+
+// function checkInfo(msg){
+//   let value = "";
+//    for(let i = 0; i < msg.length; i++){
+//     if(msg.length % 2 ==0){
+//       console.log(msg[i])
+//      value += msg[(msg.length/2)-1] + msg[msg.length/2]
+//     } else if(msg.length % 2 !==0){
+//       value += msg[Math.trunc(msg.length/2)]
+//     }
+//     return value;
+//    }
    
-   }
-   console.log(checkInfo("A"));
+//    }
+//    console.log(checkInfo("A"));
 
-//Q3. The two oldest ages function/method needs to be completed. 
-//It should take an array of numbers as its argument and return the two highest numbers within the array. 
-//The returned value should be an array in the format [second oldest age,  oldest age].
+// //Q3. The two oldest ages function/method needs to be completed. 
+// //It should take an array of numbers as its argument and return the two highest numbers within the array. 
+// //The returned value should be an array in the format [second oldest age,  oldest age].
 
-// The order of the numbers passed in could be any order. 
-//The array will always include at least 2 items. 
-//If there are two or more oldest age, then return both of them in array format.
+// // The order of the numbers passed in could be any order. 
+// //The array will always include at least 2 items. 
+// //If there are two or more oldest age, then return both of them in array format.
 
-// For example (Input --> Output):
+// // For example (Input --> Output):
 
-// [1, 2, 10, 8] --> [8, 10]
-// [1, 5, 87, 45, 8, 8] --> [45, 87]
-// [1, 3, 10, 0]) --> [3, 10]
+// // [1, 2, 10, 8] --> [8, 10]
+// // [1, 5, 87, 45, 8, 8] --> [45, 87]
+// // [1, 3, 10, 0]) --> [3, 10]
 
-function oldestAge(arr){
-  let val = arr.sort(function(a,b){return b-a})
-  return [val[1], val[0]];
-}
-console.log(oldestAge([1,5,87,45,8,8]))
+// function oldestAge(arr){
+//   let val = arr.sort(function(a,b){return b-a})
+//   return [val[1], val[0]];
+// }
+// console.log(oldestAge([1,5,87,45,8,8]))
 
-function vintageCreator(arr){
-  let arrValue = [...arr]
-  console.log(arrValue.join(''))
-  if(arrValue != ""){ //returns true if the value of the parameter is not empty.
-    return "true";
-  } 
-  return "false"; //returns false if the value of the parameter is not empty
-}
-console.log(vintageCreator([]))
+// function redundant(arr){
+//   let arrValue = [...arr]
+//   console.log(arrValue.join(''))
+//   if(arrValue != ""){ //returns true if the value of the parameter is not empty.
+//     return "true";
+//   } 
+//   return "false"; //returns false if the value of the parameter is not empty
+// }
+// console.log(redundant([]))
 
