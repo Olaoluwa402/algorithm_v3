@@ -177,6 +177,8 @@ console.log(sumPrime(12), "prime");
       tetra(5) ➞ 35
       tetra(6) ➞ 56
 
+      Tn = (n * (n + 1) * (n + 2)) / 6
+
     12. Write a function redundant that takes in a string str and returns a function that returns str.
       const f1 = redundant("apple")
       f1() ➞ "apple"
