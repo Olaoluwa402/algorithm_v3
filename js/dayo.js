@@ -267,3 +267,5 @@ NOTE; Return the value of the result from the function*/
         const result = redundant("folake");
         console.log(redundant("dayo"))
 
+        
+
