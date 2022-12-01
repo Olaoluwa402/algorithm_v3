@@ -302,3 +302,49 @@ function sumAll(arr) {
         }
         const f1 = redundant("apple");
         console.log("apple");
+
+  /*      Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+For example:
+
+summation(2) -> 3
+1 + 2
+
+summation(8) -> 36
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 */
+
+function summation(num){
+let result = 0;
+for(let i =1; i<=num; i++){
+  
+   result = result + i;
+}
+return result;
+}
+console.log(summation(8))
+
+/*In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+Examples
+makeNegative(1);    // return -1
+makeNegative(-5);   // return -5
+makeNegative(0);    // return 0
+makeNegative(0.12); // return -0.12 */
+
+function makeNegative(num){
+if(num<=0){
+  return num
+}
+else{
+  return -num
+}
+}
+console.log(makeNegative(1))
+console.log(makeNegative(-5))
+console.log(makeNegative(0))
+console.log(makeNegative(0.12))
+
+/*Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+
+Examples (input -> output)
+6, "I"     -> "IIIIII"
+5, "Hello" -> "HelloHelloHelloHelloHello"*/
