@@ -234,17 +234,17 @@
     // console.log (redundant("folake")
 
 
-    
-        // sollution 2
-    //    function redundant(str){
-    //     return f1()
 
-    //     function f1(){
-    //         return str
-    //     }
-    //    }
+        // sollution 2
+       function redundant(str){
+        return f1()
+
+        function f1(){
+            return str
+        }
+       }
 
        
 
-       console.log (redundant("folake"))
+       console.log (redundant(""),("yes"))
         
