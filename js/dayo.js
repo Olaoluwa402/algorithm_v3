@@ -258,14 +258,14 @@ NOTE; Return the value of the result from the function*/
 //       const f3 = redundant("")
 //       f3() ➞ ""
 //      
-        function redundant(str){
-          return function f1(){
-            return str;
+
+        const redundant = function(str){
+          function f1(str){
+            return JSON.stringify(str); // a method that makes a copy of a string passed as parameter.
           }
-
+          return f1(str);
         }
-        const result = redundant("folake");
-        console.log(redundant("dayo"))
-
-        
+        console.log(redundant("apple"));
+        console.log(redundant("pear"));
+        console.log(redundant(""));
 
