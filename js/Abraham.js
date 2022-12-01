@@ -343,8 +343,3 @@ console.log(makeNegative(-5))
 console.log(makeNegative(0))
 console.log(makeNegative(0.12))
 
-/*Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
-
-Examples (input -> output)
-6, "I"     -> "IIIIII"
-5, "Hello" -> "HelloHelloHelloHelloHello"*/
