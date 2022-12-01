@@ -269,3 +269,91 @@ NOTE; Return the value of the result from the function*/
         console.log(redundant("pear"));
         console.log(redundant(""));
 
+
+
+        /*  13.
+Write a function that takes a number and returns the perimeter of either a circle or a square. 
+The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, 
+and the number will be the side of the square or the radius of the circle.
+
+perimeter("s", 7) ➞ 28
+perimeter("c", 4) ➞ 25.12
+perimeter("c", 9) ➞ 56.52
+*/
+
+// function takes a letter and number (letter, num)
+// returns perimeter of circle (2πr) and square (4a)
+
+ function perimeter(letter, num){
+  if(letter === "c"){
+    return 2*3.14*num
+  }
+  else if(letter === "s"){
+    return 4*num
+  }
+ }
+ console.log(perimeter("s",7))
+ console.log(perimeter("c",4))
+ console.log(perimeter("c",9))
+
+
+
+/*
+14.
+Try finding your ancestors and offspring with code.
+
+Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
+
+    * If the number is negative, return the related ancestor.
+    * If positive, return the related descendant.
+    * You are generation 0. In the case of 0 (male or female), return "me!".
+    */
+    
+// generation(2, "f") ➞ "granddaughter"
+// generation(-3, "m") ➞ "great grandfather"
+// generation(1, "f") ➞ "daughter"
+ 
+function generation(num, char){
+  if (num >1 && char == "f"){
+    return "granddaughter"
+  }
+  else if (num >1 && char == "m"){
+    return "grandson"
+  }
+  else if(num == 1 && char == "f"){
+    return "daughter"
+    }
+  else if(num == 1 && char == "m"){
+      return "son"
+      }
+  else if(num == -1 && char == "m"){
+        return "father"
+      }
+  else if(num == -1 && char == "f"){
+        return "mother"
+      }
+  else if(num == -2 && char == "m"){
+    return "grandfather"
+  }
+  else if(num == -2 && char == "f"){
+    return "grandmother"
+  }
+  else if(num == -3 && char == "f"){
+    return "great grandmother"
+  }
+  else if(num == -3 && char == "m"){
+    return "great grandmother"
+  }
+}
+
+console.log(generation(1,"f"))
+console.log(generation(1,"m"))
+console.log(generation(2,"f"))
+console.log(generation(2,"m"))
+console.log(generation(-1,"f"))
+console.log(generation(-1,"m"))
+console.log(generation(-2,"f"))
+console.log(generation(-2,"m"))
+console.log(generation(-3,"m"))
+console.log(generation(-3,"f"))
+// console.log(generation(-4,"f"))
