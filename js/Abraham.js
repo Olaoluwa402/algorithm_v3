@@ -27,6 +27,26 @@ console.log (convertToFahrenheit(30))
     would also be accepted
  */
 
+    function evenOdd(nums) {
+        let even = [];
+        let odd = [];
+        for (let num of nums) {
+          if (num % 2 == 0) {
+            even.push(num);
+          } else {
+            odd.push(num);
+          }
+        }
+        return odd.concat(even);
+      }
+      
+      // for(let i=0; i < nums.length; i++){
+      
+      // }
+      
+      console.log(evenOdd([3, 1, 2, 4, 5, 6, 7, 8, 9]));
+      
+
 
 
    /*
@@ -118,3 +138,167 @@ else{
  }
 console.log(argument("*",3))
 console.log(argument("abc",3))
+
+// */
+//     9.
+//         We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
+//         The lowest number will not always come first. For example, sumAll([4,1]) should return 10 because sum of all the numbers 
+//         between 1 and 4 (both inclusive) is 10.
+
+//         sumAll([1, 4]) should return 10.
+
+//         sumAll([4, 1]) should return 10.
+
+//         sumAll([5, 10]) should return 45.
+
+//         sumAll([10, 5]) should return 45.
+//     */
+
+
+function sumAll(arr) {
+    // const sortedArray = arr.sort((a, b) => a - b);
+    // const min = sortedArray[0];
+    // const max = sortedArray[sortedArray.length - 1];
+  
+    // 1. Check for the MAXIMUM and MINIMUM values in the array
+    let minNum = Math.min(...arr); //spread operator
+    let maxNum = Math.max(...arr);
+    // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
+    let givenArraySumWIthMinMaxInclusive = 0;
+  
+    for (let i = minNum; i <= maxNum; i++) {
+      givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
+    }
+  
+    return givenArraySumWIthMinMaxInclusive;
+  }
+  console.log(sumAll([10, 15]));
+  
+
+//   solution 2
+
+function sumAll(arr) {
+    // 1. Declare a variable to first hold the SUM of the array, initialize to zero
+    let givenArraySum = 0;
+  
+    for (let num of arr) {
+      givenArraySum += num; // givenArraySum  = givenArraySum  + num
+    }
+  
+    // 2. Check for the MAXIMUM and MINIMUM values in the array
+    let minNum = Math.min(...arr);
+    let maxNum = Math.max(...arr);
+  
+    // 3. Declare an EMPTY array to hold the values between the MIN VALUE and MAX and the populate the array
+    let numbersBetween = [];
+  
+    for (let i = minNum + 1; i < maxNum; i++) {
+      numbersBetween.push(i);
+    }
+  
+    //   4. Add the values in the array of numbers between the MIN and MAX and store in a variable
+    let numbersBetweenSum = 0;
+  
+    for (number of numbersBetween) {
+      numbersBetweenSum += number;
+    }
+  
+    //   5. Return the sum of the given array and the sum of the numbers between
+  
+    return givenArraySum + numbersBetweenSum;
+  }
+  console.log(sumAll([10, 5]));
+  
+  /* 10
+        SUM ALL PRIME:
+        A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2
+        is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is
+        divisible by 1, 2 and 4.
+
+        Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
+
+        sumPrimes(10) should return 17.
+        sumPrimes(977) should return 73156.
+
+        note:We only need to check up to the square root because the square root 
+        of a number is the largest possible unique divisor.
+    */
+
+        function sumprimes(num){
+          let sum = 0
+          function isprime(num){
+            for(let i=2; i<num; i++){
+              if(num % i == 0){
+                return false
+              }
+            } 
+            return true
+          }
+            for(let i=2; i<=num; i++){
+              if (isprime(i)){
+                sum += i
+              }
+            } 
+            return sum
+        }
+        console.log(sumprimes(10))
+        console.log(sumprimes(977))
+
+  // solution 2
+         function sumPrime(num){
+          // 1. loop through the num given, excluding zero and 1
+          // 2. initiate a sum count
+          let sum = 0
+          for(let i=2; i<=num; i++){
+            if(isPrime(i)){
+              sum =sum +i;
+            }
+          }
+           return sum;
+        
+         function isPrime(num){
+          // check that num is prime 
+          for(let i=2; i<num; i++){
+            if(num % i === 0){
+              return false;
+            }
+          }
+          return true;
+         }
+        }
+        console.log(sumPrime(12))
+
+
+        
+/* 11.
+      A tetrahedron is a pyramid with a triangular base and three sides. 
+      A tetrahedral number is a number of items within a tetrahedron.
+      Create a function that takes an integer n and returns the nth tetrahedral number.
+      
+      Hint :
+      tetra(2) ➞ 4
+      tetra(5) ➞ 35
+      tetra(6) ➞ 56
+*/
+      function tetra(n){
+        return  (n*(n+1)*(n+2))/6
+      }
+      console.log(tetra(2))
+      console.log(tetra(5))
+      console.log(tetra(6))
+/*      
+    12. Write a function redundant that takes in a string str and returns a function that returns str.
+      const f1 = redundant("apple")
+      f1() ➞ "apple"
+      const f2 = redundant("pear")
+      f2() ➞ "pear"
+      const f3 = redundant("")
+      f3() ➞ ""
+      */
+        function redundant(str){
+          return function f1(){
+            return str;
+          };
+        }
+        const f1 = redundant("apple");
+        console.log("apple");

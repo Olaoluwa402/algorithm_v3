@@ -15,13 +15,13 @@ NOTE; Return the value of the result from the function*/
 // console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
 // /*
 
-//     2. Given an integer array nums, move all the even integers 
-//     at the beginning of the array  followed by all the odd integers. 
+//     2. Given an integer array nums, move all the even integers
+//     at the beginning of the array  followed by all the odd integers.
 //     Return any array that satisfies the condition
-//     Example: 
+//     Example:
 //     Input: nums = [3,1,2,4]
 //     output: [2,4,3,1]
-//     Explanation: outputs: [4,2,3,1], [2,4,1,3] and [4,2,1,3] 
+//     Explanation: outputs: [4,2,3,1], [2,4,1,3] and [4,2,1,3]
 //     would also be accepted
 //  */
 
@@ -166,7 +166,7 @@ function sumPrime(num) {
     return true;
   }
 }
-console.log(sumPrime(12), "prime");
+console.log(sumPrime(977), "prime");
 
 /* 10
         SUM ALL PRIME:
@@ -192,6 +192,8 @@ console.log(sumPrime(12), "prime");
       tetra(2) ➞ 4
       tetra(5) ➞ 35
       tetra(6) ➞ 56
+
+      Tn = (n * (n + 1) * (n + 2)) / 6
 
     12. Write a function redundant that takes in a string str and returns a function that returns str.
       const f1 = redundant("apple")
