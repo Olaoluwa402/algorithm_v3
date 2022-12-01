@@ -302,3 +302,102 @@ function sumAll(arr) {
         }
         const f1 = redundant("apple");
         console.log("apple");
+
+  /*      Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+For example:
+
+summation(2) -> 3
+1 + 2
+
+summation(8) -> 36
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 */
+
+function summation(num){
+let result = 0;
+for(let i =1; i<=num; i++){
+  
+   result = result + i;
+}
+return result;
+}
+console.log(summation(8))
+
+/*In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+Examples
+makeNegative(1);    // return -1
+makeNegative(-5);   // return -5
+makeNegative(0);    // return 0
+makeNegative(0.12); // return -0.12 */
+
+function makeNegative(num){
+if(num<=0){
+  return num
+}
+else{
+  return -num
+}
+}
+console.log(makeNegative(1))
+console.log(makeNegative(-5))
+console.log(makeNegative(0))
+console.log(makeNegative(0.12))
+
+/* 13.
+Write a function that takes a number and returns the perimeter of either a circle or a square. 
+The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, 
+and the number will be the side of the square or the radius of the circle.
+
+perimeter("s", 7) ➞ 28
+perimeter("c", 4) ➞ 25.12
+perimeter("c", 9) ➞ 56.52  */
+function perimeter(letter, num){
+  if (letter == "s"){
+    return 4*num;
+  } else if (letter == "c"){
+    return 2*3.14*num;
+  }
+}
+console.log(perimeter("s", 7));
+console.log(perimeter("c", 4));
+console.log(perimeter("c", 9));
+
+/* 14.
+Try finding your ancestors and offspring with code.
+
+Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
+
+    * If the number is negative, return the related ancestor.
+    * If positive, return the related descendant.
+    * You are generation 0. In the case of 0 (male or female), return "me!".
+    
+generation(2, "f") ➞ "granddaughter"
+generation(-3, "m") ➞ "great grandfather"
+generation(1, "f") ➞ "daughter" */
+
+
+function generation(num, char){
+if( num==-1 && (char=="m" || char=="f")){
+  const res = char == 'm' ? 'father':'mother'
+  return res
+}else if( num<-1 && (char=="m" || char=="f")){
+  const res = char =='m' ? 'grandfather':'grandmother'
+  return res
+}else if(num<-2  && (char=="m" || char=="f")){
+  const res = char =='m' ? 'great grandfather':'great grandmother'
+  return res
+}else if (num=1 && (char=='m' || char=='f')){
+  const res = char =='m' ? 'son':'daughter'
+  return res
+}else if(num>1 && (char=='m'|| char=='f')){
+  const res = char =='m'? 'grandson':'graanddaughter'
+  return res
+}
+}
+console.log(generation(-1, 'f'))
+console.log(generation(-2, 'f'))
+console.log(generation(-2, 'm'))
+console.log(generation(-3, 'm'))
+console.log(generation(-3, 'f'))
+console.log(generation(1, 'm'))
+console.log(generation(2, 'f'))
