@@ -183,3 +183,49 @@ console.log("apple");
 
 
  
+/*Write a function that takes a number and returns the perimeter of either a circle or a square. 
+The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, 
+and the number will be the side of the square or the radius of the circle.
+
+perimeter("s", 7) ➞ 28
+perimeter("c", 4) ➞ 25.12
+perimeter("c", 9) ➞ 56.52*/
+
+function perimeter(l,num){
+      if (l=="s"){
+           return 4 * num;
+       }else if (l=="c"){
+           return 2 * 3.14 *num;
+       }
+       return "the letter can either be c or s"
+       }
+      console.log(perimeter("s",7));
+      console.log(perimeter("c",9));
+      console.log(perimeter("c",4));
+
+      /*Try finding your ancestors and offspring with code.
+
+Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
+
+* If the number is negative, return the related ancestor.
+* If positive, return the related descendant.
+* You are generation 0. In the case of 0 (male or female), return "me!".
+
+generation(2, "f") ➞ "granddaughter"
+generation(-3, "m") ➞ "great grandfather"
+generation(1, "f") ➞ "daughter"*/
+
+const gen = {
+	"-3": ["great grandfather",	"great grandmother"],
+	"-2": ["grandfather","grandmother"],
+	"-1":["father",	"mother"],
+	"0": ["me!", "me!"],
+	"1":["son",	"daughter"],
+	"2"	:["grandson","granddaughter"],
+	"3" :["great grandson","great granddaughter"]
+}
+function generation(x, y) {
+	return y=="m"?gen[x][0]:gen[x][1];
+}
+console.log(generation(2, "f"));
+console.log(generation(-3, "m"));
