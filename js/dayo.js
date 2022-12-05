@@ -395,7 +395,9 @@ console.log(generation(-3,"f"))
 
 
 
-        myReplace = (sentence, before, after) => { return sentence.replace(before, after)}
+        myReplace = (sentence, before, after) => { 
+         sentence.replace(before, after)
+        }
 
     console.log(myReplace("Let us go to the store" , "store", "mall"))
     console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
