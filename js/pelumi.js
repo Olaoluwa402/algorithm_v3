@@ -339,12 +339,12 @@ console.log(generation(0, "m"));
     reverseInteger(46923) => 32964
 */
 
-    // function reverseInteger(number){
-    //     number += '';
-    //     return number.split('').reverse().join('');
+    function reverseInteger(number){
+        number += '';
+        return number.split('').reverse().join('');
         
-    // }
-    // console.log(reverseInteger(123));
+    }
+    console.log(reverseInteger(123));
 
 /*
 16.
@@ -373,19 +373,3 @@ console.log(generation(0, "m"));
 // }
 // console.log(myReplace("I think we should look up there", "up", "Down"));
 
-
-// function myReplace(str, before, after) {
-//   //search for the before string and then use a function to check for capitalisation before replacing.
-//   str = str.replace(before, function(x){
-//     //check whether the first letter of before is a capital
-//     //replace after with a capitalised first letter and then 
-//     //the rest of the string, cannot just replace first letter as its read only.
-//     if(before[0] == before[0].toUpperCase()){
-//       after = after[0].toUpperCase() + after.slice(1);
-//       return after;
-//     }
-//     return after;
-//   });
-//   return str;
-// }
-// console.log(myReplace("I think we should look up there", "up", "Down"));
