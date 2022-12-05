@@ -415,6 +415,18 @@ console.log(generation(2, 'f'))
     }
 console.log(ReverseInteger(123))
 console.log(ReverseInteger(46923))
+
+/*2nd solution*/
+function reverseInteger(num){
+  num =num.tostring();
+  const reversed =[];
+  for(let i =num.length - 1; i >=0; i--){
+      console.log(num[i]);
+      reversed.push(num[i]);
+  }
+  return Number(reversed,join(""));
+}
+console.log(reversed)
     
 /* 16.
 Perform a search and replace on the sentence using the arguments provided and return the new sentence.
@@ -437,8 +449,22 @@ myReplace("I think we should look up there", "up", "Down") should return the str
 */
 
 
-let myReplace = `'Let us go to the store', 'store', 'mall'`
-function myReplace(store,mail){
- return myReplace.replace('store', 'mall')
+
+let myReplace = (sentence,original,replaceWith)=>{
+  let realAlphabet = checkCase(original,replaceWith)
+return sentence.replace(original,realAlphabet)
 }
-console.log(myReplace)
+
+let checkCase=(alphabet1,alphabet2)=>{
+if(alphabet1[0].toUpperCase()+alphabet1.slice(1) === alphabet1){
+ return alphabet2[0].toUpperCase()+alphabet2.slice(1)
+}
+else{
+  return alphabet2[0].toLowerCase()+alphabet2.slice(1)
+}
+
+}
+
+console.log(checkCase("up", "Down"))
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
+
