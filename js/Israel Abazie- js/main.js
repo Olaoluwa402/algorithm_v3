@@ -315,7 +315,7 @@ console.log(offSpring(-2, "f"));
    function reverseInt(para){
      let val = para.toString();
      let Int = [...val].reverse().join(''); //using spread operator to
-     return Int;
+     return Number(Int);
      
    }
    console.log(reverseInt(123))
