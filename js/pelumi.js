@@ -373,3 +373,13 @@ console.log(generation(0, "m"));
 // }
 // console.log(myReplace("I think we should look up there", "up", "Down"));
 
+
+// SAM'S SOLUTION
+// function myReplace(sentence, before, after) {
+//     if (before[0].toUpperCase() === before[0]) {
+//       return sentence.replace(before, after.toUpperCase())
+//     } else {
+//       return sentence.replace(before, after.toLowerCase())
+//     }
+//   }
+//   console.log(myReplace('I think we should look up there', 'up', 'Down'))
