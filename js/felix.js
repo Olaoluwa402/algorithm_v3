@@ -163,7 +163,6 @@ console.log(tetra(6));
 //       f3() ➞ ""
 //  */
 
-
 // function redundant(str){
 //     return function ( ){
 //         return str;
@@ -172,17 +171,13 @@ console.log(tetra(6));
 // const f1 = redundant("apple")
 //  console.log(redundant("apple"));
 
-const redundant = function (str){
-    let result = "";
-    for(let i=0; i<str.length; i++)
-    result += str[i];
-    return JSON.stringify(result);
-}
+const redundant = function (str) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) result += str[i];
+  return JSON.stringify(result);
+};
 console.log("apple");
 
-
-
- 
 /*Write a function that takes a number and returns the perimeter of either a circle or a square. 
 The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, 
 and the number will be the side of the square or the radius of the circle.
@@ -191,41 +186,110 @@ perimeter("s", 7) ➞ 28
 perimeter("c", 4) ➞ 25.12
 perimeter("c", 9) ➞ 56.52*/
 
-function perimeter(l,num){
-      if (l=="s"){
-           return 4 * num;
-       }else if (l=="c"){
-           return 2 * 3.14 *num;
-       }
-       return "the letter can either be c or s"
-       }
-      console.log(perimeter("s",7));
-      console.log(perimeter("c",9));
-      console.log(perimeter("c",4));
+function perimeter(l, num) {
+  if (l == "s") {
+    return 4 * num;
+  } else if (l == "c") {
+    return 2 * 3.14 * num;
+  }
+  return "the letter can either be c or s";
+}
+console.log(perimeter("s", 7));
+console.log(perimeter("c", 9));
+console.log(perimeter("c", 4));
 
-      /*Try finding your ancestors and offspring with code.
+/*Try finding your ancestors and offspring with code.
 
 Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
 
 * If the number is negative, return the related ancestor.
 * If positive, return the related descendant.
-* You are generation 0. In the case of 0 (male or female), return "me!".
+* You are generation 0. I
+n the case of 0 (male or female), return "me!".
 
 generation(2, "f") ➞ "granddaughter"
 generation(-3, "m") ➞ "great grandfather"
 generation(1, "f") ➞ "daughter"*/
 
 const gen = {
-	"-3": ["great grandfather",	"great grandmother"],
-	"-2": ["grandfather","grandmother"],
-	"-1":["father",	"mother"],
-	"0": ["me!", "me!"],
-	"1":["son",	"daughter"],
-	"2"	:["grandson","granddaughter"],
-	"3" :["great grandson","great granddaughter"]
-}
+  "-3": ["great grandfather", "great grandmother"],
+  "-2": ["grandfather", "grandmother"],
+  "-1": ["father", "mother"],
+  0: ["me!", "me!"],
+  1: ["son", "daughter"],
+  2: ["grandson", "granddaughter"],
+  3: ["great grandson", "great granddaughter"],
+};
 function generation(x, y) {
-	return y=="m"?gen[x][0]:gen[x][1];
+  return y == "m" ? gen[x][0] : gen[x][1];
 }
 console.log(generation(2, "f"));
 console.log(generation(-3, "m"));
+
+
+// Integer Reversal
+// Given an integer, reverse the order of the digits
+
+// reverseInteger(123) => 321
+// reverseInteger(46923) => 32964
+
+function reverseInteger(num){
+ 
+  // converting number to string
+  let str = num.toString().split("");
+ 
+  // reversing the string
+  str.reverse();
+   
+ 
+  // converting string to integer
+  num = parseInt(str.join(""))
+ 
+  // returning integer
+  return num;
+}
+ 
+// Driver Code
+let num = 4562;
+console.log("Reverse of no. is " + reverseInteger(num));
+console.log(reverseInteger(123));
+console.log(reverseInteger(46923));
+
+/*Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+
+First argument is the sentence to perform the search and replace on.
+
+Second argument is the word that you will be replacing (before).
+
+Third argument is what you will be replacing the second argument with (after).
+
+Note: Preserve the case of the first character in the original word when you are replacing it. 
+For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+
+Template:
+myReplace("Let us go to the store", "store", "mall") should return the string Let us go to the mall.
+
+myReplace("He is Sleeping on the couch", "Sleeping", "sitting") should return the string He is Sitting on the couch.
+
+myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
+*/
+
+
+
+
+function myReplace(str, before, after) {
+  const strSplit = str.split(' ');
+
+  if (/^[A-Z]/.test(before)) {
+    after = after.charAt(0).toUpperCase() + after.slice(1);
+  } 
+
+  strSplit.splice(strSplit.indexOf(before), 1, after);
+  return strSplit.join(' ');
+}
+
+console.log(myReplace("I think we should look up there", "up", "Down"));
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
+console.log(myReplace("Let us go to the store", "store", "mall"));
+
+ 
