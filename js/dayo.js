@@ -291,10 +291,6 @@ perimeter("c", 9) ➞ 56.52
   else if(letter === "s"){
     return 4*num
   }
-
-  // OR
-
-  return (letter == "s")?4*num:(letter == "c")?2*3.142*num:false
  }
  console.log(perimeter("s",7))
  console.log(perimeter("c",4))
