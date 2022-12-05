@@ -9,10 +9,23 @@
     */
 function reverseInteger(num) {
   //   return num.toString().split('').reverse().join('')
-  let numStr = num.toString()
-  return [...numStr].reverse().join('')
+  // let numStr = num.toString()
+  // return [...numStr].reverse().join('')
+  num = num.toString();
+  // const reversed = "";
+  const reversed = [];
+  for (let i = num.length - 1; i >= 0; i--) {
+    reversed.push(num[i]);
+
+    // console.log(num[i]);
+    // reversed += num[i];
+  }
+
+  console.log(reversed);
+  return Number(reversed.join(""));
 }
-console.log(reverseInteger(123))
+
+console.log(reverseInteger(123));
 
 /*
 16.
@@ -36,9 +49,23 @@ console.log(reverseInteger(123))
 */
 function myReplace(sentence, before, after) {
   if (before[0].toUpperCase() === before[0]) {
-    return sentence.replace(before, after.toUpperCase())
+    return sentence.replace(before, after.toUpperCase());
   } else {
-    return sentence.replace(before, after.toLowerCase())
+    return sentence.replace(before, after.toLowerCase());
   }
 }
-console.log(myReplace('I think we should look up there', 'up', 'Down'))
+// console.log(myReplace("I think we should look up there", "up", "Down"));
+
+function myplace(sentence, before, after) {
+  const index = sentence.indexOf(before);
+  console.log(sentence[index][0] === before[0].toUpperCase(), "index");
+  if (sentence[index][0] === before[0].toUpperCase()) {
+    after = after[0].toUpperCase() + after.substr(1);
+  } else {
+    after = after[0].toLowerCase() + after.substr(1);
+  }
+  // console.log(after);
+  return sentence.replace(before, after);
+}
+
+console.log(myplace("I think we should look up there", "up", "Down"));
