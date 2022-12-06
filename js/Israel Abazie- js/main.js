@@ -1,4 +1,5 @@
 // Bootcamp Algorithm challenge/solutions - itskills 2022
+
 const { log } = console;
 /*1. The formula to convert from Celsius to Fahrenheit is the
 temperature in Celsius times 9/5, plus 32.
@@ -347,7 +348,7 @@ console.log(offSpring(-2, "f"));
 function myReplace(sentence, before, after){
   switch (before[0].toUpperCase()) {
     case before[0]:
-      return sentence.replace(before, after.toUpperCase())
+      return sentence.replace(before, after[0].toUpperCase())
       break;
 
     default:
@@ -358,6 +359,14 @@ function myReplace(sentence, before, after){
 console.log(myReplace("Let us go to the store", "store", "mall"))
 console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
 console.log(myReplace("I think we should look up there", "up", "Down"))
+
+
+                                      //  ALGORITHM CHALLENGE 06-12-2022
+                                    
+
+
+
+
 // ALGORITHM PERSONAL PRACTICE:
 
 // Calculating the average of student scores.
@@ -431,4 +440,14 @@ console.log(myReplace("I think we should look up there", "up", "Down"))
 //   return "false"; //returns false if the value of the parameter is not empty
 // }
 // console.log(redundant([]))
+
+// function factorial(n){
+//   let value = 1;
+//   for(let i = 1; i <= n; i++){
+//     console.log(i, "amen")
+//     value *= i;
+//   }
+//   return value;
+// }
+// console.log(factorial(5))
 
