@@ -346,6 +346,18 @@ console.log(generation(0, "m"));
     }
     console.log(reverseInteger(123));
 
+// OR
+
+    function reverseInteger(number){
+        number = number.toString();
+        const reversed = [];
+        for(let i = number.length -1 ; i >= 0; i--){
+            reversed.push(number[i])
+        }
+        return reversed.join('');
+    }
+    console.log(reverseInteger(123));
+
 /*
 16.
         Perform a search and replace on the sentence using the arguments provided and return the new sentence.
@@ -367,19 +379,15 @@ console.log(generation(0, "m"));
         myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
 
 */
-// function myReplace(sentence, before, after){
-//         let newString = sentence.replace(before, after);
-//         return newString
-// }
-// console.log(myReplace("I think we should look up there", "up", "Down"));
 
+function myReplace(sentence, before, after){
+    const index = sentence.indexOf(before);
+    if (){
 
-// SAM'S SOLUTION
-// function myReplace(sentence, before, after) {
-//     if (before[0].toUpperCase() === before[0]) {
-//       return sentence.replace(before, after.toUpperCase())
-//     } else {
-//       return sentence.replace(before, after.toLowerCase())
-//     }
-//   }
-//   console.log(myReplace('I think we should look up there', 'up', 'Down'))
+    }else{
+
+    }      
+    return sentence.replace(before, after);
+
+}
+console.log(myReplace("I think we should look up there", "up", "Down"));
