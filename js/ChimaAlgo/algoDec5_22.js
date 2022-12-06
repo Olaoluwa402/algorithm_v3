@@ -32,8 +32,15 @@ console.log(reverseInteger(46923))
 
 
 let myReplace = (sentence,original,replaceWith)=>{
-    let realAlphabet = checkCase(original,replaceWith)
-return sentence.replace(original,realAlphabet)
+    if (sentence.includes(original) || sentence.includes(original[0].toUpperCase()+original.slice(1)) ){
+        let realAlphabet = checkCase(original,replaceWith)
+        return sentence.replace(original,realAlphabet)
+    }
+    else{
+        return "word does not exist"
+    }
+    
+
 }
 
 let checkCase=(alphabet1,alphabet2)=>{
@@ -47,6 +54,6 @@ else{
 }
 
 console.log(checkCase("up", "Down"))
-console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
+console.log(myReplace("He is Sleeping n the couch", "on", "sitting"))
 
 
