@@ -416,17 +416,17 @@ console.log(generation(2, 'f'))
 console.log(ReverseInteger(123))
 console.log(ReverseInteger(46923))
 
-/*2nd solution*/
-function reverseInteger(num){
-  num =num.tostring();
-  const reversed =[];
-  for(let i =num.length - 1; i >=0; i--){
-      console.log(num[i]);
-      reversed.push(num[i]);
-  }
-  return Number(reversed,join(""));
-}
-console.log(reversed)
+// /*2nd solution*/
+// function reverseInteger(num){
+//   num =num.tostring();
+//   const reversed =[];
+//   for(let i =num.length - 1; i >=0; i--){
+//       console.log(num[i]);
+//       reversed.push(num[i]);
+//   }
+//   return Number(reversed,join(""));
+// }
+// console.log(reversed)
     
 /* 16.
 Perform a search and replace on the sentence using the arguments provided and return the new sentence.
@@ -468,3 +468,31 @@ else{
 console.log(checkCase("up", "Down"))
 console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
 
+/*  17.
+      Write a function that splits an array (first argument) into groups the length of size (second argument) 
+      and returns them as a two-dimensional array.
+
+      Example:
+      chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+
+        */
+
+      function splitArray(array, chucklength){
+        let result = [];
+        for(let i = 0; i < array.length; i+=chucklength){
+         let chuck = array.slice(i, i+chucklength);
+         result.push(chuck);
+        }
+        return result
+      }
+      console.log(splitArray(["a", "b", "c", "d"], 2))
+      console.log(splitArray([0, 1, 2, 3, 4, 5], 3))
+      console.log(splitArray([0, 1, 2, 3, 4, 5], 2))
+      console.log(splitArray([0, 1, 2, 3, 4, 5], 4))
+      
