@@ -380,14 +380,38 @@ console.log(generation(0, "m"));
 
 */
 
-function myReplace(sentence, before, after){
-    const index = sentence.indexOf(before);
-    if (){
+// function myReplace(sentence, before, after){
+//     const index = sentence.indexOf(before);
+//     if (){
 
-    }else{
+//     }else{
 
-    }      
-    return sentence.replace(before, after);
+//     }      
+//     return sentence.replace(before, after);
 
+// }
+// console.log(myReplace("I think we should look up there", "up", "Down"));
+/*
+17.
+    Write a function that splits an array (first argument) into groups the length of size (second argument) 
+    and returns them as a two-dimensional array.
+
+    Example:
+    chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+
+    chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+
+    chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+
+    chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+
+*/
+function chunkArrayInGroups(array, chunkLength){
+    let result = [];
+    for(let i = 0; i < array.length; i+=chunkLength){
+        let chunk = array.slice(i, i+chunkLength);
+        result.push(chunk);
+    }
+    return result;
 }
-console.log(myReplace("I think we should look up there", "up", "Down"));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
