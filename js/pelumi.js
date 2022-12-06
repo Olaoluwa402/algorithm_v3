@@ -308,7 +308,110 @@ Create a function that takes a number x and a character y ("m" for male, "f" for
 generation(2, "f") ➞ "granddaughter"
 generation(-3, "m") ➞ "great grandfather"
 generation(1, "f") ➞ "daughter"
- */
-function generation(x, y){
-     
+
+let generation = (gen, gender) => {
+  let g = {
+    "3": ["great grandson", "great granddaughter"],
+    "2": ["grandson", "granddaughter"],
+    "1": ["son", "daughter"],
+    "0": ["me", "me"],
+   "-1": ["father", "mother"],
+   "-2": ["grandfather", "grandmother"],
+   "-3": ["great grandfather", "great grandmother"]
+  };
+  
+      return gender === "m" && gen > -4 && gen < 4
+    ? g[gen][0]
+    : gender === "f" && gen > -4 && gen < 4
+    ? g[gen][1]
+    : "out of scope"; 
+};
+console.log(generation(0, "m"));
+
+*/
+
+/*
+15.
+    Integer Reversal
+    Given an integer, reverse the order of the digits
+
+    reverseInteger(123) => 321
+    reverseInteger(46923) => 32964
+*/
+
+    function reverseInteger(number){
+        number += '';
+        return number.split('').reverse().join('');
+        
+    }
+    console.log(reverseInteger(123));
+
+// OR
+
+    function reverseInteger(number){
+        number = number.toString();
+        const reversed = [];
+        for(let i = number.length -1 ; i >= 0; i--){
+            reversed.push(number[i])
+        }
+        return reversed.join('');
+    }
+    console.log(reverseInteger(123));
+
+/*
+16.
+        Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+
+        First argument is the sentence to perform the search and replace on.
+
+        Second argument is the word that you will be replacing (before).
+
+        Third argument is what you will be replacing the second argument with (after).
+
+        Note: Preserve the case of the first character in the original word when you are replacing it. 
+        For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+
+        Template:
+        myReplace("Let us go to the store", "store", "mall") should return the string Let us go to the mall.
+
+        myReplace("He is Sleeping on the couch", "Sleeping", "sitting") should return the string He is Sitting on the couch.
+
+        myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
+
+*/
+
+// function myReplace(sentence, before, after){
+//     const index = sentence.indexOf(before);
+//     if (){
+
+//     }else{
+
+//     }      
+//     return sentence.replace(before, after);
+
+// }
+// console.log(myReplace("I think we should look up there", "up", "Down"));
+/*
+17.
+    Write a function that splits an array (first argument) into groups the length of size (second argument) 
+    and returns them as a two-dimensional array.
+
+    Example:
+    chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+
+    chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+
+    chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+
+    chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+
+*/
+function chunkArrayInGroups(array, chunkLength){
+    let result = [];
+    for(let i = 0; i < array.length; i+=chunkLength){
+        let chunk = array.slice(i, i+chunkLength);
+        result.push(chunk);
+    }
+    return result;
 }
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));

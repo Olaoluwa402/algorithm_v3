@@ -30,10 +30,6 @@ console.log(reverseInteger(46923));
 //         myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
 // */
 
-let myReplace = (sentence, original, replaceWith) => {
-  let realAlphabet = checkCase(original, replaceWith);
-  return sentence.replace(original, realAlphabet);
-};
 
 let checkCase = (alphabet1, alphabet2) => {
   if (alphabet1[0].toUpperCase() + alphabet1.slice(1) === alphabet1) {
@@ -43,5 +39,28 @@ let checkCase = (alphabet1, alphabet2) => {
   }
 };
 
-console.log(checkCase("up", "Down"));
-console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
+let myReplace = (sentence,original,replaceWith)=>{
+    if (sentence.includes(original) || sentence.includes(original[0].toUpperCase()+original.slice(1)) ){
+        let realAlphabet = checkCase(original,replaceWith)
+        return sentence.replace(original,realAlphabet)
+    }
+    else{
+        return "word does not exist"
+    }
+    
+
+}
+
+// let checkCase=(alphabet1,alphabet2)=>{
+// if(alphabet1[0].toUpperCase()+alphabet1.slice(1) === alphabet1){
+//    return alphabet2[0].toUpperCase()+alphabet2.slice(1)
+// }
+// else{
+//     return alphabet2[0].toLowerCase()+alphabet2.slice(1)
+// }
+
+// }
+
+console.log(checkCase("up", "Down"))
+console.log(myReplace("He is Sleeping n the couch", "on", "sitting"))
+
