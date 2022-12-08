@@ -444,8 +444,8 @@ Create a function that takes a number x and a character y ("m" for male, "f" for
 //    uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
 
       function uniteUnique(...array){
-        answer = new Set([...array].flat())
-        return [...answer]
+        result = new Set([...array].flat())
+        return [...result]
       }
       console.log(uniteUnique([1,3,2],[5,2,1,4],[2,1]))
       console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
