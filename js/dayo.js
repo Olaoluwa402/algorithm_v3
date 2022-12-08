@@ -425,8 +425,7 @@ console.log(generation(-3,"f"))
         for (i=0; i<=arr.length; i++){
            result.push(arr.splice(0,size));
         }
-        return result;
-        // console.log("original",arr)
+        return result
       }
 
       console.log(chunkArrayInGroups(["a","b","c","d"],2))
