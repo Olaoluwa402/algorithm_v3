@@ -1,4 +1,5 @@
-// Bootcamp Algorithm challenge/solutions - itskills 2022
+                         // Bootcamp Algorithm challenge/solutions - itskills 2022
+
 
 const { log } = console;
 /*1. The formula to convert from Celsius to Fahrenheit is the
@@ -14,8 +15,9 @@ function convertCelsius(para) {
 }
 console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
 
+
 /*
-    2. Given an integer array nums, move all the even integers 
+2. Given an integer array nums, move all the even integers 
     at the beginning of the array  followed by all the odd integers. 
     Return any array that satisfies the condition
     Example: 
@@ -40,8 +42,10 @@ console.log(convertCelsius(2)); //converts Celsius to Fahrenheit.
 //   document.body.appendChild(element);
 // }
 // evenInt(nums)
+
+
 /*
-        3. Write a function that takes in integers in minute and convert it to seconds
+ 3. Write a function that takes in integers in minute and convert it to seconds
         Examples:
         convert(5) => 300
         convert(3) => 180
@@ -65,8 +69,10 @@ const result = (function (Int) {
 })(5);
 
 result;
+
+
 /*
-        4. Write a function that returns true if a number passed into it is an 
+ 4. Write a function that returns true if a number passed into it is an 
         even number and false if otherwise. 
     */
 const val = function (para) {
@@ -76,8 +82,10 @@ const val = function (para) {
 
 console.log(val(3));
 
+
+
 /* 
-        5. Create a function that takes a number as an argument, increments the number by 
+5. Create a function that takes a number as an argument, increments the number by 
         1 and return the result. Example addition(0) => 1, addition(4) => 5
     */
 
@@ -86,8 +94,9 @@ function increaseNum(num) {
 }
 increaseNum(4);
 
+
 /* 
-       6. Create a function that takes voltage and current and returns the 
+6. Create a function that takes voltage and current and returns the 
         calculated power. Example circuitPower(230, 10) => 2300
     */
 
@@ -96,8 +105,9 @@ function powerInWatts(voltage, current) {
 }
 console.log(powerInWatts(230, 10));
 
+
 /*
-       7. You are counting points for a basketball game, given the amount of 
+7. You are counting points for a basketball game, given the amount of 
         2-pointers scored and 3-pointers scored, find the final points for the 
         team and return that value. Examples points(1,1) => 5, points(5,7) => 31
     */
@@ -112,8 +122,9 @@ function basketballPoints(twos, threes) {
 }
 console.log(basketballPoints(1, 1));
 
+
 /*
-    8.  Repeat a given string str (first argument) for num times (second argument). 
+8.  Repeat a given string str (first argument) for num times (second argument). 
       Return an empty string if num is not a positive number. 
       For the purpose of this challenge, do not use the built-in .repeat() method.
 
@@ -135,7 +146,7 @@ function repeatStringNumTimes(arg, num) {
 console.log(repeatStringNumTimes("abc", 1.4));
 
 /*
-    9.
+9.
         We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
         The lowest number will not always come first. For example, sumAll([4,1]) should return 10 because sum of all the numbers 
         between 1 and 4 (both inclusive) is 10.
@@ -162,6 +173,7 @@ function sumAll(arr) {
   return givenArraySumWIthMinMaxInclusive;
 }
 console.log(sumAll([10, 15]));
+
 
 /* 10
         SUM ALL PRIME:
@@ -220,7 +232,7 @@ console.log(tetra(6));
 
 
 /*
-    12. Write a function redundant that takes in a string str and returns a function that returns str.
+12. Write a function redundant that takes in a string str and returns a function that returns str.
       const f1 = redundant("apple")
       f1() ➞ "apple"
       const f2 = redundant("pear")
@@ -240,7 +252,7 @@ console.log(tetra(6));
       console.log(redundant(""));
 
 
-      /*  13.
+/*  13.
 Write a function that takes a number and returns the perimeter of either a circle or a square. 
 The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, 
 and the number will be the side of the square or the radius of the circle.
@@ -345,26 +357,78 @@ console.log(offSpring(-2, "f"));
 */     
 
 
-function myReplace(sentence, before, after){
-  switch (before[0].toUpperCase()) {
-    case before[0]:
-      return sentence.replace(before, after[0].toUpperCase())
-      break;
+// function myReplace(sentence, before, after){
+//   switch (before[0].toUpperCase()) {
+//     case before[0]:
+//       return sentence.replace(before, after[0].toUpperCase())
+//       break;
 
-    default:
-      return sentence.replace(before, after.toLowerCase())
-      break;
-  }
-}
-console.log(myReplace("Let us go to the store", "store", "mall"))
-console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
-console.log(myReplace("I think we should look up there", "up", "Down"))
+//     default:
+//       return sentence.replace(before, after.toLowerCase())
+//       break;
+//   }
+// }
+// console.log(myReplace("Let us go to the store", "store", "mall"))
+// console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
+// console.log(myReplace("I think we should look up there", "up", "Down"))
 
 
                                       //  ALGORITHM CHALLENGE 06-12-2022
                                     
 
+/*
+17.
+      Write a function that splits an array (first argument) into groups the length of size (second argument) 
+      and returns them as a two-dimensional array.
 
+      Example:
+      chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+
+        */
+
+      function arraySplit(first, second){
+        let newArray = [];
+       if(first.length > 0){
+        for(let i = 0; i < second; i++){
+          newArray.push(first[i])
+         }
+       } else{
+        newArray.push(first[i])
+       }
+       console.log(newArray)
+       
+       
+
+      }
+      arraySplit(["a", "b", "c", "d"], 2)
+      arraySplit(["a", "b", "c", "d"], 2)
+      arraySplit(["a", "b", "c", "d"], 2)
+
+
+let messsage = "ITSkills Center"
+      switch (messsage) {
+        case "biscuit":
+          console.log("you like biscuit alot")
+          break;
+        case "itskillscenter":
+          console.log("wrongly spelt")
+          break;
+        case "ITSkills Center":
+          console.log("ITSkills Center is one of the best bootcamp in Lagos")
+          break;
+      
+        default:
+          console.log("you are not bright!")
+          break;
+      }
+
+      
 
 
 // ALGORITHM PERSONAL PRACTICE:
@@ -450,4 +514,7 @@ console.log(myReplace("I think we should look up there", "up", "Down"))
 //   return value;
 // }
 // console.log(factorial(5))
+
+
+
 
