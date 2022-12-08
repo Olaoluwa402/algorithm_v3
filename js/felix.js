@@ -6,8 +6,8 @@
 //     */
 
 // /*
-//         4. Write a function that returns true if a number passed into it is an 
-//         even number and false if otherwise. 
+//         4. Write a function that returns true if a number passed into it is an
+//         even number and false if otherwise.
 //     */
 
 // function minuteToSecondsConverter(a) {
@@ -178,8 +178,8 @@
 // };
 // console.log("apple");
 
-// /*Write a function that takes a number and returns the perimeter of either a circle or a square. 
-// The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, 
+// /*Write a function that takes a number and returns the perimeter of either a circle or a square.
+// The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle,
 // and the number will be the side of the square or the radius of the circle.
 
 // perimeter("s", 7) ➞ 28
@@ -226,7 +226,6 @@
 // console.log(generation(2, "f"));
 // console.log(generation(-3, "m"));
 
-
 // // Integer Reversal
 // // Given an integer, reverse the order of the digits
 
@@ -234,30 +233,27 @@
 // // reverseInteger(46923) => 32964
 
 // function reverseInteger(num){
- 
+
 //   // converting number to string
 //   let str = num.toString().split("");
- 
+
 //   // reversing the string
 //   str.reverse();
-   
- 
+
 //   // converting string to integer
 //   num = parseInt(str.join(""))
- 
+
 //   // returning integer
 //   return num;
 // }
- 
+
 // // Driver Code
 // let num = 4562;
 // console.log("Reverse of no. is " + reverseInteger(num));
 // console.log(reverseInteger(123));
 // console.log(reverseInteger(46923));
 
-  //  
-    
-  
+//
 
 /*Perform a search and replace on the sentence using the arguments provided and return the new sentence.
 
@@ -278,25 +274,20 @@ myReplace("He is Sleeping on the couch", "Sleeping", "sitting") should return th
 myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
 */
 
-
-
-
 function myReplace(str, before, after) {
-  const strSplit = str.split(' ');
+  const strSplit = str.split(" ");
 
   if (/^[A-Z]/.test(before)) {
     after = after.charAt(0).toUpperCase() + after.slice(1);
-  } 
+  }
 
   strSplit.splice(strSplit.indexOf(before), 1, after);
-  return strSplit.join(' ');
+  return strSplit.join(" ");
 }
 
 console.log(myReplace("I think we should look up there", "up", "Down"));
 console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
 console.log(myReplace("Let us go to the store", "store", "mall"));
-
-
 
 /*Write a function that splits an array (first argument) into groups the length of size (second argument) 
 and returns them as a two-dimensional array.
@@ -312,19 +303,14 @@ chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
 
   */
 
-
-
-
-
 function chunkArrayInGroups(arr, size) {
-    var result = [];
-    while (arr.length > size) {
-        result.push(arr.splice(0, size))
-    }
-    if (arr.length)
-        result.push(arr);
+  var result = [];
+  while (arr.length > size) {
+    result.push(arr.splice(0, size));
+  }
+  if (arr.length) result.push(arr);  
 
-    return result;
+  return result;
 }
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
