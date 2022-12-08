@@ -495,4 +495,41 @@ console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
       console.log(splitArray([0, 1, 2, 3, 4, 5], 3))
       console.log(splitArray([0, 1, 2, 3, 4, 5], 2))
       console.log(splitArray([0, 1, 2, 3, 4, 5], 4))
+
+
+      let weather = 'cloudy'
+      switch(weather){
+        case 'rainy':
+          console.log('you need a rain coat')
+          break
+        case 'cloudy':
+          console.log('you need a jacket')
+          break
+        case 'sunny':
+          console.log('you can go out freely')
+          break
+          default:
+            console.log('No need for rain coat')  
+
+           
+      }
       
+ // SECTION 2
+             
+
+ let grade = score
+ switch(grade){
+   case 'score>=70':
+     console.log('grade the score A')
+     break
+     case 'score<=69':
+      console.log('grade the score B')
+      break
+      case 'scrore <=59':
+      console.log('grade the score C')
+      break
+      case 'score <40':
+        console.log('grade failed')
+ }
+return score
+console.log(grade(65))
