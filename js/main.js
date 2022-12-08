@@ -80,7 +80,7 @@ NOTE; Return the value of the result from the function*/
 
 /* 
         5. Create a function that takes a number as an argument, increments the number by 
-        1 and return the result. Example addition(0) => 1, addition(4) => 5
+        1 and return the result. Example addition(0) => 1, addition(4) => 5.
     */
 
 /* 
@@ -126,16 +126,16 @@ NOTE; Return the value of the result from the function*/
         sumAll([10, 5]) should return 45.
     */
 
-function sumAll(arr) {
-  // const sortedArray = arr.sort((a, b) => a - b);
-  // const min = sortedArray[0];
-  // const max = sortedArray[sortedArray.length - 1];
+// function sumAll(arr) {
+// const sortedArray = arr.sort((a, b) => a - b);
+// const min = sortedArray[0];
+// const max = sortedArray[sortedArray.length - 1];
 
   // 1. Check for the MAXIMUM and MINIMUM values in the array
-  let minNum = Math.min(...arr); //spread operator
-  let maxNum = Math.max(...arr);
+  // let minNum = Math.min(...arr); //spread operator
+  // let maxNum = Math.max(...arr);
   // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
-  let givenArraySumWIthMinMaxInclusive = 0;
+//   let givenArraySumWIthMinMaxInclusive = 0;
 
   for (let i = minNum; i <= maxNum; i++) {
     givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
@@ -253,19 +253,3 @@ generation(1, "f") ➞ "daughter"
 
         myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
 */
-
-/*
-17.
-      Write a function that splits an array (first argument) into groups the length of size (second argument) 
-      and returns them as a two-dimensional array.
-
-      Example:
-      chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
-
-      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
-
-      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
-
-      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
-
-        */

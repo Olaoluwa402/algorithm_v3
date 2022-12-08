@@ -308,7 +308,7 @@ function chunkArrayInGroups(arr, size) {
   while (arr.length > size) {
     result.push(arr.splice(0, size));
   }
-  if (arr.length) result.push(arr);  
+  if (arr.length) result.push(arr);
 
   return result;
 }
