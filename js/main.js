@@ -127,13 +127,13 @@ NOTE; Return the value of the result from the function*/
     */
 
 // function sumAll(arr) {
-  // const sortedArray = arr.sort((a, b) => a - b);
-  // const min = sortedArray[0];
-  // const max = sortedArray[sortedArray.length - 1];
+// const sortedArray = arr.sort((a, b) => a - b);
+// const min = sortedArray[0];
+// const max = sortedArray[sortedArray.length - 1];
 
   // 1. Check for the MAXIMUM and MINIMUM values in the array
-  // let minNum = Math.min(...arr); //spread operator
-  // let maxNum = Math.max(...arr);
+  let minNum = Math.min(...arr); //spread operator
+  let maxNum = Math.max(...arr);
   // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
   let givenArraySumWIthMinMaxInclusive = 0;
 
@@ -269,33 +269,3 @@ generation(1, "f") ➞ "daughter"
       chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
 
         */
-      chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
-
-      // declare a container to push looped items into
-
-      // loop through the array
-      // set a counter that takes second argument 
-      
-
-
-      let free=[];
-      let arr=[]
-      count=0
-      
-      function chunk(x,y){
-        for (let i=0; i=x.length-1; i++){
-         arr=x[i].push
-          count++
-          if(count=count+y){
-
-          }
-
-
-      
-
-
-
-        }
-
-      }
-
