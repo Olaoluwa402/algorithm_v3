@@ -192,44 +192,44 @@ NOTE; Return the value of the result from the function*/
     */
 
 
-      function sumPrimes(num){
-        let numofPrime = [];
+      // function sumPrimes(num){
+      //   let numofPrime = [];
 
-        for(let i=1; i<=num; i++ ){
-            numofPrime.push(i);    
-        } 
-        return numofPrime;
-      }
-      //   primeofnumofPrime =[]
-      // for (let i=2; i<=primeofnumofPrime; i++ ){
-      //   if(numofPrime % i == 0){
-      //     primeofnumofPrime.push(i)
-      //   }
-      //   return primeofnumofPrime += numofPrime;
+      //   for(let i=1; i<=num; i++ ){
+      //       numofPrime.push(i);    
+      //   } 
+      //   return numofPrime;
       // }
-        console.log(sumPrimes(10))
+      // //   primeofnumofPrime =[]
+      // // for (let i=2; i<=primeofnumofPrime; i++ ){
+      // //   if(numofPrime % i == 0){
+      // //     primeofnumofPrime.push(i)
+      // //   }
+      // //   return primeofnumofPrime += numofPrime;
+      // // }
+      //   console.log(sumPrimes(10))
 
-        function sumPrime(num){
-          // 1. loop through the num given, excluding zero and 1
-          // initiate a sum count
-          let sum = 0;
+      //   function sumPrime(num){
+      //     // 1. loop through the num given, excluding zero and 1
+      //     // initiate a sum count
+      //     let sum = 0;
 
-          for (let i=2; i<=num; i++){
-              if (isPrime(i)){
-                sum = sum +i;
-              }
-          }
-          return sum;
+      //     for (let i=2; i<=num; i++){
+      //         if (isPrime(i)){
+      //           sum = sum +i;
+      //         }
+      //     }
+      //     return sum;
            
-          function isPrime(num){
-            for(let i =2; i < num; i++){
-              if (num % i === 0){
-                return false;
-              }
-            }
-            return true
-          }
-        }
+      //     function isPrime(num){
+      //       for(let i =2; i < num; i++){
+      //         if (num % i === 0){
+      //           return false;
+      //         }
+      //       }
+      //       return true
+      //     }
+      //   }
 
       //  11.
       // A tetrahedron is a pyramid with a triangular base and three sides. 
@@ -241,11 +241,11 @@ NOTE; Return the value of the result from the function*/
       // tetra(5) ➞ 35
       // tetra(6) ➞ 56
       
-      function tetra(n){
-        return (n*(n+1)*(n+2))/6
-      }
-      console.log(tetra(2))
-      console.log(tetra(5))
+      // function tetra(n){
+      //   return (n*(n+1)*(n+2))/6
+      // }
+      // console.log(tetra(2))
+      // console.log(tetra(5))
 
 
 
@@ -259,15 +259,15 @@ NOTE; Return the value of the result from the function*/
 //       f3() ➞ ""
 //      
 
-        const redundant = function(str){
-          function f1(str){
-            return JSON.stringify(str); // a method that makes a copy of a string passed as parameter.
-          }
-          return f1(str);
-        }
-        console.log(redundant("apple"));
-        console.log(redundant("pear"));
-        console.log(redundant(""));
+        // const redundant = function(str){
+        //   function f1(str){
+        //     return JSON.stringify(str); // a method that makes a copy of a string passed as parameter.
+        //   }
+        //   return f1(str);
+        // }
+        // console.log(redundant("apple"));
+        // console.log(redundant("pear"));
+        // console.log(redundant(""));
 
 
 
@@ -284,17 +284,17 @@ perimeter("c", 9) ➞ 56.52
 // function takes a letter and number (letter, num)
 // returns perimeter of circle (2πr) and square (4a)
 
- function perimeter(letter, num){
-  if(letter === "c"){
-    return 2*3.14*num
-  }
-  else if(letter === "s"){
-    return 4*num
-  }
- }
- console.log(perimeter("s",7))
- console.log(perimeter("c",4))
- console.log(perimeter("c",9))
+//  function perimeter(letter, num){
+//   if(letter === "c"){
+//     return 2*3.14*num
+//   }
+//   else if(letter === "s"){
+//     return 4*num
+//   }
+//  }
+//  console.log(perimeter("s",7))
+//  console.log(perimeter("c",4))
+//  console.log(perimeter("c",9))
 
 
 
@@ -313,49 +313,49 @@ Create a function that takes a number x and a character y ("m" for male, "f" for
 // generation(-3, "m") ➞ "great grandfather"
 // generation(1, "f") ➞ "daughter"
  
-function generation(num, char){
-  if (num >1 && char == "f"){
-    return "granddaughter"
-  }
-  else if (num >1 && char == "m"){
-    return "grandson"
-  }
-  else if(num == 1 && char == "f"){
-    return "daughter"
-    }
-  else if(num == 1 && char == "m"){
-      return "son"
-      }
-  else if(num == -1 && char == "m"){
-        return "father"
-      }
-  else if(num == -1 && char == "f"){
-        return "mother"
-      }
-  else if(num == -2 && char == "m"){
-    return "grandfather"
-  }
-  else if(num == -2 && char == "f"){
-    return "grandmother"
-  }
-  else if(num == -3 && char == "f"){
-    return "great grandmother"
-  }
-  else if(num == -3 && char == "m"){
-    return "great grandmother"
-  }
-}
+// function generation(num, char){
+//   if (num >1 && char == "f"){
+//     return "granddaughter"
+//   }
+//   else if (num >1 && char == "m"){
+//     return "grandson"
+//   }
+//   else if(num == 1 && char == "f"){
+//     return "daughter"
+//     }
+//   else if(num == 1 && char == "m"){
+//       return "son"
+//       }
+//   else if(num == -1 && char == "m"){
+//         return "father"
+//       }
+//   else if(num == -1 && char == "f"){
+//         return "mother"
+//       }
+//   else if(num == -2 && char == "m"){
+//     return "grandfather"
+//   }
+//   else if(num == -2 && char == "f"){
+//     return "grandmother"
+//   }
+//   else if(num == -3 && char == "f"){
+//     return "great grandmother"
+//   }
+//   else if(num == -3 && char == "m"){
+//     return "great grandmother"
+//   }
+// }
 
-console.log(generation(1,"f"))
-console.log(generation(1,"m"))
-console.log(generation(2,"f"))
-console.log(generation(2,"m"))
-console.log(generation(-1,"f"))
-console.log(generation(-1,"m"))
-console.log(generation(-2,"f"))
-console.log(generation(-2,"m"))
-console.log(generation(-3,"m"))
-console.log(generation(-3,"f"))
+// console.log(generation(1,"f"))
+// console.log(generation(1,"m"))
+// console.log(generation(2,"f"))
+// console.log(generation(2,"m"))
+// console.log(generation(-1,"f"))
+// console.log(generation(-1,"m"))
+// console.log(generation(-2,"f"))
+// console.log(generation(-2,"m"))
+// console.log(generation(-3,"m"))
+// console.log(generation(-3,"f"))
 // console.log(generation(-4,"f"))
 
 // 15.
@@ -366,9 +366,9 @@ console.log(generation(-3,"f"))
 //     reverseInteger(46923) => 32964
 
 
-    let reverseInteger = (num) => {return num.toString().split('').reverse().join("")}
+    // let reverseInteger = (num) => {return num.toString().split('').reverse().join("")}
 
-    console.log(reverseInteger(123))
+    // console.log(reverseInteger(123))
 
 
 
@@ -395,14 +395,14 @@ console.log(generation(-3,"f"))
 
 
 
-        myReplace = (sentence, before, after) => { 
-         sentence.replace(before, after)
-        }
-        myReplace = (sentence, before, after) => { return sentence.replace(before, after)}
+    //     myReplace = (sentence, before, after) => { 
+    //      sentence.replace(before, after)
+    //     }
+    //     myReplace = (sentence, before, after) => { return sentence.replace(before, after)}
 
-    console.log(myReplace("Let us go to the store" , "store", "mall"))
-    console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
-    console.log(myReplace("I think we should look up there", "up", "Down"))
+    // console.log(myReplace("Let us go to the store" , "store", "mall"))
+    // console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
+    // console.log(myReplace("I think we should look up there", "up", "Down"))
 
     /*
 17.
@@ -420,18 +420,36 @@ console.log(generation(-3,"f"))
 
         */
 
-      function chunkArrayInGroups(arr, size){
-        let result = []
-        for (i=0; i<=arr.length; i++){
-           result.push(arr.splice(0,size));
-        }
-        return result
-      }
+      // function chunkArrayInGroups(arr, size){
+      //   let result = []
+      //   for (i=0; i<=arr.length; i++){
+      //      result.push(arr.splice(0,size));
+      //   }
+      //   return result
+      // }
 
-      console.log(chunkArrayInGroups(["a","b","c","d"],2))
-      console.log(chunkArrayInGroups([0,1,2,3,4,5],3))
-      console.log(chunkArrayInGroups([0,1,2,3,4,5],2))
-      console.log(chunkArrayInGroups([0,1,2,3,4,5],4))
-      
+      // console.log(chunkArrayInGroups(["a","b","c","d"],2))
+      // console.log(chunkArrayInGroups([0,1,2,3,4,5],3))
+      // console.log(chunkArrayInGroups([0,1,2,3,4,5],2))
+      // console.log(chunkArrayInGroups([0,1,2,3,4,5],4))
+  
+      // 18.
+//   Write a function that takes two or more arrays and returns a new array of unique values in the     order of the original provided arrays. In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array. 
+
+//   The unique numbers should be sorted by their original order, but the final array 
+//    should not be sorted in numerical order.
+
+  // uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
+//    uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
+//    uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
+
+      function uniteUnique(...array){
+        answer = new Set([...array].flat())
+        return [...answer]
+      }
+      console.log(uniteUnique([1,3,2],[5,2,1,4],[2,1]))
+      console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
+      console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+     
 
 
