@@ -142,7 +142,7 @@ NOTE; Return the value of the result from the function*/
   }
 
   return givenArraySumWIthMinMaxInclusive;
-}
+
 // console.log(sumAll([10, 15]));
 function sumPrime(num) {
   // 1. loop through the num given, excluding zero and 1
