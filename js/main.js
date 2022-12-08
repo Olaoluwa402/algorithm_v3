@@ -80,7 +80,7 @@ NOTE; Return the value of the result from the function*/
 
 /* 
         5. Create a function that takes a number as an argument, increments the number by 
-        1 and return the result. Example addition(0) => 1, addition(4) => 5
+        1 and return the result. Example addition(0) => 1, addition(4) => 5.
     */
 
 /* 
@@ -131,11 +131,11 @@ NOTE; Return the value of the result from the function*/
 // const min = sortedArray[0];
 // const max = sortedArray[sortedArray.length - 1];
 
-// 1. Check for the MAXIMUM and MINIMUM values in the array
-// let minNum = Math.min(...arr); //spread operator
-// let maxNum = Math.max(...arr);
-// 2 . Declare a variable to first hold the SUM of the array, initialize to zero
-//   let givenArraySumWIthMinMaxInclusive = 0;
+  // 1. Check for the MAXIMUM and MINIMUM values in the array
+  let minNum = Math.min(...arr); //spread operator
+  let maxNum = Math.max(...arr);
+  // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
+  let givenArraySumWIthMinMaxInclusive = 0;
 
 //   for (let i = minNum; i <= maxNum; i++) {
 //     givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
@@ -269,15 +269,3 @@ generation(1, "f") ➞ "daughter"
       chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
 
         */
-/*
-18.
-        Write a function that takes two or more arrays and returns a new array of unique values
-        in the order of the original provided arrays. In other words, all values present from all 
-        arrays should be included in their original order, but with no duplicates in the final array. 
-        The unique numbers should be sorted by their original order, but the final array 
-        should not be sorted in numerical order.
-
-        uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
-        uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
-        uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
-    */
