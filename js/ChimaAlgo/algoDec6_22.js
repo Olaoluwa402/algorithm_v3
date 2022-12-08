@@ -12,7 +12,7 @@
 //       chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
 
 //         */
-
+/*
 let chunkArrayInGroups =(array,stopValue)=>{
 let newValue = array.join("")
 let newArray =[]
@@ -27,3 +27,21 @@ return newArray
 
 }
 console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4))
+
+*/
+
+
+
+
+let chunkArrayInGroups =(array,stopValue)=>{
+   
+    let newArray =[]
+    let split
+    for(let i=0 ; i<array.length; i++){
+        split=array.splice(i,stopValue)
+        newArray.push(split) 
+    }
+    return newArray
+    
+    }
+    console.log(chunkArrayInGroups([0, 1, 20, 3, 4, 50,78,3,5,67,8], 4))
