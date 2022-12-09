@@ -517,19 +517,51 @@ console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
  // SECTION 2
              
 
- let grade = score
- switch(grade){
-   case 'score>=70':
-     console.log('grade the score A')
-     break
-     case 'score<=69':
-      console.log('grade the score B')
-      break
-      case 'scrore <=59':
-      console.log('grade the score C')
-      break
-      case 'score <40':
-        console.log('grade failed')
- }
-return score
-console.log(grade(65))
+//  let grade = score
+//  switch(grade){
+//    case 'score>=70':
+//      console.log('grade the score A')
+//      break
+//      case 'score<=69':
+//       console.log('grade the score B')
+//       break
+//       case 'scrore <=59':
+//       console.log('grade the score C')
+//       break
+//       case 'score <40':
+//         console.log('grade failed')
+//  }
+// return score
+// console.log(grade(65))
+
+/*18.
+        Write a function that takes two or more arrays and returns a new array of unique values
+        in the order of the original provided arrays. In other words, all values present from all 
+        arrays should be included in their original order, but with no duplicates in the final array. 
+        The unique numbers should be sorted by their original order, but the final array 
+        should not be sorted in numerical order. 
+
+        uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
+        uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
+        uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
+    */
+  //  function uniteUnique(...arr){
+  //   result = new Set(([...arr]).flat())
+  //   return [...result]
+  //  }
+  //  console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
+
+  //  2nd method
+  let unique = []
+  function uniteUnique(...arr){
+  let newArr = [...arr].flat()
+  for(let i = 0; i < newArr.length; i++){
+    if(unique.includes(newArr[i])){
+
+    }else{
+      unique.push(newArr[i])
+    }
+  }
+  return unique
+}
+console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
