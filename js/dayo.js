@@ -270,7 +270,7 @@ function countVowels(words) {
   }
   return numofvowel.length
 }
-console.log(countVowels("my name"));
+console.log(countVowels("my name is dayo"));
 
 
 
