@@ -131,42 +131,42 @@ NOTE; Return the value of the result from the function*/
 // const min = sortedArray[0];
 // const max = sortedArray[sortedArray.length - 1];
 
-  // 1. Check for the MAXIMUM and MINIMUM values in the array
-  let minNum = Math.min(...arr); //spread operator
-  let maxNum = Math.max(...arr);
-  // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
-  let givenArraySumWIthMinMaxInclusive = 0;
+// 1. Check for the MAXIMUM and MINIMUM values in the array
+// let minNum = Math.min(...arr); //spread operator
+// let maxNum = Math.max(...arr);
+// 2 . Declare a variable to first hold the SUM of the array, initialize to zero
+//   let givenArraySumWIthMinMaxInclusive = 0;
 
-//   for (let i = minNum; i <= maxNum; i++) {
-//     givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
-//   }
+for (let i = minNum; i <= maxNum; i++) {
+  givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
+}
 
-//   return givenArraySumWIthMinMaxInclusive;
-// }
-// // console.log(sumAll([10, 15]));
-// function sumPrime(num) {
-//   // 1. loop through the num given, excluding zero and 1
-//   //2. initiate a sum count
-//   let sum = 0;
-//   for (let i = 2; i <= num; i++) {
-//     if (isPrime(i)) {
-//       sum = sum + i;
-//     }
-//   }
+return givenArraySumWIthMinMaxInclusive;
 
-//   return sum;
+// console.log(sumAll([10, 15]));
+function sumPrime(num) {
+  // 1. loop through the num given, excluding zero and 1
+  //2. initiate a sum count
+  let sum = 0;
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      sum = sum + i;
+    }
+  }
 
-//   function isPrime(test) {
-//     //check that num is prime
-//     for (let i = 2; i < test; i++) {
-//       if (test % i === 0) {
-//         return false;
-//       }
-//     }
-//     return true;
-//   }
-// }
-// console.log(sumPrime(977), "prime");
+  return sum;
+
+  function isPrime(test) {
+    //check that num is prime
+    for (let i = 2; i < test; i++) {
+      if (test % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+console.log(sumPrime(977), "prime");
 
 /* 10
         SUM ALL PRIME:
@@ -269,3 +269,21 @@ generation(1, "f") ➞ "daughter"
       chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
 
         */
+/*
+18.
+        Write a function that takes two or more arrays and returns a new array of unique values
+        in the order of the original provided arrays. In other words, all values present from all 
+        arrays should be included in their original order, but with no duplicates in the final array. 
+        The unique numbers should be sorted by their original order, but the final array 
+        should not be sorted in numerical order.
+
+        uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
+        uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
+        uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
+    */
+
+/*
+19.
+  Function count Vowels:
+  Given a string of words or phrases, count the number of vowels.
+*/
