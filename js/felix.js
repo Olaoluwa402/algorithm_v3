@@ -303,6 +303,19 @@ chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
 
   */
 
+<<<<<<< HEAD
+function chunkArrayInGroups(arr, size) {
+  var result = [];
+  while (arr.length > size) {
+    result.push(arr.splice(0, size));
+  }
+  if (arr.length) result.push(arr);
+
+  return result;
+}
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
+=======
 // function chunkArrayInGroups(arr, size) {
 //   var result = [];
 //   while (arr.length > size) {
@@ -353,3 +366,4 @@ let a = [1,2,3]
    let b = [4,5,6]
    console.log(a.concat(b));
 
+>>>>>>> 35c9019bbfb300299c77a9d83d2d5d30deecc4c5

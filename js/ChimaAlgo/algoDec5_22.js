@@ -30,8 +30,19 @@ console.log(reverseInteger(46923));
 //         myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
 // */
 
+<<<<<<< HEAD
+let myReplace = (sentence, original, replaceWith) => {
+  let realAlphabet = checkCase(original, replaceWith);
+  return sentence.replace(original, realAlphabet);
+};
+=======
+>>>>>>> 8b854f1ca9c17e66d7663699e8952d8b10346a6f
 
 
+<<<<<<< HEAD
+console.log(checkCase("up", "Down"));
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
+=======
 let myReplace = (sentence,original,replaceWith)=>{
     let realAlphabet = checkCase(original,replaceWith)
 return sentence.replace(original,realAlphabet)
@@ -51,3 +62,4 @@ console.log(checkCase("up", "Down"))
 console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
 
 
+>>>>>>> 8b854f1ca9c17e66d7663699e8952d8b10346a6f

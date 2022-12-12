@@ -131,17 +131,17 @@ NOTE; Return the value of the result from the function*/
 // const min = sortedArray[0];
 // const max = sortedArray[sortedArray.length - 1];
 
-  // 1. Check for the MAXIMUM and MINIMUM values in the array
-  // let minNum = Math.min(...arr); //spread operator
-  // let maxNum = Math.max(...arr);
-  // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
+// 1. Check for the MAXIMUM and MINIMUM values in the array
+// let minNum = Math.min(...arr); //spread operator
+// let maxNum = Math.max(...arr);
+// 2 . Declare a variable to first hold the SUM of the array, initialize to zero
 //   let givenArraySumWIthMinMaxInclusive = 0;
 
-  for (let i = minNum; i <= maxNum; i++) {
-    givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
-  }
+for (let i = minNum; i <= maxNum; i++) {
+  givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
+}
 
-  return givenArraySumWIthMinMaxInclusive;
+return givenArraySumWIthMinMaxInclusive;
 
 // console.log(sumAll([10, 15]));
 function sumPrime(num) {
@@ -252,4 +252,38 @@ generation(1, "f") ➞ "daughter"
         myReplace("He is Sleeping on the couch", "Sleeping", "sitting") should return the string He is Sitting on the couch.
 
         myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
+*/
+
+/*
+17.
+      Write a function that splits an array (first argument) into groups the length of size (second argument) 
+      and returns them as a two-dimensional array.
+
+      Example:
+      chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+
+        */
+/*
+18.
+        Write a function that takes two or more arrays and returns a new array of unique values
+        in the order of the original provided arrays. In other words, all values present from all 
+        arrays should be included in their original order, but with no duplicates in the final array. 
+        The unique numbers should be sorted by their original order, but the final array 
+        should not be sorted in numerical order.
+
+        uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
+        uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
+        uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
+    */
+
+/*
+19.
+  Function count Vowels:
+  Given a string of words or phrases, count the number of vowels.
 */
