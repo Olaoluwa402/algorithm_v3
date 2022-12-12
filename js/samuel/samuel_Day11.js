@@ -11,13 +11,16 @@
         uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
     */
 
-function uniteUnique(arrays) {
-  // concatenate the array
-  let concatenatedArr = []
+function uniteUnique(arr) {
+  // console.log(arguments)
+  let setValues = new Set(arr)
 
-  for (let idx = 0; idx < arrays.length; idx++) {
-    concatenatedArr
+  for (let count = 0; count < arguments.length; count++) {
+    arguments[count].forEach((item) => {
+      setValues.add(item)
+    })
   }
+  return Array.from(setValues)
 }
 console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
 
