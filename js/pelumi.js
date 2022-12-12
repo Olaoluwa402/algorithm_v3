@@ -471,3 +471,27 @@ function uniteUnique(array1, ...arrays){
 console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
 console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
 console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+
+/*
+19.
+  Function count Vowels:
+  Given a string of words or phrases, count the number of vowels.
+*/
+// define vowels
+const vowels = ["a","e","i","o","u"];
+
+function countVowel(string){
+   // initialize count
+   let count = 0;
+   // loop through to check if each chracter is a vowel
+   for(let i=0; i<string.length; i++){
+      
+      if(vowels.includes(string[i].toLowerCase())){
+         count++
+      }
+   }
+   // return number of vowels
+   return count;  
+}
+console.log(countVowel("I am Unstoppable"))
+console.log(countVowel("Congratulations"))
