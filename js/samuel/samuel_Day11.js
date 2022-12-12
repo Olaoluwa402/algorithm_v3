@@ -17,9 +17,11 @@ function uniteUnique(arr) {
 
   for (let count = 0; count < arguments.length; count++) {
     arguments[count].forEach((item) => {
+      //The add() method inserts a new element with a specified value in to a Set object,
       setValues.add(item)
     })
   }
+  //The Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
   return Array.from(setValues)
 }
 console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
