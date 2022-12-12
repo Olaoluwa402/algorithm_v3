@@ -269,4 +269,4 @@ function countVowels(words) {
   }
   return numofvowel.length
 }
-console.log(countVowels("table"));
+console.log(countVowels("my name"));
