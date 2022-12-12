@@ -11,6 +11,16 @@
         uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
     */
 
+function uniteUnique(arrays) {
+  // concatenate the array
+  let concatenatedArr = []
+
+  for (let idx = 0; idx < arrays.length; idx++) {
+    concatenatedArr
+  }
+}
+console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+
 /*
 19.
   Function count Vowels:
