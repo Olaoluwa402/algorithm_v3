@@ -281,3 +281,9 @@ generation(1, "f") ➞ "daughter"
         uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
         uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
     */
+
+/*
+19.
+  Function count Vowels:
+  Given a string of words or phrases, count the number of vowels.
+*/
