@@ -428,7 +428,79 @@ let messsage = "ITSkills Center"
           break;
       }
 
+
+
+
+                                           //  ALGORITHM CHALLENGE 08-12-2022
+
+    /*18.
+//     Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays. In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array. 
+
+//     The unique numbers should be sorted by their original order, but the final array 
+//     ashould not be sorted in numerical order.
+
+//    uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
+//    uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
+//    uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
+//     */
+
+let uniteUnique = function(...arr){ //Used a rest operator to avoid repetition of values
+  //Convert to array and flatten it to remove the multiple arrays
+let newArray = [...arr].flat();
+
+ //Isolate the duplicates using array Set method
+let result = new Set(newArray);
+
+//Using array method, Set will return an object
+let uniqueNumbers = [...result] //Using a spread operators helps us to unpack the items in an array
+return uniqueNumbers;
+}
+console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
+
+
       
+                                          //  ALGORITHM CHALLENGE 12-12-2022
+
+/*
+19.
+  Function count Vowels:
+  Given a string of words or phrases, count the number of vowels.
+*/
+
+const vowelLetters = new Map();
+//Added a set of vowel letters using map method to append keys and values
+vowelLetters.set(1, "a");
+vowelLetters.set(2, "e");
+vowelLetters.set(3, "i");
+vowelLetters.set(4, "o");
+vowelLetters.set(5, "u");
+
+//function that counts the number of vowel letters
+function countVowels(str){
+  let numberOfVowels = 0;
+  for(let i of str){
+    if(vowelLetters.get(1) == i || vowelLetters.get(2) == i || vowelLetters.get(3) == i || vowelLetters.get(4) == i || vowelLetters.get(5) == i){
+      numberOfVowels ++
+    }
+  }
+  return `The number of vowels in your input is: ${numberOfVowels}`;
+}
+console.log(countVowels("My name is itskillscenter"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // ALGORITHM PERSONAL PRACTICE:
