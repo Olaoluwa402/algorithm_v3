@@ -80,7 +80,7 @@ NOTE; Return the value of the result from the function*/
 
 /* 
         5. Create a function that takes a number as an argument, increments the number by 
-        1 and return the result. Example addition(0) => 1, addition(4) => 5
+        1 and return the result. Example addition(0) => 1, addition(4) => 5.
     */
 
 /* 
@@ -127,15 +127,15 @@ NOTE; Return the value of the result from the function*/
     */
 
 // function sumAll(arr) {
-  // const sortedArray = arr.sort((a, b) => a - b);
-  // const min = sortedArray[0];
-  // const max = sortedArray[sortedArray.length - 1];
+// const sortedArray = arr.sort((a, b) => a - b);
+// const min = sortedArray[0];
+// const max = sortedArray[sortedArray.length - 1];
 
   // 1. Check for the MAXIMUM and MINIMUM values in the array
-  // let minNum = Math.min(...arr); //spread operator
-  // let maxNum = Math.max(...arr);
+  let minNum = Math.min(...arr); //spread operator
+  let maxNum = Math.max(...arr);
   // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
-//   let givenArraySumWIthMinMaxInclusive = 0;
+  let givenArraySumWIthMinMaxInclusive = 0;
 
 //   for (let i = minNum; i <= maxNum; i++) {
 //     givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num

@@ -1,5 +1,5 @@
 // 17.
-//       Write a function that splits an array (first argument) into groups the length of size (second argument) 
+//       Write a function that splits an array (first argument) into groups the length of size (second argument)
 //       and returns them as a two-dimensional array.
 
 //       Example:
@@ -33,15 +33,29 @@ console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4))
 
 
 
-let chunkArrayInGroups =(array,stopValue)=>{
+// let chunkArrayInGroups =(array,stopValue)=>{
    
-    let newArray =[]
-    let split
-    for(let i=0 ; i<array.length; i++){
-        split=array.splice(i,stopValue)
-        newArray.push(split) 
-    }
-    return newArray
+//     let newArray =[]
+//     let split
+//     for(let i=0 ; i<array.length; i++){
+//         split=array.splice(i,stopValue)
+//         newArray.push(split) 
+//     }
+//     return newArray
     
-    }
-    console.log(chunkArrayInGroups([0, 1, 20, 3, 4, 50,78,3,5,67,8], 4))
+//     }
+//     console.log(chunkArrayInGroups([0, 1, 20, 3, 4, 50,78,3,5,67,8], 4))
+
+let chunkArrayInGroups = (array, stopValue) => {
+  let newValue = array.join("");
+  console.log(newValue);
+  let newArray = [];
+  let split;
+  for (let i = 0; i < array.length; i++) {
+    split = newValue.substr(i, stopValue).split("");
+    newArray.push(split);
+    i = i + (stopValue - 1);
+  }
+  return newArray;
+};
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5, 9, 10, 8, 2, 4], 4));
