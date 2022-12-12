@@ -287,3 +287,4 @@ generation(1, "f") ➞ "daughter"
   Function count Vowels:
   Given a string of words or phrases, count the number of vowels.
 */
+ 
