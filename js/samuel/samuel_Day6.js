@@ -11,7 +11,7 @@
 
         note:We only need to check up to the square root because the square root 
         of a number is the largest possible unique divisor.
-    */
+
 
 function sumPrimes(num) {
   // 1.Generate an array of all the numbers less than or equal to num
@@ -39,6 +39,7 @@ function sumPrimes(num) {
   // 3. Test the elements of List of Numbers and push prime into a variable
   let primeNumbers = []
   listOfNumbers.forEach((element) => {
+
     const isElementPrime = checkPrime(element)
 
     if (isElementPrime) {
@@ -57,4 +58,25 @@ function sumPrimes(num) {
   return 'The sum of prime = ' + sumOfPrimeNumbers
 }
 
+console.log(sumPrimes(10))
+    */
+
+function sumPrimes(num) {
+  let sum = 0
+  for (let i = 2; i <= num; i++) {
+    if (checkPrime(i)) {
+      sum += i
+    }
+  }
+  return sum
+
+  function checkPrime(test) {
+    for (let i = 2; i < test; i++) {
+      if (test % i == 0) {
+        return false
+      }
+    }
+    return true
+  }
+}
 console.log(sumPrimes(10))

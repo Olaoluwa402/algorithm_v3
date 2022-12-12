@@ -302,3 +302,266 @@ function sumAll(arr) {
         }
         const f1 = redundant("apple");
         console.log("apple");
+
+  /*      Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+For example:
+
+summation(2) -> 3
+1 + 2
+
+summation(8) -> 36
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 */
+
+function summation(num){
+let result = 0;
+for(let i =1; i<=num; i++){
+  
+   result = result + i;
+}
+return result;
+}
+console.log(summation(8))
+
+/*In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+Examples
+makeNegative(1);    // return -1
+makeNegative(-5);   // return -5
+makeNegative(0);    // return 0
+makeNegative(0.12); // return -0.12 */
+
+function makeNegative(num){
+if(num<=0){
+  return num
+}
+else{
+  return -num
+}
+}
+console.log(makeNegative(1))
+console.log(makeNegative(-5))
+console.log(makeNegative(0))
+console.log(makeNegative(0.12))
+
+/* 13.
+Write a function that takes a number and returns the perimeter of either a circle or a square. 
+The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, 
+and the number will be the side of the square or the radius of the circle.
+
+perimeter("s", 7) ➞ 28
+perimeter("c", 4) ➞ 25.12
+perimeter("c", 9) ➞ 56.52  */
+function perimeter(letter, num){
+  if (letter == "s"){
+    return 4*num;
+  } else if (letter == "c"){
+    return 2*3.14*num;
+  }
+}
+console.log(perimeter("s", 7));
+console.log(perimeter("c", 4));
+console.log(perimeter("c", 9));
+
+/* 14.
+Try finding your ancestors and offspring with code.
+
+Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
+
+    * If the number is negative, return the related ancestor.
+    * If positive, return the related descendant.
+    * You are generation 0. In the case of 0 (male or female), return "me!".
+    
+generation(2, "f") ➞ "granddaughter"
+generation(-3, "m") ➞ "great grandfather"
+generation(1, "f") ➞ "daughter" */
+
+
+function generation(num, char){
+if( num==-1 && (char=="m" || char=="f")){
+  const res = char == 'm' ? 'father':'mother'
+  return res
+}else if( num<-1 && (char=="m" || char=="f")){
+  const res = char =='m' ? 'grandfather':'grandmother'
+  return res
+}else if(num<-2  && (char=="m" || char=="f")){
+  const res = char =='m' ? 'great grandfather':'great grandmother'
+  return res
+}else if (num=1 && (char=='m' || char=='f')){
+  const res = char =='m' ? 'son':'daughter'
+  return res
+}else if(num>1 && (char=='m'|| char=='f')){
+  const res = char =='m'? 'grandson':'graanddaughter'
+  return res
+}
+}
+console.log(generation(-1, 'f'))
+console.log(generation(-2, 'f'))
+console.log(generation(-2, 'm'))
+console.log(generation(-3, 'm'))
+console.log(generation(-3, 'f'))
+console.log(generation(1, 'm'))
+console.log(generation(2, 'f'))
+
+
+/*15.
+    Integer Reversal
+    Given an integer, reverse the order of the digits
+
+    reverseInteger(123) => 321
+    reverseInteger(46923) => 32964*/
+
+    function ReverseInteger(Num){
+      return Num.toString().split('').reverse().join('')
+    }
+console.log(ReverseInteger(123))
+console.log(ReverseInteger(46923))
+
+// /*2nd solution*/
+// function reverseInteger(num){
+//   num =num.tostring();
+//   const reversed =[];
+//   for(let i =num.length - 1; i >=0; i--){
+//       console.log(num[i]);
+//       reversed.push(num[i]);
+//   }
+//   return Number(reversed,join(""));
+// }
+// console.log(reversed)
+    
+/* 16.
+Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+
+First argument is the sentence to perform the search and replace on.
+
+Second argument is the word that you will be replacing (before).
+
+Third argument is what you will be replacing the second argument with (after).
+
+Note: Preserve the case of the first character in the original word when you are replacing it. 
+For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+
+Template:
+myReplace("Let us go to the store", "store", "mall") should return the string Let us go to the mall.
+
+myReplace("He is Sleeping on the couch", "Sleeping", "sitting") should return the string He is Sitting on the couch.
+
+myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
+*/
+
+
+
+let myReplace = (sentence,original,replaceWith)=>{
+  let realAlphabet = checkCase(original,replaceWith)
+return sentence.replace(original,realAlphabet)
+}
+
+let checkCase=(alphabet1,alphabet2)=>{
+if(alphabet1[0].toUpperCase()+alphabet1.slice(1) === alphabet1){
+ return alphabet2[0].toUpperCase()+alphabet2.slice(1)
+}
+else{
+  return alphabet2[0].toLowerCase()+alphabet2.slice(1)
+}
+
+}
+
+console.log(checkCase("up", "Down"))
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
+
+/*  17.
+      Write a function that splits an array (first argument) into groups the length of size (second argument) 
+      and returns them as a two-dimensional array.
+
+      Example:
+      chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2) should return [[0, 1], [2, 3], [4, 5]].
+
+      chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]].
+
+        */
+
+      function splitArray(array, chucklength){
+        let result = [];
+        for(let i = 0; i < array.length; i+=chucklength){
+         let chuck = array.slice(i, i+chucklength);
+         result.push(chuck);
+        }
+        return result
+      }
+      console.log(splitArray(["a", "b", "c", "d"], 2))
+      console.log(splitArray([0, 1, 2, 3, 4, 5], 3))
+      console.log(splitArray([0, 1, 2, 3, 4, 5], 2))
+      console.log(splitArray([0, 1, 2, 3, 4, 5], 4))
+
+
+      let weather = 'cloudy'
+      switch(weather){
+        case 'rainy':
+          console.log('you need a rain coat')
+          break
+        case 'cloudy':
+          console.log('you need a jacket')
+          break
+        case 'sunny':
+          console.log('you can go out freely')
+          break
+          default:
+            console.log('No need for rain coat')  
+
+           
+      }
+      
+ // SECTION 2
+             
+
+//  let grade = score
+//  switch(grade){
+//    case 'score>=70':
+//      console.log('grade the score A')
+//      break
+//      case 'score<=69':
+//       console.log('grade the score B')
+//       break
+//       case 'scrore <=59':
+//       console.log('grade the score C')
+//       break
+//       case 'score <40':
+//         console.log('grade failed')
+//  }
+// return score
+// console.log(grade(65))
+
+/*18.
+        Write a function that takes two or more arrays and returns a new array of unique values
+        in the order of the original provided arrays. In other words, all values present from all 
+        arrays should be included in their original order, but with no duplicates in the final array. 
+        The unique numbers should be sorted by their original order, but the final array 
+        should not be sorted in numerical order. 
+
+        uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
+        uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
+        uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
+    */
+  //  function uniteUnique(...arr){
+  //   result = new Set(([...arr]).flat())
+  //   return [...result]
+  //  }
+  //  console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
+
+  //  2nd method
+  let unique = []
+  function uniteUnique(...arr){
+  let newArr = [...arr].flat()
+  for(let i = 0; i < newArr.length; i++){
+    if(unique.includes(newArr[i])){
+
+    }else{
+      unique.push(newArr[i])
+    }
+  }
+  return unique
+}
+console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))

@@ -238,9 +238,126 @@ console.log(tetra(6));
       console.log(redundant("pear"));
       console.log(redundant(""));
 
-      
-     
 
+      /*  13.
+Write a function that takes a number and returns the perimeter of either a circle or a square. 
+The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, 
+and the number will be the side of the square or the radius of the circle.
+
+perimeter("s", 7) ➞ 28
+perimeter("c", 4) ➞ 25.12
+perimeter("c", 9) ➞ 56.52
+*/
+
+
+function perimeterCheck(l, num){
+  try {
+    if(l == "s"){ //Here the code tests for 's' input.
+      return `Perimeter of square is ${4*num}` //Returns the perimeter of square if input is 's'.
+    }else {
+      throw new Error("The input must either be 's' or 'c'") //Here it throws a custom error if the input is not either of 's' or 'c'.
+    }
+  } catch (error) {
+    if(l == "c"){ //If the input is 'c', it runs through this code block to return the resultant value.
+      return `Perimeter of circle is ${(2*Math.PI*num).toFixed(2)}` //Returns the perimeter of circle using the constant Math.PI rounding the result to 2 decimal places using the number method 'toFixed()'.
+    }
+    throw error;
+  }
+}
+console.log(perimeterCheck('s', 7))
+console.log(perimeterCheck('c', 4))
+console.log(perimeterCheck('c', 9))
+/*
+14.
+Try finding your ancestors and offspring with code.
+
+Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
+
+    * If the number is negative, return the related ancestor.
+    * If positive, return the related descendant.
+    * You are generation 0. In the case of 0 (male or female), return "me!".
+    
+generation(2, "f") ➞ "granddaughter"
+generation(-3, "m") ➞ "great grandfather"
+generation(1, "f") ➞ "daughter"
+ */
+
+function offSpring(x,y){
+  //* Hint: This is a word play of arguements. If the inputted number is negative, regardless of the value, the result will either be great grand-father of great grand-mother. However, it will return either of son or daughter if the inputted number is '1' and return grandson or grand-daughter if the inputted number is '2'.
+  if(x == 0){
+    return "me!";
+  } else if(x == 1 && y == "m"){
+    return "son"
+  } else if(x == 1 && y == "f"){
+    return "daughter";
+  } else if(x == 2 && y == "m"){
+    return "grand-son";
+  } else if(x == 2 && y == "f"){
+    return "grand-daughter";
+  } else if(x < 0 && y == "m"){
+    return "great grand-father";
+  }else if(x < 0 && y == "f"){
+    return "great grand-mother";
+  }
+}
+console.log(offSpring(-2, "f"));
+
+      
+/*
+15.
+    Integer Reversal
+    Given an integer, reverse the order of the digits
+
+    reverseInteger(123) => 321
+    reverseInteger(46923) => 32964
+    */
+
+   function reverseInt(para){
+     let val = para.toString();
+     let Int = [...val].reverse().join(''); //using spread operator to
+     return Number(Int);
+     
+   }
+   console.log(reverseInt(123))
+   console.log(reverseInt(46923))
+
+
+    /*
+16.
+        Perform a search and replace on the sentence using the arguments provided and return the new sentence.
+
+        First argument is the sentence to perform the search and replace on.
+
+        Second argument is the word that you will be replacing (before).
+
+        Third argument is what you will be replacing the second argument with (after).
+
+        Note: Preserve the case of the first character in the original word when you are replacing it. 
+        For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
+
+        Template:
+        myReplace("Let us go to the store", "store", "mall") should return the string Let us go to the mall.
+
+        myReplace("He is Sleeping on the couch", "Sleeping", "sitting") should return the string He is Sitting on the couch.
+
+        myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
+*/     
+
+
+function myReplace(sentence, before, after){
+  switch (before[0].toUpperCase()) {
+    case before[0]:
+      return sentence.replace(before, after.toUpperCase())
+      break;
+
+    default:
+      return sentence.replace(before, after.toLowerCase())
+      break;
+  }
+}
+console.log(myReplace("Let us go to the store", "store", "mall"))
+console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
+console.log(myReplace("I think we should look up there", "up", "Down"))
 // ALGORITHM PERSONAL PRACTICE:
 
 // Calculating the average of student scores.

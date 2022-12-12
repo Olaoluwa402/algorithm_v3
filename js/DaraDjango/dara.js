@@ -187,20 +187,20 @@
 
 // solution 1
 
-function redundant(str) {
-  return (() => {
-    return str;
-  })();
-}
+// function redundant(str) {
+//   return (() => {
+//     return str;
+//   })();
+// }
 
-// console.log (redundant("folake")
+// // console.log (redundant("folake")
 
-// sollution 2
-function redundant(str) {
-  return function f1() {
-    return str;
-  };
-}
+// // sollution 2
+// function redundant(str) {
+//   return function f1() {
+//     return str;
+//   };
+// }
 
 // const result = redundant("folake");
 // console.log(result());
@@ -212,11 +212,27 @@ and the number will be the side of the square or the radius of the circle.
 
 perimeter("s", 7) ➞ 28
 perimeter("c", 4) ➞ 25.12
-perimeter("c", 9) ➞ 56.52
+perimeter("c", 9) ➞ 56.52*/
+
+
+
+function periM(l,num){
+    if (l==="c"){
+        p=2* 3.142 * num 
+        return p
+    }
+    else if(l==="s"){
+        p=4*num
+        return p
+    }
+
+}
+console.log(periM("s",7))
+
 
 
 14.
-Try finding your ancestors and offspring with code.
+/*Try finding your ancestors and offspring with code.
 
 Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
 
@@ -228,3 +244,44 @@ generation(2, "f") ➞ "granddaughter"
 generation(-3, "m") ➞ "great grandfather"
 generation(1, "f") ➞ "daughter"
  */
+
+
+function famTree(x,y){
+    if ( x==0 ){
+        return ("ME")
+    }
+    else if(x==1 && y=="m"){
+        return ("son")
+    }else if(x==1 && y=="f"){
+        return ("daughter")
+    }else if(x==2 && y=="m"){
+        return ("Grandson")
+    }else if(x==2 && y=="f"){
+        return ("GrandDaughter")
+    }else if(x==3 && y=="m"){
+        return ("GreatGrandson")
+    }else if(x==3 && y=="f"){
+        return ("GreatGrandDaughter")
+    }else if(x>3){
+        return ("Descendant")
+    }else if(x==-1 && y=="m"){
+        return ("Father")
+    }else if(x==-1 && y=="f"){
+        return ("Mother")
+    }else if(x==-2 && y=="m"){
+        return ("Grandfather")
+    }else if(x==-2 && y=="f"){
+        return ("GrandMother")
+    }else if(x==-3 && y=="m"){
+        return ("GreatGrandFather")
+    }else if(x==-3 && y=="f"){
+        return ("GreatGrandMother")
+    }else if(x<-3){
+        return ("Ancestor")
+    }else{
+        return("input a valid decendant format")
+    }
+
+}
+console.log(famTree(1,"f"))
+console.log("attempt to commit")
