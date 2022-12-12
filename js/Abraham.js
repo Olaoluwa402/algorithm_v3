@@ -565,3 +565,21 @@ console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
   return unique
 }
 console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+
+/*
+19.
+  Function count Vowels:
+  Given a string of words or phrases, count the number of vowels.
+*/
+let vowel = ['a', 'e', 'i', 'o', 'u']
+let count = 0;
+function vowelsCount(string){
+for(let i = 0; i<string.length; i++){
+if(vowel.includes(string[i].toLowerCase())){
+count++
+}
+
+}
+return count
+}
+console.log(vowelsCount('congratulations'))
