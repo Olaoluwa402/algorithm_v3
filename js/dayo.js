@@ -151,8 +151,7 @@ function repeatStringNumTimes(str, num) {
   if (num > 0) {
     for (let i = 0; i < num; i++) {
       result += str;
-    }
-  else if(num == 1 && char == "m"){
+    }if(num == 1 && char == "m"){
       return "son"
       }
   else if(num == -1 && char == "m"){
@@ -173,6 +172,7 @@ function repeatStringNumTimes(str, num) {
   else if(num == -3 && char == "m"){
     return "great grandmother"
   }
+}
 }
 
 console.log(generation(1,"f"))
@@ -262,5 +262,3 @@ console.log(generation(-3,"f"))
       console.log(chunkArrayInGroups([0,1,2,3,4,5],2))
       console.log(chunkArrayInGroups([0,1,2,3,4,5],4))
       
-
-
