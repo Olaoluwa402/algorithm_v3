@@ -80,7 +80,7 @@ NOTE; Return the value of the result from the function*/
 
 /* 
         5. Create a function that takes a number as an argument, increments the number by 
-        1 and return the result. Example addition(0) => 1, addition(4) => 5
+        1 and return the result. Example addition(0) => 1, addition(4) => 5.
     */
 
 /* 
@@ -137,36 +137,36 @@ NOTE; Return the value of the result from the function*/
 // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
 //   let givenArraySumWIthMinMaxInclusive = 0;
 
-//   for (let i = minNum; i <= maxNum; i++) {
-//     givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
-//   }
+for (let i = minNum; i <= maxNum; i++) {
+  givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
+}
 
-//   return givenArraySumWIthMinMaxInclusive;
-// }
-// // console.log(sumAll([10, 15]));
-// function sumPrime(num) {
-//   // 1. loop through the num given, excluding zero and 1
-//   //2. initiate a sum count
-//   let sum = 0;
-//   for (let i = 2; i <= num; i++) {
-//     if (isPrime(i)) {
-//       sum = sum + i;
-//     }
-//   }
+return givenArraySumWIthMinMaxInclusive;
 
-//   return sum;
+// console.log(sumAll([10, 15]));
+function sumPrime(num) {
+  // 1. loop through the num given, excluding zero and 1
+  //2. initiate a sum count
+  let sum = 0;
+  for (let i = 2; i <= num; i++) {
+    if (isPrime(i)) {
+      sum = sum + i;
+    }
+  }
 
-//   function isPrime(test) {
-//     //check that num is prime
-//     for (let i = 2; i < test; i++) {
-//       if (test % i === 0) {
-//         return false;
-//       }
-//     }
-//     return true;
-//   }
-// }
-// console.log(sumPrime(977), "prime");
+  return sum;
+
+  function isPrime(test) {
+    //check that num is prime
+    for (let i = 2; i < test; i++) {
+      if (test % i === 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+console.log(sumPrime(977), "prime");
 
 /* 10
         SUM ALL PRIME:
