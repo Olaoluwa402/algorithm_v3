@@ -260,6 +260,7 @@ NOTE; Return the value of the result from the function*/
   Function count Vowels:
   Given a string of words or phrases, count the number of vowels.
 */
+
 function countVowels(words) {
   numofvowel = [];
   for (let i = 0; i < words.length; i++) {
@@ -270,3 +271,6 @@ function countVowels(words) {
   return numofvowel.length
 }
 console.log(countVowels("my name"));
+
+
+
