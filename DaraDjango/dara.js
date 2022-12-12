@@ -80,17 +80,17 @@
         
 
 
-        function rev (num){
-            //convert num to string to toString
-            //convert to array with split
-            //reverse the array
-            //join the reversed array
+        // function rev (num){
+        //     //convert num to string to toString
+        //     //convert to array with split
+        //     //reverse the array
+        //     //join the reversed array
 
-            strng=num.toString().reverse()
-            return strng
+        //     strng=num.toString().reverse()
+        //     return strng
             
 
-        }console.log(rev(12376465875))
+        // }console.log(rev(12376465875))
 
 
 
@@ -124,5 +124,57 @@
 
     // }
 
-    console.log(new Date)
-       
+    18.
+//         Write a function that takes two or more arrays and returns a new array of unique values in the     order of the original provided arrays. In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array. 
+
+//         The unique numbers should be sorted by their original order, but the final array 
+//         should not be sorted in numerical order.
+
+//    uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
+//    uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
+//    uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
+//     */
+
+
+
+let a=[1,2,3,4,5,6]
+let b=[7,8,9,0]
+let c=[5,4,5,6,4,45]
+let d=[6,4,5,65,7,4,3]
+//h=[]
+
+// function connect(a,b,c,d){
+//  let g= a.concat(b,c,d)
+ 
+//  for (let i=0; i<=g.length-1; i++){
+//     if(h.includes(g[i])){
+
+//     }else{
+//         h.push(g[i])
+//     }
+
+
+
+ 
+//  }return h
+// }
+//console.log(connect(a,b,c,d))
+
+let h=[]
+function connect(...values){
+     let g= [...values].flat()
+    
+     for (let i=0; i< g.length; i++){
+        if(h.includes(g[i])){
+    
+        }else{
+            h.push(g[i])
+        }
+    
+    
+    
+     
+     }return h
+    }
+console.log(connect([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+
