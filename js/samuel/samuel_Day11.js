@@ -28,3 +28,22 @@ function VowelsCounter(wordsOrPhrases) {
 }
 
 console.log(VowelsCounter('This is a baby boy'))
+
+// -------------SOLUTION TWO -----------------
+// ------------------------------------------
+function VowelsCount(wordsOrPhrases) {
+  let vowels = 'aeiou'
+  let vowelsArray = vowels.split('')
+  let count = 0
+
+  for (let x = 0; x < wordsOrPhrases.length; x++) {
+    for (let y = 0; y < vowelsArray.length; y++) {
+      if (wordsOrPhrases[x] == vowelsArray[y]) {
+        count++
+      }
+    }
+  }
+  return count
+}
+
+console.log(VowelsCount('This is a baby boy'))
