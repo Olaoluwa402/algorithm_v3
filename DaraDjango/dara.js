@@ -160,21 +160,61 @@ let d=[6,4,5,65,7,4,3]
 // }
 //console.log(connect(a,b,c,d))
 
-let h=[]
-function connect(...values){
-     let g= [...values].flat()
+// let h=[]
+// function connect(...values){
+//      let g= [...values].flat()
     
-     for (let i=0; i< g.length; i++){
-        if(h.includes(g[i])){
+//      for (let i=0; i< g.length; i++){
+//         if(h.includes(g[i])){
     
-        }else{
-            h.push(g[i])
-        }
+//         }else{
+//             h.push(g[i])
+//         }
     
     
     
      
-     }return h
-    }
-console.log(connect([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+//      }return h
+//     }
+// console.log(connect([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
 
+
+/*
+19.
+  Function count Vowels:
+  Given a string of words or phrases, count the number of vowels.
+*/
+
+
+
+// let count;
+// let v="aeiou"
+// function vowelCount(phrases){
+//     for (let i=0; i<phrases.length ;i++){
+        
+//         if(v.includes(phrases(i))){
+//            let y= count++;
+//         }
+
+
+
+//     }return y
+// }console.log(vowelCount("tolani is a girl"))
+
+let y=[]
+function vowelCount(phrases){
+    phrases=phrases.toLowerCase()
+    for (let i=0; i<phrases.length; i++){
+        if (( 'aeiou').includes(phrases[i])){
+            y.push(phrases[i])
+
+
+        }
+
+    }return y.length
+
+    
+
+
+}
+console.log(vowelCount("tolani is a girl"))
