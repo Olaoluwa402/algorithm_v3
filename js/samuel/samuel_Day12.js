@@ -2,22 +2,22 @@
 20. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8
 */
 function evenDash(number) {
-  const numberArray = number.toString().split("")
-  let result = []
+  const numberArray = number.toString().split("");
+  let result = [];
   numberArray.forEach((num) => {
-    num = Number(num)
+    num = Number(num);
     if (num % 2 === 0) {
-      result.push(-num)
+      result.push(-num);
       //   console.log(-num)
     } else {
-      result.push(num)
+      result.push(num);
     }
-  })
+  });
 
-  return result.join("")
+  return result.join("");
 }
-let resultDash = evenDash(025468)
-console.log(resultDash)
+let resultDash = evenDash(025468);
+console.log(resultDash);
 
 /*
 21. Make a function that looks through an array of objects (first argument) 
@@ -32,17 +32,42 @@ because it contains the name and its value, that was passed on as the second arg
 */
 
 function checkObject(obj, objCheck) {
-  if (obj.hasOwnProperty(objCheck)) {
-    console.log("ji")
-  }
+  const keys = Object.keys(objCheck);
+
+  let obj = [
+    { first: "Romeo", last: "Montague" },
+    { first: "Mercutio", last: null },
+    { first: "Tybalt", last: "Capulet" },
+  ];
+
+  const objCheck = { first: "Mercutio", last: null };
+
+  return obj.filter((item) => {
+    for (let i = 0; i < keys.length; i++) {
+      // console.log(item[keys[i]] == objCheck[keys[i]]);
+      if (
+        !item.hasOwnProperty(keys[i]) ||
+        item[keys[i]] !== objCheck[keys[i]]
+      ) {
+        console.log("false");
+        return false;
+      } else {
+        console.log("true");
+        return true;
+      }
+    }
+  });
+  // if (obj.hasOwnProperty(objCheck)) {
+  //   console.log("ji");
+  // }
 }
 
 let obj = [
   { first: "Romeo", last: "Montague" },
   { first: "Mercutio", last: null },
   { first: "Tybalt", last: "Capulet" },
-]
+];
 
-let objCheck = { last: "Capulet" }
+const objCheck = { first: "Mercutio", last: null };
 
-console.log(checkObject)
+console.log(checkObject(obj, objCheck));
