@@ -575,7 +575,7 @@ let vowel = ['a', 'e', 'i', 'o', 'u']
 let count = 0;
 function vowelsCount(string){
 for(let i = 0; i<string.length; i++){
-if(vowel.includes(string[i].toLowerCase())){
+if(vowel.includes(string[i].toLowerase())){
 count++
 }
 
