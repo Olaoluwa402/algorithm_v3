@@ -13,18 +13,19 @@
 
 function uniteUnique(arr) {
   // console.log(arguments)
-  let setValues = new Set(arr)
+  let setValues = new Set(arr);
+  console.log(setValues);
 
   for (let count = 0; count < arguments.length; count++) {
     arguments[count].forEach((item) => {
       //The add() method inserts a new element with a specified value in to a Set object,
-      setValues.add(item)
-    })
+      setValues.add(item);
+    });
   }
   //The Array.from() static method creates a new, shallow-copied Array instance from an iterable or array-like object.
-  return Array.from(setValues)
+  return Array.from(setValues);
 }
-console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]));
 
 /*
 19.
@@ -32,33 +33,33 @@ console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
   Given a string of words or phrases, count the number of vowels.
 */
 function VowelsCounter(wordsOrPhrases) {
-  let vowels = 'aeiou'
-  let vowelsArray = vowels.split('')
-  let count = 0
+  let vowels = "aeiou";
+  let vowelsArray = vowels.split("");
+  let count = 0;
 
   for (let eachCharacter of wordsOrPhrases) {
-    if (vowelsArray.includes(eachCharacter)) count++
+    if (vowelsArray.includes(eachCharacter)) count++;
   }
-  return count
+  return count;
 }
 
-console.log(VowelsCounter('This is a baby boy'))
+console.log(VowelsCounter("This is a baby boy"));
 
 // -------------SOLUTION TWO -----------------
 // ------------------------------------------
 function VowelsCount(wordsOrPhrases) {
-  let vowels = 'aeiou'
-  let vowelsArray = vowels.split('')
-  let count = 0
+  let vowels = "aeiou";
+  let vowelsArray = vowels.split("");
+  let count = 0;
 
   for (let x = 0; x < wordsOrPhrases.length; x++) {
     for (let y = 0; y < vowelsArray.length; y++) {
       if (wordsOrPhrases[x] == vowelsArray[y]) {
-        count++
+        count++;
       }
     }
   }
-  return count
+  return count;
 }
 
-console.log(VowelsCount('This is a baby boy'))
+console.log(VowelsCount("This is a baby boy"));
