@@ -49,3 +49,22 @@ for(
 
 console.log(countVowel(string));
 
+//20. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8
+
+function insertDashes() {
+  let number = "025468"
+  let result = ""
+
+  for (let i = 0; i < number.length; i++) {
+    let char = number[i];
+
+    if (char % 2 === 0) {
+      result += "-";
+    }
+
+    result += char;
+  }
+  return result;
+
+}
+console.log(insertDashes())
