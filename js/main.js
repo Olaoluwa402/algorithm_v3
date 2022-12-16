@@ -137,36 +137,36 @@ NOTE; Return the value of the result from the function*/
 // 2 . Declare a variable to first hold the SUM of the array, initialize to zero
 //   let givenArraySumWIthMinMaxInclusive = 0;
 
-for (let i = minNum; i <= maxNum; i++) {
-  givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
-}
+// for (let i = minNum; i <= maxNum; i++) {
+//   givenArraySumWIthMinMaxInclusive += i; // givenArraySum  = givenArraySum  + num
+// }
 
-return givenArraySumWIthMinMaxInclusive;
+// return givenArraySumWIthMinMaxInclusive;
 
 // console.log(sumAll([10, 15]));
-function sumPrime(num) {
-  // 1. loop through the num given, excluding zero and 1
-  //2. initiate a sum count
-  let sum = 0;
-  for (let i = 2; i <= num; i++) {
-    if (isPrime(i)) {
-      sum = sum + i;
-    }
-  }
+// function sumPrime(num) {
+// 1. loop through the num given, excluding zero and 1
+//2. initiate a sum count
+// let sum = 0;
+// for (let i = 2; i <= num; i++) {
+//   if (isPrime(i)) {
+//     sum = sum + i;
+//   }
+// }
 
-  return sum;
+// return sum;
 
-  function isPrime(test) {
-    //check that num is prime
-    for (let i = 2; i < test; i++) {
-      if (test % i === 0) {
-        return false;
-      }
-    }
-    return true;
-  }
-}
-console.log(sumPrime(977), "prime");
+// function isPrime(test) {
+//check that num is prime
+//     for (let i = 2; i < test; i++) {
+//       if (test % i === 0) {
+//         return false;
+//       }
+//     }
+//     return true;
+//   }
+// }
+// console.log(sumPrime(977), "prime");
 
 /* 10
         SUM ALL PRIME:
@@ -286,4 +286,18 @@ generation(1, "f") ➞ "daughter"
 19.
   Function count Vowels:
   Given a string of words or phrases, count the number of vowels.
+*/
+
+/*
+20. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8
+
+21. Make a function that looks through an array of objects (first argument) 
+and returns an array of all objects that have matching name and value pairs (second argument). 
+Each name and value pair of the source object has to be present 
+in the object from the collection if it is to be included in the returned array.
+
+For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], 
+and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), 
+because it contains the name and its value, that was passed on as the second argument.
+
 */
