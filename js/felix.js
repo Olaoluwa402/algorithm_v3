@@ -379,19 +379,17 @@ function countVowel(str) {
 }
 console.log(countVowel("congratulations today is your birthday"));
 
-
-
-const numbers = [1,2,3,4,5]
+const numbers = [1, 2, 3, 4, 5];
 console.log(numbers.slice());
 console.log(numbers.slice(0));
 console.log(numbers.slice(0, numbers.length));
 console.log(numbers.slice(1, 4));
 
-numbers.splice()
+numbers.splice();
 console.log(numbers);
-numbers.splice(0, 1)
-console.log(numbers)
+numbers.splice(0, 1);
+console.log(numbers);
 
-const beat = [1, 2, 3, 4, 5, 6]
-beat.splice(3,3,7,8,9)
-console.log(beat.splice(3,3,7,8,9))
+const beat = [1, 2, 3, 4, 5, 6];
+beat.splice(3, 3, 7, 8, 9);
+console.log(beat.splice(3, 3, 7, 8, 9));
