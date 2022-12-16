@@ -56,4 +56,4 @@ for (let i = 0; i < ad.length; i++){
  }
  console.log(bnb);
 }
-console.log(, "nestedForLoop");
+console.log("nestedForLoop");
