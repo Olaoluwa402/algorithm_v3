@@ -446,23 +446,22 @@
 //    uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
 //    uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
 //    
-//    function uniteUnique(...array){
-//          let newArr = [...array.flat()]
-//          return [...new Set(newArr)]
-//    }
-//    console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
-//    console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
-//    console.log(unicd teUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+   function uniteUnique(...array){
+         let newArr = [...array.flat()]
+         return [...new Set(newArr)]
+   }
+   console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
+   console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
+   console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
 
 // 
 let unique = []
 function uniteUnique(array1, ...arrays){
    let newArr = [array1, ...arrays].flat()
-//    console.log(newArr)
+// .flat() creates a new array with all arrays concatenated into it
    for (let i=0; i<newArr.length; i++){
-       if(unique.includes(newArr[i])){
-           
-       }else{
+       if(!unique.includes(newArr[i])){
+// .includes() determines whether characters in unique are in newArr
           unique.push(newArr[i])
        }
    }
@@ -477,21 +476,21 @@ console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
   Function count Vowels:
   Given a string of words or phrases, count the number of vowels.
 */
-// define vowels
-const vowels = ["a","e","i","o","u"];
+// // define vowels
+// const vowels = ["a","e","i","o","u"];
 
-function countVowel(string){
-   // initialize count
-   let count = 0;
-   // loop through to check if each chracter is a vowel
-   for(let i=0; i<string.length; i++){
+// function countVowel(string){
+//    // initialize count
+//    let count = 0;
+//    // loop through to check if each chracter is a vowel
+//    for(let i=0; i<string.length; i++){
       
-      if(vowels.includes(string[i].toLowerCase())){
-         count++
-      }
-   }
-   // return number of vowels
-   return count;  
-}
-console.log(countVowel("I am Unstoppable"))
-console.log(countVowel("Congratulations"))
+//       if(vowels.includes(string[i].toLowerCase())){
+//          count++
+//       }
+//    }
+//    // return number of vowels
+//    return count;  
+// }
+// console.log(countVowel("I am Unstoppable"))
+// console.log(countVowel("Congratulations"))
