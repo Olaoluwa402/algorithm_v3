@@ -263,7 +263,7 @@
 
 // Third argument is what you will be replacing the second argument with (after).
 
-// Note: Preserve the case of the first character in the original word when you are replacing it. 
+// Note: Preserve the case of the first character in the original word when you are replacing it.
 // For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
 
 // Template:
@@ -289,7 +289,7 @@
 // console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"));
 // console.log(myReplace("Let us go to the store", "store", "mall"));
 
-// /*Write a function that splits an array (first argument) into groups the length of size (second argument) 
+// /*Write a function that splits an array (first argument) into groups the length of size (second argument)
 // and returns them as a two-dimensional array.
 
 // Example:
@@ -315,11 +315,27 @@
 // // console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
 // // console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
 
+function chunkArrayInGroups(arr, size) {
+  var result = [];
+  while (arr.length > size) {
+    result.push(arr.splice(0, size));
+  }
+  if (arr.length) result.push(arr);
 
+  return result;
+}
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
+// function chunkArrayInGroups(arr, size) {
+//   var result = [];
+//   while (arr.length > size) {
+//     result.push(arr.splice(0, size));
+//   }
+//   if (arr.length) result.push(arr);
 
-// //         Write a function that takes two or more arrays and returns a new array of unique values in the     order of the original provided arrays. In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array. 
+// //         Write a function that takes two or more arrays and returns a new array of unique values in the     order of the original provided arrays. In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
 
-// //         The unique numbers should be sorted by their original order, but the final array 
+// //         The unique numbers should be sorted by their original order, but the final array
 // //         should not be sorted in numerical order.
 
 // //    uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].
@@ -327,8 +343,8 @@
 // //    uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
 // //     */
 // //    function uniteUnique(array1, array2){
-// //         let theTwoArrays = array1.concat[array2] 
-// //         return theTwoArrays 
+// //         let theTwoArrays = array1.concat[array2]
+// //         return theTwoArrays
 // //    }
 // //    console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
 
@@ -336,7 +352,6 @@
 // //    let b = [4,5,6]
 
 // //    console.log(a.concat(b))
-
 
 // function uniteUnique(arr) {
 //   const mySet = new Set(arr);
@@ -356,13 +371,11 @@
 // Function count Vowels:
 // Given a string of words or phrases, count the number of vowels.
 
-   function countVowel(str) { 
-
-    // find the count of vowels
-    const count = str.match(/[aeiou]/gi).length;
-
-    // return number of vowels
-    return count;
+function countVowel(str) {
+  // find the count of vowels
+  const count = str.match(/[aeiou]/gi).length;
+  // return number of vowels
+  return count;
 }
 console.log(countVowel("congratulations today is your birthday"));
 
