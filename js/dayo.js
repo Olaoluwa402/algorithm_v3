@@ -13,6 +13,7 @@ NOTE; Return the value of the result from the function*/
 //     return Fahrenheit;
 // }
 // console.log(converttoF(30))
+
 // ()()
 // function tempconvert(celsius){
 //     const k = 9/5
@@ -150,212 +151,40 @@ NOTE; Return the value of the result from the function*/
 //   if (num > 0) {
 //     for (let i = 0; i < num; i++) {
 //       result += str;
-//     }
-//     return result;
-//   } else {
-//     return "";
+//     }if(num == 1 && char == "m"){
+//       return "son"
+//       }
+//   else if(num == -1 && char == "m"){
+//         return "father"
+//       }
+//   else if(num == -1 && char == "f"){
+//         return "mother"
+//       }
+//   else if(num == -2 && char == "m"){
+//     return "grandfather"
+//   }
+//   else if(num == -2 && char == "f"){
+//     return "grandmother"
+//   }
+//   else if(num == -3 && char == "f"){
+//     return "great grandmother"
+//   }
+//   else if(num == -3 && char == "m"){
+//     return "great grandmother"
 //   }
 // }
-// console.log(repeatStringNumTimes("*", 3));
-// console.log(repeatStringNumTimes("ABC", 3));
+// }
 
-/*
-    9.
-        We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them. 
-        The lowest number will not always come first. For example, sumAll([4,1]) should return 10 because sum of all the numbers 
-        between 1 and 4 (both inclusive) is 10.
-
-        sumAll([1, 4]) should return 10.
-
-        sumAll([4, 1]) should return 10.
-
-        sumAll([5, 10]) should return 45.
-
-        sumAll([10, 5]) should return 45.
-    */
-     
-
-
-/* 10
-        SUM ALL PRIME:
-        A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. For example, 2
-        is a prime number because it is only divisible by 1 and 2. In contrast, 4 is not prime since it is
-        divisible by 1, 2 and 4.
-
-        Rewrite sumPrimes so it returns the sum of all prime numbers that are less than or equal to num.
-
-        sumPrimes(10) should return 17.
-        sumPrimes(977) should return 73156.
-
-        note:We only need to check up to the square root because the square root 
-        of a number is the largest possible unique divisor.
-    */
-
-
-      function sumPrimes(num){
-        let numofPrime = [];
-
-        for(let i=1; i<=num; i++ ){
-            numofPrime.push(i);    
-        } 
-        return numofPrime;
-      }
-      //   primeofnumofPrime =[]
-      // for (let i=2; i<=primeofnumofPrime; i++ ){
-      //   if(numofPrime % i == 0){
-      //     primeofnumofPrime.push(i)
-      //   }
-      //   return primeofnumofPrime += numofPrime;
-      // }
-        console.log(sumPrimes(10))
-
-        function sumPrime(num){
-          // 1. loop through the num given, excluding zero and 1
-          // initiate a sum count
-          let sum = 0;
-
-          for (let i=2; i<=num; i++){
-              if (isPrime(i)){
-                sum = sum +i;
-              }
-          }
-          return sum;
-           
-          function isPrime(num){
-            for(let i =2; i < num; i++){
-              if (num % i === 0){
-                return false;
-              }
-            }
-            return true
-          }
-        }
-
-      //  11.
-      // A tetrahedron is a pyramid with a triangular base and three sides. 
-      // A tetrahedral number is a number of items within a tetrahedron.
-      // Create a function that takes an integer n and returns the nth tetrahedral number.
-      
-      // Hint :
-      // tetra(2) ➞ 4
-      // tetra(5) ➞ 35
-      // tetra(6) ➞ 56
-      
-      function tetra(n){
-        return (n*(n+1)*(n+2))/6
-      }
-      console.log(tetra(2))
-      console.log(tetra(5))
-
-
-
-
-//     12. Write a function redundant that takes in a string str and returns a function that returns str.
-//       const f1 = redundant("apple")
-//       f1() ➞ "apple"
-//       const f2 = redundant("pear")
-//       f2() ➞ "pear"
-//       const f3 = redundant("")
-//       f3() ➞ ""
-//      
-
-        const redundant = function(str){
-          function f1(str){
-            return JSON.stringify(str); // a method that makes a copy of a string passed as parameter.
-          }
-          return f1(str);
-        }
-        console.log(redundant("apple"));
-        console.log(redundant("pear"));
-        console.log(redundant(""));
-
-
-
-        /*  13.
-Write a function that takes a number and returns the perimeter of either a circle or a square. 
-The input will be in the form (letter l, number num) where the letter will be either "s" for square, or "c" for circle, 
-and the number will be the side of the square or the radius of the circle.
-
-perimeter("s", 7) ➞ 28
-perimeter("c", 4) ➞ 25.12
-perimeter("c", 9) ➞ 56.52
-*/
-
-// function takes a letter and number (letter, num)
-// returns perimeter of circle (2πr) and square (4a)
-
- function perimeter(letter, num){
-  if(letter === "c"){
-    return 2*3.14*num
-  }
-  else if(letter === "s"){
-    return 4*num
-  }
- }
- console.log(perimeter("s",7))
- console.log(perimeter("c",4))
- console.log(perimeter("c",9))
-
-
-
-/*
-14.
-Try finding your ancestors and offspring with code.
-
-Create a function that takes a number x and a character y ("m" for male, "f" for female), and returns the name of an ancestor (m/f) or descendant (m/f).
-
-    * If the number is negative, return the related ancestor.
-    * If positive, return the related descendant.
-    * You are generation 0. In the case of 0 (male or female), return "me!".
-    */
-    
-// generation(2, "f") ➞ "granddaughter"
-// generation(-3, "m") ➞ "great grandfather"
-// generation(1, "f") ➞ "daughter"
- 
-function generation(num, char){
-  if (num >1 && char == "f"){
-    return "granddaughter"
-  }
-  else if (num >1 && char == "m"){
-    return "grandson"
-  }
-  else if(num == 1 && char == "f"){
-    return "daughter"
-    }
-  else if(num == 1 && char == "m"){
-      return "son"
-      }
-  else if(num == -1 && char == "m"){
-        return "father"
-      }
-  else if(num == -1 && char == "f"){
-        return "mother"
-      }
-  else if(num == -2 && char == "m"){
-    return "grandfather"
-  }
-  else if(num == -2 && char == "f"){
-    return "grandmother"
-  }
-  else if(num == -3 && char == "f"){
-    return "great grandmother"
-  }
-  else if(num == -3 && char == "m"){
-    return "great grandmother"
-  }
-}
-
-console.log(generation(1,"f"))
-console.log(generation(1,"m"))
-console.log(generation(2,"f"))
-console.log(generation(2,"m"))
-console.log(generation(-1,"f"))
-console.log(generation(-1,"m"))
-console.log(generation(-2,"f"))
-console.log(generation(-2,"m"))
-console.log(generation(-3,"m"))
-console.log(generation(-3,"f"))
+// console.log(generation(1,"f"))
+// console.log(generation(1,"m"))
+// console.log(generation(2,"f"))
+// console.log(generation(2,"m"))
+// console.log(generation(-1,"f"))
+// console.log(generation(-1,"m"))
+// console.log(generation(-2,"f"))
+// console.log(generation(-2,"m"))
+// console.log(generation(-3,"m"))
+// console.log(generation(-3,"f"))
 // console.log(generation(-4,"f"))
 
 // 15.
@@ -365,13 +194,9 @@ console.log(generation(-3,"f"))
 //     reverseInteger(123) => 321
 //     reverseInteger(46923) => 32964
 
+// let reverseInteger = (num) => {return num.toString().split('').reverse().join("")}
 
-    let reverseInteger = (num) => {return num.toString().split('').reverse().join("")}
-
-    console.log(reverseInteger(123))
-
-
-
+// console.log(reverseInteger(123))
 
 // 16.
 //         Perform a search and replace on the sentence using the arguments provided and return the new sentence.
@@ -382,7 +207,7 @@ console.log(generation(-3,"f"))
 
 //         Third argument is what you will be replacing the second argument with (after).
 
-//         Note: Preserve the case of the first character in the original word when you are replacing it. 
+//         Note: Preserve the case of the first character in the original word when you are replacing it.
 //         For example if you mean to replace the word Book with the word dog, it should be replaced as Dog
 
 //         Template:
@@ -392,19 +217,16 @@ console.log(generation(-3,"f"))
 
 //         myReplace("I think we should look up there", "up", "Down") should return the string I think we should look down there.
 
+//     myReplace = (sentence, before, after) => {
+//      sentence.replace(before, after)
+//     }
+//     myReplace = (sentence, before, after) => { return sentence.replace(before, after)}
 
+// console.log(myReplace("Let us go to the store" , "store", "mall"))
+// console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
+// console.log(myReplace("I think we should look up there", "up", "Down"))
 
-
-        myReplace = (sentence, before, after) => { 
-         sentence.replace(before, after)
-        }
-        myReplace = (sentence, before, after) => { return sentence.replace(before, after)}
-
-    console.log(myReplace("Let us go to the store" , "store", "mall"))
-    console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
-    console.log(myReplace("I think we should look up there", "up", "Down"))
-
-    /*
+/*
 17.
       Write a function that splits an array (first argument) into groups the length of size (second argument) 
       and returns them as a two-dimensional array.
@@ -420,18 +242,35 @@ console.log(generation(-3,"f"))
 
         */
 
-      function chunkArrayInGroups(arr, size){
-        let result = []
-        for (i=0; i<=arr.length; i++){
-           result.push(arr.splice(0,size));
-        }
-        return result
-      }
+//   function chunkArrayInGroups(arr, size){
+//     let result = []
+//     for (i=0; i<=arr.length; i++){
+//        result.push(arr.splice(0,size));
+//     }
+//     return result
+//   }
 
-      console.log(chunkArrayInGroups(["a","b","c","d"],2))
-      console.log(chunkArrayInGroups([0,1,2,3,4,5],3))
-      console.log(chunkArrayInGroups([0,1,2,3,4,5],2))
-      console.log(chunkArrayInGroups([0,1,2,3,4,5],4))
-      
+//   console.log(chunkArrayInGroups(["a","b","c","d"],2))
+//   console.log(chunkArrayInGroups([0,1,2,3,4,5],3))
+//   console.log(chunkArrayInGroups([0,1,2,3,4,5],2))
+//   console.log(chunkArrayInGroups([0,1,2,3,4,5],4))
+
+/*
+19.
+  Function count Vowels:
+  Given a string of words or phrases, count the number of vowels.
+*/
+
+function countVowels(words) {
+  numofvowel = [];
+  for (let i = 0; i < words.length; i++) {
+    if (words[i] == "a" || words[i] =="e" || words[i] == "i" || words[i] == "o" || words[i] == "u") {
+        numofvowel.push(words[i]); 
+    }
+  }
+  return numofvowel.length
+}
+console.log(countVowels("my name is dayo"));
+
 
 
