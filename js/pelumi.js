@@ -446,30 +446,30 @@
 //    uniteUnique([1, 2, 3], [5, 2, 1]) should return [1, 2, 3, 5].
 //    uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]) should return [1, 2, 3, 5, 4, 6, 7, 8]
 //    
-   function uniteUnique(...array){
-         let newArr = [...array.flat()]
-         return [...new Set(newArr)]
-   }
-   console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
-   console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
-   console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+//    function uniteUnique(...array){
+//          let newArr = [...array.flat()]
+//          return [...new Set(newArr)]
+//    }
+//    console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
+//    console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
+//    console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
 
-// 
-let unique = []
-function uniteUnique(array1, ...arrays){
-   let newArr = [array1, ...arrays].flat()
-// .flat() creates a new array with all arrays concatenated into it
-   for (let i=0; i<newArr.length; i++){
-       if(!unique.includes(newArr[i])){
-// .includes() determines whether characters in unique are in newArr
-          unique.push(newArr[i])
-       }
-   }
-   return unique
-}
-console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
-console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
-console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
+// // 
+// let unique = []
+// function uniteUnique(array1, ...arrays){
+//    let newArr = [array1, ...arrays].flat()
+// // .flat() creates a new array with all arrays concatenated into it
+//    for (let i=0; i<newArr.length; i++){
+//        if(!unique.includes(newArr[i])){
+// // .includes() determines whether characters in unique are in newArr
+//           unique.push(newArr[i])
+//        }
+//    }
+//    return unique
+// }
+// console.log(uniteUnique([1, 2, 3], [5, 2, 1]))
+// console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
+// console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
 
 /*
 19.
@@ -494,3 +494,34 @@ console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
 // }
 // console.log(countVowel("I am Unstoppable"))
 // console.log(countVowel("Congratulations"))
+
+/*
+20. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8
+*/
+// 
+function insertDashesBetweenTwoEvenNumbers(number){
+   let result = ' '
+   for(let i=0; i<number.length; i++){
+      if(number[i] % 2 == 0 && number[i+1] % 2 == 0){
+         result += number[i] + '-'
+      }else{
+         result += number[i]
+      }
+   }
+   return result
+}
+console.log(insertDashesBetweenTwoEvenNumbers("025468"))
+
+/*
+21. Make a function that looks through an array of objects (first argument) 
+and returns an array of all objects that have matching name and value pairs (second argument). 
+Each name and value pair of the source object has to be present 
+in the object from the collection if it is to be included in the returned array.
+
+For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], 
+and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), 
+because it contains the name and its value, that was passed on as the second argument.
+*/
+function arrayOfObjects(objects, newObject){
+
+}
