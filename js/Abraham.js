@@ -552,34 +552,49 @@ console.log(myReplace("He is Sleeping on the couch", "Sleeping", "sitting"))
   //  console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]))
 
   //  2nd method
-  let unique = []
-  function uniteUnique(...arr){
-  let newArr = [...arr].flat()
-  for(let i = 0; i < newArr.length; i++){
-    if(unique.includes(newArr[i])){
-
-    }else{
-      unique.push(newArr[i])
-    }
-  }
-  return unique
-}
-console.log(uniteUnique([1, 2, 3], [5, 2, 1, 4], [2, 1], [6, 7, 8]))
-
+//    
 /*
 19.
   Function count Vowels:
   Given a string of words or phrases, count the number of vowels.
 */
-let vowel = ['a', 'e', 'i', 'o', 'u']
-let count = 0;
-function vowelsCount(string){
-for(let i = 0; i<string.length; i++){
-if(vowel.includes(string[i].toLowerCase())){
-count++
-}
+// let vowel = ['a', 'e', 'i', 'o', 'u']
+// let count = 0;
+// function vowelsCount(string){
+// for(let i = 0; i<string.length; i++){
+// if(vowel.includes(string[i].toLowerase())){
+// count++
+// }
 
-}
-return count
-}
-console.log(vowelsCount('congratulations'))
+// }
+// return count
+// }
+// console.log(vowelsCount('congratulations'))
+
+
+/*
+20. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8
+*/
+let Num = 2457863
+const str = Num.toString();
+const result1 = [str[0]];
+for(let i = 0; i<str.length; i++){
+  if((str[i]%2===0) && (str[i+1]%2===0)){
+    result1.push('-', str[i+1]);
+  }
+    else{
+      result1.push(str[i+1])
+    }
+  }
+  console.log(result1.join(''));
+  /*
+21. Make a function that looks through an array of objects (first argument) 
+and returns an array of all objects that have matching name and value pairs (second argument). 
+Each name and value pair of the source object has to be present 
+in the object from the collection if it is to be included in the returned array.
+
+For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], 
+and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), 
+because it contains the name and its value, that was passed on as the second argument.
+
+*/
