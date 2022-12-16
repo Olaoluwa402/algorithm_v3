@@ -274,11 +274,31 @@ NOTE; Return the value of the result from the function*/
 
 // 20. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8
 function addDash(input){
-  if (input[i] % 2 == 0){
-    input[i]
+  // value = input.toString()
+  // even = []
+  // odd = []
+  //   for (let i=0; i<=value.length; i++){
+  //     if (value[i] % 2 == 0){
+  //       even.push(value[i])
+  //     }
+  //     else {
+  //        odd.push(value[i])
+  //     }
+  //   }
+  //   return even.join('-') + odd
+  
+    result = ""
+  for (let i = 0; i<input.length; i++){
+    if(input[i] % 2 == 0 && input[i+1] % 2 == 0){
+          result += input[i] + "-"
+    }else {
+      result += input[i]
+    }
   }
-}
+  return result
 
+}
+console.log(addDash("025468"))
 
 
 
