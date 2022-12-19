@@ -298,8 +298,7 @@ function addDash(input){
   return result
 
 }
-console.log(addDash("025468"))
-
+console.log(countVowels("my name is dayo"));
 
 
 

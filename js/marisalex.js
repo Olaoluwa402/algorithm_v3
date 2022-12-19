@@ -30,22 +30,44 @@
 */
 //set initial count to 0
 
-const string = "The Lazy brown dog jumped over the fence"
+const string = "The Lazy brown dog jumped over the fence";
 
-function countVowel(string){
-  let vowelCount = 0
+function countVowel(string) {
+  let vowelCount = 0;
 
-for(
-    let i=0; i < string.length; i++
-){
-    if (string[i] == "a"|| string[i] == "e" ||string[i] == "i"||string[i] == "o"|| string[i] == "u"){
+  for (let i = 0; i < string.length; i++) {
+    if (
+      string[i] == "a" ||
+      string[i] == "e" ||
+      string[i] == "i" ||
+      string[i] == "o" ||
+      string[i] == "u"
+    ) {
       vowelCount++;
-      
     }
-    
-}
-   return vowelCount;
+  }
+  return vowelCount;
 }
 
 console.log(countVowel(string));
 
+//20. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8
+1234562;
+
+function insertDashes() {
+  let number = "025468";
+  let result = "";
+
+  for (let i = 0; i < number.length; i++) {
+    let char = Number(number[i]);
+    if (number[i] % 2 === 0 && number[i + 1] % 2 === 0) {
+      console.log("here");
+      result += number[i] + "-";
+    } else {
+      result += number[i];
+    }
+    // result += char;
+  }
+  return result;
+}
+console.log(insertDashes());

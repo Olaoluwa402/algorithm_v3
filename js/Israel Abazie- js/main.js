@@ -490,6 +490,55 @@ console.log(countVowels("My name is itskillscenter"))
 
 
 
+                                         //  ALGORITHM CHALLENGE 16-12-2022
+
+/*
+20. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8
+*/
+
+function numberConversion(num){
+  let evenNums = "";
+  if(typeof num == "number"){
+    let newNum = num.toString();
+
+    for(let i = 0; i < newNum.length; i++){
+    if(newNum[i] % 2 == 0 && newNum[i+1] % 2 == 0){
+      evenNums += newNum[i] + "-"
+    } else {
+      evenNums += newNum[i]
+    }
+  }
+} else {
+  for(let j = 0; j < num.length; j++){
+    if(num[j] % 2 == 0 && num[j+1] % 2 == 0){
+      evenNums += num[j] + "-"
+    } else {
+      evenNums += num[j]
+    }
+  }
+ 
+  
+}
+return evenNums
+}
+  
+console.log(numberConversion(534477))
+
+/*
+21. Make a function that looks through an array of objects (first argument) 
+and returns an array of all objects that have matching name and value pairs (second argument). 
+Each name and value pair of the source object has to be present 
+in the object from the collection if it is to be included in the returned array.
+
+For example, if the first argument is [{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], 
+and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), 
+because it contains the name and its value, that was passed on as the second argument.
+
+*/
+
+
+
+
 
 
 
@@ -588,5 +637,27 @@ console.log(countVowels("My name is itskillscenter"))
 // console.log(factorial(5))
 
 
+
+// function solution(N) {
+//     // write your code in JavaScript (Node.js 8.9.4)
+//     // Set the string result
+//     let result = "";
+//     // Check the validation for min and max
+//     if (N >= 1 && N <= 100) {
+//       for (var i = 0; i < N; i++) {
+//         let rows = N - 1;
+//         if (i < rows) {
+//           result += "L" + "\n";
+//         } else {
+//           for (let j = 0; j < N; j++) {
+//             result += " " + "L";
+//           }
+//         }
+//       }
+//     }
+
+//     return result;
+//   }
+//   console.log(solution(7));
 
 
