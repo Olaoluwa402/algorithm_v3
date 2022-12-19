@@ -62,12 +62,4 @@ function checkObject(obj, objCheck) {
   // }
 }
 
-let obj = [
-  { first: "Romeo", last: "Montague" },
-  { first: "Mercutio", last: null },
-  { first: "Tybalt", last: "Capulet" },
-];
-
-const objCheck = { first: "Mercutio", last: null };
-
 console.log(checkObject(obj, objCheck));

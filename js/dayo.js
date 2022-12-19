@@ -312,4 +312,35 @@ console.log(countVowels("my name is dayo"));
 // and the second argument is { last: "Capulet" }, then you must return the third object from the array (the first argument), 
 // because it contains the name and its value, that was passed on as the second argument.
 
+function checkObject(obj, objCheck) {
+  const keys = Object.keys(objCheck);
 
+  let obj = [
+    { first: "Romeo", last: "Montague" },
+    { first: "Mercutio", last: null },
+    { first: "Tybalt", last: "Capulet" },
+  ];
+
+  const objCheck = { first: "Mercutio", last: null };
+
+  return obj.filter((item) => {
+    for (let i = 0; i < keys.length; i++) {
+      // console.log(item[keys[i]] == objCheck[keys[i]]);
+      if (
+        !item.hasOwnProperty(keys[i]) ||
+        item[keys[i]] !== objCheck[keys[i]]
+      ) {
+        console.log("false");
+        return false;
+      } else {
+        console.log("true");
+        return true;
+      }
+    }
+  });
+  // if (obj.hasOwnProperty(objCheck)) {
+  //   console.log("ji");
+  // }
+}
+
+console.log(checkObject(obj, objCheck));
