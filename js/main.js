@@ -301,3 +301,60 @@ and the second argument is { last: "Capulet" }, then you must return the third o
 because it contains the name and its value, that was passed on as the second argument.
 
 */
+// 1. convertng to an array
+function maxChar(str) {
+  const strArray = str.split("");
+  //   console.log(strArray);
+
+  // 2. loop the array and fored an object
+  let ObjOfChar = {};
+
+  //method 2
+
+  //looping the string
+  for (let i = 0; i < str.length; i++) {
+    if (ObjOfChar[str[i]]) {
+      ObjOfChar[str[i]] = ObjOfChar[str[i]] + 1;
+    } else {
+      ObjOfChar[str[i]] = 1;
+    }
+  }
+
+  //loop the object
+  let initialCountKey = "";
+  let initialCountValue = 0;
+  for (let item in ObjOfChar) {
+    if (ObjOfChar[item] > initialCountValue) {
+      initialCountKey = item;
+      initialCountValue = ObjOfChar[item];
+    }
+  }
+
+  return initialCountKey;
+
+  //method 1
+  //   for (let i = 0; i < strArray.length; i++) {
+  //     let counter = 1;
+
+  //     // checking if the key exits and incrementing the value
+  //     if (ObjOfChar.hasOwnProperty([strArray[i]])) {
+  //       //   console.log(strArray[i], ObjOfChar[strArray[i]]);
+  //       ObjOfChar[strArray[i]] = ObjOfChar[strArray[i]] + 1;
+  //       //   ObjOfChar[strArray[i]] += 1;
+
+  //       //   console.log((ObjOfChar[strArray[i]] += 1), "here");
+  //     } else {
+  //       ObjOfChar[strArray[i]] = counter;
+  //     }
+
+  //     // console.log();
+  //   }
+  //   const sortedObjOfChar = Object.entries(ObjOfChar).sort((a, b) => {
+  //     return a[1] - b[1];
+  //   });
+  //   console.log(sortedObjOfChar[sortedObjOfChar.length - 1][0]);
+}
+
+// 3. sorted the object
+// 4. returned thr maxCharacter
+console.log(maxChar("abccccd"));
